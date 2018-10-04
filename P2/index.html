@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>P2 Requirements</title>
+</head>
+
+<body>
+    <div class=wrapper>
+
+        <div class="header content">
+            <h1>IT2805 P2 Project Requirements</h1>
+            <h2>Alexey Gusev, Hans Bratland Østerdal, Sander Kilen, Simen Kjernlie og Vilde Bruvik</h2>
+            <h4>09.10.2018</h4>
+
+        </div>
+        <div class="content">
+            <h2>Administative detaljer</h2>
+            <p>Kunde: Visita Sardinia (turistkontor, ikke reell klient).</p>
+        </div>
+        <div class="content">
+            <h2>Hensikt og mål</h2>
+            <p>Formidle og gjøre det enkelt for turister og reisende å finne ut hva Sardinia har å tilby. Det skal være
+                enkelt å booke aktiviteter, fremkomstmidler og hoteller. </p>
+
+        </div>
+        <div class="content">
+            <h2>Brukere</h2>
+            <p>Brukerne er i hovedsak turister som vil ha informasjon om hva Sardinia kan tilby, i form av aktiviteter
+                og severdigheter. Siden bør gi verdifull informasjon både til personer i planleggingsfasen og turister
+                som allerede er i Sardinia. Forslag til aktiviteter og severdigheter skal være tilpasset alle
+                aldersgrupper. </p>
+        </div>
+        <div class="content">
+            <h2>Navigasjonsstruktur</h2>
+            <p>Navigasjonsstrukturen til denne nettsiden er ganske rett frem. Det skal være mulig å komme til alle de
+                ulike sidene på nettsiden uavhengig av hvilken side man befinner seg på. Når en laster inn hjemmesiden
+                (index) skal det være mulig å komme til alle de andre sidene slik som hotell, aktiviteter og
+                resturanter bare for å nevne noen. Det skal også være mulig å komme fra alle de de ulike sidene tilbake
+                til hjemmesiden eller videre til en annen av sidene. En fullstendig oversikt over alle de ulike sidene
+                og deres tilkobling til hverandre er beskrevet i figur 1 under.</p>
+            <p>Denne formen for linking skal forekomme i en navigasjonsbar på toppen av nettside vinduet, hvor den også
+                skal følge med nedover på siden når brukeren beveger seg rundt om på siden. Det er kun linkene til
+                «Home», «Hotels», «Resturants», «Activities», «About ardinia» og «About us» (beskrevet i figur 1 på
+                norsk) som er synlige linker til å begynne med. Linkene til «Boat», «Bike», «Culture» og «Nature» skal
+                ikke være synlige til å begynne med, men skal komme frem når man beveger musepekeren over «Activities»
+                taben. </p>
+            <p>Denne strukturen hvor alle sidene har tilgang til hverandre er valgt over en hierarkisk struktur fordi
+                det skal være lett og oversiktlig å kunne navigere til alle delene av nettsiden uten å måtte gå en
+                designert vei gjennom en nettside for å kunne komme til en annen side. Det blir dermed en mer
+                oversiktlig struktur hvor der skal være vanskeligere å rote seg bort.</p>
+            <p>Det ble også mer naturlig å plassere «Boat», «Bike», «Culture» og «Nature» som undergrupper av
+                «Activities» i navigasjonsbaren da disse egentlig tilhører den samme undergruppe. Dette er for å ha
+                tilgang til alle delene av nettsiden uten å gjøre navigasjonsbaren alt for uoversiktlig og full av
+                tekst som heller er mer hensiktsmessig å gjemme bort. Dette er også fordi selv om det skal være lett å
+                komme til alle delene av siden gir det en mer oversiktlig løsning om man først blir ledet inn på en
+                nettside som gir en kort og oversiktlig beskrivelse av de ulike aktivitetene som er tilgjengelig.</p>
+            <img src="img/navigasjons_struktur.png" height="300" alt="">
+        </div>
+        <div class="content">
+            <h2>Side oppsett og utseende</h2>
+            <p>Font: Roboto og Roboto Slab
+                Roboto Slab er en font med serif, noe som er med på å uttrykke en seriøsitet og profesjonalitet. Denne
+                fonten gjør seg godt til overskrifter og menyer og annen viktig informasjon.
+                Roboto er en fot uten serif, dette gjør at den virker moderne og lett leselig. Derfor har vi valgt å
+                bruke denne til resten av tekstene.</p>
+            <p>Farger: Hovedfargen er en mørk blågrønn farge som sammen med den nesten hvite fargen under er med på å
+                representere havet, noe som er veldig viktig i forhold til Sardinia. Disse to fargene går igjen på hele
+                siden, og blir en slags rød tråd for designet.</p>
+            <p>På footeren har vi valgt en mellom-grå farge. Denne er veldig nøytral, noe som er ønsket da footeren
+                ikke skal stikke seg så veldig ut, og passe til på alle sider. </p>
+            <p>Den litt lysere grå er brukt i vinduet for å sende mail. Denne fargen er også veldig nøytral, og ønsker
+                ikke å ta for mye plass. </p>
+            <p>Den relativt sterke-gule fargen er brukt til bestillinger, dette gjør at brukeren får tydelig
+                informasjon om at han er i ferd med å gjøre en bestilling, samt tydeliggjøre at dette er en interaktiv
+                del, noe som skjer eller skal gjøres. </p>
+        </div>
+        <div class="content">
+            <h2>Innhold</h2>
+            <h3>Forside</h3>
+            <p>Forsiden for nettsiden VisitaSardinia skal inneholde flere, men enkle elementer med lite tekst.
+                Siden skal ha et moderne utsende; rolige pastell farger og et generelt enkelt og upretensiøst design,
+                uten ekstra forfininger (små og unødvendige detaljer). Tanken er å skape en luksuriøs men samtidig god
+                oppfatning av firmaet og dens tilbud, slik at brukeropplevelsen er optimal fra starten av. For å få til
+                dette har vi valgt å begrense innholdet på forsiden, som nevnt tidligere. </p>
+            <h4>Navn og meny</h4>
+            <p>Øverst på siden troner firmanavnet VisitaSardinia og logoen i hvitt, på en mørketurkis bakgrunn,
+                etterfulgt av et praktisk og brukervennlig menyoppsett for nettsiden. For bedre synlighet er bakgrunnen
+                til menyen hvit mens bokstavene er turkise. Disse layoutene vil gå gjennom hele nettsiden og vil være
+                som en rød tråd i designet. Når en tar musen over de ulike valgene i menyen vil hver av dem bli
+                understreket for å vise brukeren hva han ser på. Under valget activities vil det derimot komme ut en
+                liten rullegardin med tre ytterlige valg, da på de ulike aktivitetene; fra forsiden kan man komme til
+                rett sted uten å måtte gå inn via flere mellomledd. Denne menyen vil være bevegelig når en scroller
+                ned, og vil holde seg øverst på skjermen selv om man «går forbi den». (sticky header) </p>
+            <h4>Hovedbilde og "Om oss"</h4>
+            <p>Under menyen vil det bli plassert et ganske stort bevegelig bilde av Sardinias kyst/natur som skal møte
+                de besøkende og vekke interesse. Et slik bilde understreker også designet ved å ha flere gjennomgående
+                farger og gir en følelse av kompletthet i designet. Bildet skal også være av rolige farger men som
+                samtidig er av den typen som gir de besøkende lyst til å se videre på hva siden har å by på, altså et
+                vakkert bilde. Under bilde vil det være en spalte av samme turkisfarge som før med hvit tekst. Teksten
+                skal ha overskriften
+                Om oss og er det plassert der for å raskt forklare en usikker besøkende hva firmaet VisitaSardinia
+                driver med og hvem de er. Grunnen bak dette er at firmaet er relativt nytt og det er mange som ikke vet
+                hva firmaet gjør og hva slags type vare de kan tilby.
+            </p>
+            <h4>Spesielle tilbud</h4>
+            <p>Ved å scrolle videre ned på siden vil man se Spesielle tilbud. (Merk at disse er ikke synlige når man
+                kommer inn på forsiden, de ligger lenger nede på siden. Det er gjort bevist for å unngå unødvendig info
+                når man kommer inn på siden) Poenget med elementet er å gi flere farger og samtidig muligheter til
+                forsiden. Her vil det være plassert tre ruter. Hvor hver av dem har dedikerte temaer. Et for
+                restaurant, et for hotell og et for aktivitet. Tanken er at det skal bli vist bilder inni rutene med en
+                footer på bilde som forklarer kort hva det er. De skal rullere etter en viss tid, mellom ulike tilbud
+                som firmaet har per dags dato. Dersom man tar musen over et av rutene/bildene så vil footeren bevege
+                seg opp til toppen av bildet samtidig som den drar med seg den turkise fargen over bildet (med 80-90%
+                gjennomsiktighet) og det vil det men hvit tekst stå mer informasjon om det gjeldende tilbudet. Dette er
+                gjort for å unngå at brukeren klikker på noe han ikke vet hva er og må gå fram og tilbake på ulike
+                sider. </p>
+            <h4>Footer</h4>
+            <p>Nederst på siden vil det logisk nok være en footer som skal inneholde en del vanlige men viktige ting.
+                Den skal ha hvite bokstaver på denne gangen lysegrå bakgrunn. Fargevalget er laget for å understreke en
+                endring – slutten på forsiden. Innholdet her vil være firmaets kontaktinformasjon, ikoner med link til
+                å Facebook, Twitter, Instagram. </p>
+        </div>
+        <div class="content">
+            <h2>Minimumskrav til bruk av JavaScript</h2>
+            <p>Vi sikter på å tilfredsstille JavaScript-kravene med følgende funksjonalitet:</p>
+            <ol>
+                <li>
+                    En JavaScript-funksjon som reagerer når brukeren holder musepekeren over "Activities"-fanen i
+                    navigasjonsbaren, ved å vise en "drop down"-meny med de forskjellige aktivitetene. Alle aktivietene
+                    skal
+                    linke til deres respektive sider, inkludert den øverste ("Activities"). Denne menyen skal
+                    forsvinne igjen hvis brukeren flytter musepekeren bort.
+
+                </li>
+                <li>På hotell-fanen: Ha en knapp som fører til at et nytt element med en reservasjons-form popper opp
+                    under
+                    elementet som beskriver hotellet. Her skal brukeren kunne legge inn detaljer om sin bestilling
+                    (ankomst- og
+                    avreisedato, antall rom, antall personer og personlig kontaktinformasjon) og trykke på "Book now".
+                </li>
+                <li>På hotell-fanen: Når brukeren forandrer informasjon om reservasjonen skal prisen oppdateres for å
+                    vise
+                    prisen med de nåværende valgene.</li>
+                <li>
+                    På hotell-fanen: Når brukeren trykker på "Book now" skal reservasjons-formen forsvinne og en pop-up
+                    skal
+                    bekrefte at bestillingen er gjort. Denne skal kunne fjernes igjen ved å trykke på en knapp på
+                    pop-up'en.
+                    Samme pop-up skal brukes igjen når brukeren sender en mail med kontakt-formen under "About
+                    us"-fanen, men
+                    da med annen tekst.
+                </li>
+                <li>På restaurant-fanen: Hvert restaurant-element skal ha en knapp som øker størrelsen på elementet og
+                    gir mer
+                    informasjon.
+                    Dette skal være mer utfyllende informasjon om restauranten og et element som viser plasseringen til
+                    restauranten med Google Maps.
+                </li>
+                <li>
+                    (Kanskje:) På hjemmesiden: Når brukeren holder musepekeren over en av "News"-elementene, skal
+                    bildet i
+                    bakgrunnen begynne å bevege seg og en knapp med "More information" skal dukke opp. Denne skal linke
+                    til den
+                    relevante siden (hotellet/restauranten/aktiviteten som vises).
+                </li>
+            </ol>
+
+        </div>
+        <div class="content">
+            <h2>Overordnet plan for utvikling av siden</h2>
+            <ol>
+                <li>
+                    <h4>Målsetting</h4>
+                    <p>Definere bruksområde for siden, målgruppe, funksjonelle egenskaper osv. Se innlevering P1.</p>
+                </li>
+                <li>
+                    <h4>Strukturering og design av siden</h4>
+                    <p> Bestemme det overordnede designet på sidene og produsere mockups for hver side.
+                        Dette vil gjøre det enklere å produsere de endlige sidene, og gi en god indikasjon
+                        på hvordan vi ønsker at siden skal se ut. Funksjonelle og ikke-funksjonelle
+                        egenskaper på sidene skal defineres, og forskjellige JavaScript's som skal
+                        benyttes må være klart definert. <br> Frist: 09.10.
+                    </p>
+                </li>
+                <li>
+                    <h4>Rollefordelig</h4>
+                    <p>Fordele ulike arbeidsoppgaver og roller for prosjektet, slik at vi har
+                        en klar arbeidsfordeling for oppgavene som må gjøres. Dette vil tillate oss å
+                        jobbe induviduelt med oppgavene, før de forskjelligene komponentene
+                        blir kombinert i den endelige siden. <br> Frist: 09.10.
+                    </p>
+                </li>
+                <li>
+                    <h4>Utvikling av de induviduelle sidene</h4>
+                    <p>Etter at arbeidsoppgavene er fordelt vil hver gruppemedlem være ansvarlig
+                        for å gjennomføre oppgavene innen den fastsatte fristen. Hver side eller
+                        script skal først fungere isolert, før alle de induviduelle komponentene
+                        settes sammen til den endelige siden. <br> Frist 05.11.
+
+                    </p>
+                </li>
+                <li>
+                    <h4>Sammenstilling til endelig resultat og finpussing</h4>
+                    <p> Etter at alle de induviduelle sidene er produsert, vil vi sette dem sammen til en fungerende
+                        nettside. Den siste perioden av prosjektet vil gå med til dette, og eventuelle mindre
+                        estetiske eller funkjsonelle tilpassninger blir endret. Alle delmål og arbeidsoppgaver som er
+                        blitt
+                        bestemt skal være gjennomført på dette tidspunktet.<br> Frist 10.11.
+
+                    </p>
+                </li>
+
+                <li>
+                    <h4>Levering</h4>
+                    <p> Levering av endelig nettside.<br> Frist 11.11.
+
+                    </p>
+                </li>
+            </ol>
+
+        </div>
+        <div class="content">
+            <h2>Filstruktur</h2>
+            <p>Følgende filstruktur vil bli benyttet under utviklingen av nettsiden.
+                Filene vil være tilgjengelig via GitHub, slik at man enkelt kan jobbe med og
+                pushe endringer i dokumentene.
+            </p>
+            <img class="center" src="img/dtrict.png" alt="File structure">
+            <h2>Arbeidsfordeling html-sider</h2>
+            <table>
+                <tr>
+                    <th>Side</th>
+                    <th>Ansvarlig</th>
+                    <th>Frist</th>
+                </tr>
+                <tr>
+                    <td>Index.html</td>
+                    <td>XX</td>
+                    <td>05.11</td>
+                </tr>
+                <tr>
+                    <td>Hotels.html</td>
+                    <td>XX</td>
+                    <td>05.11</td>
+                </tr>
+                <tr>
+                    <td>Resturants.html</td>
+                    <td>XX</td>
+                    <td>05.11</td>
+                </tr>
+                <tr>
+                    <td>Activites.html</td>
+                    <td>XX</td>
+                    <td>05.11</td>
+                </tr>
+                <tr>
+                    <td>Biking.html</td>
+                    <td>XX</td>
+                    <td>05.11</td>
+                </tr>
+                <tr>
+                    <td>Sailing.html</td>
+                    <td>XX</td>
+                    <td>05.11</td>
+                </tr>
+                <tr>
+                    <td>Culture.html</td>
+                    <td>XX</td>
+                    <td>05.11</td>
+                </tr>
+                <tr>
+                    <td>Nature.html</td>
+                    <td>XX</td>
+                    <td>05.11</td>
+                </tr>
+                <tr>
+                    <td>AboutSardinia.html</td>
+                    <td>XX</td>
+                    <td>05.11</td>
+                </tr>
+                <tr>
+                    <td>AboutUs.html</td>
+                    <td>XX</td>
+                    <td>05.11</td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+        <div class="content">
+            <h2>Arbeidsfordeling JavaScript</h2>
+            <table>
+                <tr>
+                    <th>Navn på script</th>
+                    <th>Ansvarlig</th>
+                    <th>Beskrivelse</th>
+                    <th>Input/Output</th>
+                    <th>Frist</th>
+                </tr>
+                <tr>
+                    <td>SlideShow.js</td>
+                    <td>XX</td>
+                    <td>Skriptet skal styre slideshowet på bildene som vises på Home-siden.</td>
+                    <td>Ingen</td>
+                    <td>05.11</td>
+                </tr>
+                <tr>
+                    <td>Booking.js</td>
+                    <td>XX</td>
+                    <td>Skal brukes for å reservere hoteller, resturanter, og aktiviteter.</td>
+                    <td>Input: brukerdefinerte datoer. <br>
+                        Output: Bekreftelse dersom ledig dato.</td>
+                    <td>05.11</td>
+                </tr>
+                <tr>
+                    <td>Booking.js</td>
+                    <td>XX</td>
+                    <td>Skal brukes for å reservere hoteller, resturanter, og aktiviteter.</td>
+                    <td>Input: brukerdefinerte datoer. <br>
+                        Output: Bekreftelse dersom ledig dato.</td>
+                    <td>05.11</td>
+                </tr>
+                <tr>
+                    <td>Booking.js</td>
+                    <td>XX</td>
+                    <td>Skal brukes for å reservere hoteller, resturanter, og aktiviteter.</td>
+                    <td>Input: brukerdefinerte datoer. <br>
+                        Output: Bekreftelse dersom ledig dato.</td>
+                    <td>05.11</td>
+                </tr>
+                <tr>
+                    <td>Booking.js</td>
+                    <td>XX</td>
+                    <td>Skal brukes for å reservere hoteller, resturanter, og aktiviteter.</td>
+                    <td>Input: brukerdefinerte datoer. <br>
+                        Output: Bekreftelse dersom ledig dato.</td>
+                    <td>05.11</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content">
+            <h2>Hva vi trenger fra vår client</h2>
+            <p>Dette er hva vi trenger av ressurser fra vår klient.
+                Ettersom vi har en fiktiv klient, vil vi forvente å "motta" disse ressursene
+                fortløpende etterhvert som sidene blir utformet.
+            </p>
+            <ul>
+                <li>
+                    <h4>Bilder</h4>
+                    <ul>
+                        <li>Bilder som illutrerer foskjellige sider av Sardinia på en
+                            appelerende måte for potensielle turister. Bilder som benyttes vil
+                            primært bli hentet fra "non-copyright" bildesider.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Tekst</h4>
+                    <ul>
+                        <li>
+                            Vi må selv produsere tekst som er beskrivende for den aktuelle nettsiden, og det
+                            er viktig at denne teksten fremmer nettsidens og selskapets interesser.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Video/Animasjoner</h4>
+                    <ul>
+                        <li>
+                            Rolig animasjon på forside som skal illustrere aktuelle sider av Sardinia.
+                            Animasjon må hentes fra en "non-copyright" side.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Lokasjon for de forskjellige aktivitetene og resturanene</h4>
+                    <ul>
+                        <li>
+                            Vi må bestemme nøyaktig lokasjon for de forskjellige hotellene og resturantene, slik
+                            at vi kan benytte oss av kartfunksjoner på siden.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Kontinuerlig tilbakemelding etterhver som vi utvikler nettsiden</h4>
+                    <ul>
+                        <li>
+                            Vi må gjevnlig få tilbakemelding for hva klineten ønsker, slik at vi møter dens
+                            forventinger.
+                            Dette gjennomføres i praksis gjennom gjvnlige møter med veileder, for å få tilbakemelding.
+                            Vi vil
+                            også benytte oss av ande utestående til å teste og evaluere brukeropplevelsen av siden,
+                            slik at
+                            vi kan få tilbakemeldinger fra den potensielle brukergruppen av siden.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
