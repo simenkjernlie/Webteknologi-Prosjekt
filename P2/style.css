@@ -46,3 +46,8 @@ th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+.mockups {
+  display: block;
+  height: 400px;
+  margin: 10px auto 10px auto;
+}
