@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+}
+
+/* Navigation bar */
+.navigationBarWrapper{
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 10000;
+    height: 1em;
+}
+
+.navigationBarDiv{
+    width: 100%;
+    display: table;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.navigationBarList{
+    color: #186fad;
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+    background-color: #ffffff;
+    vertical-align: center;
+}
+
+.navigationBarLi{
+    float: left;
+    width: 16.6%; /* Width of navigation bar link */
+}
+
+.navigationBarLi a{
+    background-color: white;
+    display: block;
+    color: #13434b;
+    text-align: center;
+    padding: 7px; /* Margin over and under text link */
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navigationBarLi a:hover{
+    background-color: #e4e4e4;
+}
+
+.navDropdown{
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: inherit;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.navDropdown a{
+    display: block;
+    text-align: center;
+    color: #000000;
+}
+
+#DropdownLink:hover .navDropdown{
+    display: block;
+}
+
+@media only screen and (max-device-width: 800px){
+    .navigationBarLi{
+        float: none;
+        width: 100%;
+    }
+    .navDropdown :hover, #DropdownLink:hover .navDropdown{
+        height: 0;
+        display: none;
+        overflow: hidden;
+    }
+    .navigationBarLi a{
+        display: none;
+    }
+    .navigationBarLi .navBarHome{
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width: 960px){
+    .navigationBarLi{
+        float: none;
+        width: 100%;
+    }
+    .navDropdown :hover, #DropdownLink:hover .navDropdown{
+        height: 0;
+        display: none;
+        overflow: hidden;
+    }
+    .navigationBarLi a{
+        display: none;
+    }
+    .navigationBarLi .navBarHome{
+        display: block;
+    }
+
+
+    /*
+    #DropdownLink{
+        height: auto;
+        -webkit-transition: height 1s;
+        transition: height 1s;
+    }
+
+    .navDropdown{
+        display: block;
+        height: 0px;
+        overflow: hidden;
+        -webkit-transition: height 1s;
+        transition: height 1s;
+    }
+    .dropdownMainLink:hover + .navDropdown, .navDropdown:hover{
+        height: 146px;
+    }
+
+    .navigationBarLi .dropdownMainLink:hover + .navigationBarLi a{
+        color:red;
+    }
+
+    .navDropdown a{
+        background-color: #f0f0f0;
+    } */
+}
+

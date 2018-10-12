@@ -1,0 +1,134 @@
+/* Footer */
+.footer{
+    background-color: #999797;
+    color: #ffffff;
+    height: 25vh;
+    width: 100%;
+    display: table;
+    overflow: hidden;
+    vertical-align: center;
+}
+
+.footerPart{
+    height: 25vh;
+    float: left;
+}
+#left_footer{
+    width: 30%;
+    border-right: 1px solid black;
+    position: relative;
+}
+#right_footer{
+    width:60%;
+}
+
+/* Må endre px hvis dette skal gjøre ordentlig og responsivt */
+#contactInf{
+    margin-top: 30px;
+    margin-left: 30px;
+    line-height: 150%;
+    overflow: hidden;
+}
+#socialMedia{
+    position: absolute;
+    bottom: 30px;
+    margin-left: 30px;
+    line-height: 150%;
+}
+
+.footerImages{
+    height: 12px;
+    width: 12px;
+}
+
+.footerLinkListHeader{
+    margin-left: 15%;
+    line-height: 150%;
+    height: 20%;
+    margin-top: 5%;
+}
+
+.footerLinkList{
+    margin-left: 15%;
+    line-height: 150%;
+    height: 50%;
+    width: 60%;
+    display: table;
+    word-wrap: break-word;
+}
+
+.footerLinkList a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.footerLinks a:hover{
+    color: #13434b;
+}
+
+.footerLinks{
+    list-style: none;
+}
+.footerLinks > li {
+    float:left;
+    width: 50%;
+    margin-bottom: 2%;
+}
+
+/* Activates when the device is an phone */
+@media only screen and (max-device-width: 800px){
+    .footer{
+        height: 10vh;
+    }
+
+    .footerPart{
+        float: none;
+        margin: auto;
+        height: 10vh;
+    }
+    #right_footer{
+        width: 60%;
+    }
+    #left_footer {
+        width: 60%;
+        border-right: none;
+        border-bottom: 1px solid black;
+        overflow: auto;
+        z-index: 1;
+    }
+    .footerLinkList{
+        width: 150%;
+        margin-left: 5%;
+    }
+    .footerLinkListHeader{
+        text-align: center;
+    }
+}
+
+/* When the screen less than 800px. A computer screen */
+@media only screen and (max-width: 800px) {
+    .footer{
+        height: 10vh;
+    }
+
+    .footerPart{
+        float: none;
+        margin: auto;
+    }
+    #right_footer{
+        width: 60%;
+    }
+    #left_footer {
+        width: 60%;
+        border-right: none;
+        border-bottom: 1px solid black;
+        overflow: auto;
+        z-index: 1;
+    }
+    .footerLinkList{
+        width: 150%;
+        margin-left: 5%;
+    }
+    .footerLinkListHeader{
+        text-align: center;
+    }
+}

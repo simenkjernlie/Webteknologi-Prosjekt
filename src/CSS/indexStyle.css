@@ -1,0 +1,152 @@
+body{
+    font-family: Roboto Slab, sans-serif
+}
+
+
+/* Header */
+.titleBar{
+    background-color: #13434b;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    color:white;
+}
+
+.headerImg{
+    height: inherit;
+}
+
+
+/* Body */
+.indexPicture{
+    width: 100%;
+    background-color: #13434b;
+}
+
+.portraitImage{
+    width: 100%;
+    height: 85vh;
+    margin: 0;
+    padding: 0;
+}
+
+.aboutFile{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 85vh;
+    color: #ffffff;
+    background-color: #13434b;
+    font-size: 150%;
+    vertical-align: middle;
+}
+
+.textWrapper{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding-top: 20%;
+    line-height: normal;
+}
+
+
+
+
+/* Recomended activitis */
+.recomendedSection{
+    height: 55vh;
+    width: 100%;
+    text-align: center;
+    padding-top: 10vh; 
+    color: #13434b;
+    font-size: 150%;
+}
+
+.activitis{
+    width: 31.3%;
+    height: 50%;
+    float: left;
+    margin: 1%;
+    position: relative;
+}
+
+.activitis a img{
+    width: 100%;
+    height: 100%;
+}
+
+.hoverInf{
+    width: 100%;
+    height: 1.5em;
+    z-index: 1000;
+    position: absolute;
+    float: left;
+    left: 0px;
+    bottom: 0;
+    color: #F8F8F8;
+    background: rgba(19,67,76,0.8);
+    -webkit-transition: height 0.4s;
+    transition: height 0.4s;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+.activitis a img:hover + .hoverInf, .hoverInf:hover{
+    height: 100%;
+}
+
+
+/* When the site is loaded on a mobile device */
+@media only screen and (max-device-width: 800px){
+    .portraitImage{
+        height: 45vh;
+    }
+    .aboutFile{
+        height: 45vh;
+    }
+    .textWrapper{
+        padding-top: 20%;
+        font-size: 120%;
+    }
+    .recomendedSection{
+        padding-top: 2vh;
+    }
+    
+    .activitis{
+        float: left;
+        width: 70%;
+        margin-left:15%;
+        margin-bottom: 2%;
+    }
+    .hoverInf{
+        left:inherit;
+    }
+}
+
+/* When the screen less than 600px */
+@media only screen and (max-width: 800px) {
+    .portraitImage{
+        height: 45vh;
+    }
+    .aboutFile{
+        height: 45vh;
+    }
+    .textWrapper{
+        padding-top: 15%;
+        font-size: 65%;
+    }
+    .recomendedSection{
+        padding-top: 2vh;
+    }
+    
+    .activitis{
+        float: left;
+        width: 70%;
+        margin-left:15%;
+        margin-bottom: 2%;
+    }
+    .hoverInf{
+        left:inherit;
+    }
+}
