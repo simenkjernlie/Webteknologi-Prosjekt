@@ -18,8 +18,8 @@ var navigationBar = null;
 var offSet = null;
 var h = null;
 
-function navigationStartup(){
-    addHeader()
+function navigationStartup(isindex){
+    addHeader(isindex)
     addNavBar()
     const navBar = document.getElementById("navBarDiv");
     navBar.addEventListener("mouseover",function(){
@@ -189,13 +189,18 @@ function addNewElementNavbar(element, liElement) {
 * Add a div with the id "headerDiv" at the top of the document
 * (The top of the body tag) and this code wil insert the header auto-magically
 * */
-function addHeader(){
+function addHeader(isindex){
     const header = document.getElementById("headerDiv");
     const titleBar = document.createElement("div")
     titleBar.classList.add("titleBar");
     const image = document.createElement("img");
     image.alt = "header image";
-    image.src = "img/logo.PNG";
+    let imageLink = "";
+    if (isindex != true){
+        imageLink += "../"
+    }
+    imageLink += "img/logo.PNG";
+    image.src = imageLink;
     image.classList.add("headerImg");
     titleBar.appendChild(image)
     header.appendChild(titleBar);

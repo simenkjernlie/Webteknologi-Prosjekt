@@ -2,22 +2,6 @@ body{
     font-family: Roboto Slab, sans-serif
 }
 
-
-/* Header */
-.titleBar{
-    background-color: #13434b;
-    width: 100%;
-    height: 60px;
-    text-align: center;
-    vertical-align: middle;
-    color:white;
-}
-
-.headerImg{
-    height: inherit;
-}
-
-
 /* Body */
 .indexPicture{
     width: 100%;

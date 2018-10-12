@@ -75,15 +75,20 @@ links_Footer = {
 }
 
 
-function createImg(element){
+function createImg(element, isindex){
     const img = document.createElement("img");
     img.alt = element.alt;
-    img.src = element.src;
+    let src = "";
+    if (isindex != true){
+        src += "../"
+    }
+    src += element.src
+    img.src = src;
     img.classList.add(element.class);
     return img;
 }
 
-function addFooter() {
+function addFooter(isindex) {
     const footer = document.getElementById("footer");
 
     const left_footer = document.createElement("div");
@@ -97,7 +102,7 @@ function addFooter() {
     const contactInf = document.createElement("div");
     contactInf.setAttribute("id","contactInf");
     for (let e in images.contactInf){
-        contactInf.appendChild(createImg(images.contactInf[e]));
+        contactInf.appendChild(createImg(images.contactInf[e],isindex));
         if (images.contactInf[e].text != null){
             console.log(images.contactInf[e].text);
             const t = document.createTextNode(images.contactInf[e].text)
@@ -111,7 +116,7 @@ function addFooter() {
     sosialmedia.appendChild(document.createTextNode("Sosial"));
     sosialmedia.appendChild(document.createElement("br"));
     for (let e in images.sosialmedia){
-        sosialmedia.appendChild(createImg(images.sosialmedia[e]));
+        sosialmedia.appendChild(createImg(images.sosialmedia[e],isindex));
     }
 
 
