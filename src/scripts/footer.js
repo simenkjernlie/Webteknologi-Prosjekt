@@ -136,7 +136,12 @@ function addFooter(isindex) {
     for (let e in links_Footer){
         const listElement = document.createElement("li");
         const linkElement = document.createElement("a");
-        linkElement.href = links_Footer[e].href;
+        let href = "";
+        if (links_Footer[e].href == "index.html" && isindex == false){
+            href += "../";
+        }
+        href += links_Footer[e].href;
+        linkElement.href = href;
         linkElement.appendChild(document.createTextNode(links_Footer[e].text));
         listElement.appendChild(linkElement);
         footerLinks.appendChild(listElement);

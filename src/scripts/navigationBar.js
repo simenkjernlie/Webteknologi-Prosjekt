@@ -11,6 +11,12 @@
 *           </body>
 *
 * Remember to also add the stylesheet navigationBar.css.
+*
+* You also need to add a the function changeWidth() to the body
+*   Example:
+*       <body>
+*           onresize="changeWidth()"
+*       </body>
 * */
 
 
@@ -19,13 +25,13 @@ var offSet = null;
 var h = null;
 
 function navigationStartup(isindex){
-    addHeader(isindex)
-    addNavBar()
+    addHeader(isindex);
+    addNavBar(isindex);
     const navBar = document.getElementById("navBarDiv");
     navBar.addEventListener("mouseover",function(){
         let element = document.getElementsByClassName("navigationBarListLink");
         for (i in element){
-            if (element[i].style == undefined){
+            if (element[i].style === undefined){
                 break;
             }
            element[i].style.display = "block";
@@ -37,14 +43,13 @@ function navigationStartup(isindex){
         }
         let element = document.getElementsByClassName("navigationBarListLink");
         for (i in element){
-            if (element[i].style == undefined){
+            if (element[i].style === undefined){
                 break;
             }
-            if (element[i].innerHTML != "Home"){
+            if (element[i].innerHTML !== "Home"){
                 element[i].style.display = "none";
             }
         }
-        console.log("På");
     });
     navigationBar = document.getElementById("navigationBar");
     offSet = navigationBar.offsetTop;
@@ -55,8 +60,24 @@ function navigationStartup(isindex){
     
 }
 
+function changeWidth(){
+    let displaytype = "block";
+    if (window.innerWidth <= 960){
+        displaytype = "none";
+    }
+    let element = document.getElementsByClassName("navigationBarListLink");
+    for (i in element){
+        if (element[i].style === undefined){
+            break;
+        }
+        if (element[i].innerHTML !== "Home"){
+            element[i].style.display = displaytype;
+        }
+    }
+}
+
 function navigationPosition(){
-    if (String(document.getElementById("navigationBar").offsetHeight)+"px" != h){
+    if (String(document.getElementById("navigationBar").offsetHeight)+"px" !== h){
         h = String(document.getElementById("navigationBar").offsetHeight)+"px";
         document.getElementById("navigationPlaceholder").style.height = h;
     }
@@ -147,7 +168,7 @@ navbarElements = {
 }
 
 
-function addNewElementNavbar(element, liElement) {
+function addNewElementNavbar(element, liElement,isindex) {
     //Creates a link object and sets its atributes
     const link = document.createElement("a");
     link.classList.add(element.linkClass);
@@ -155,7 +176,12 @@ function addNewElementNavbar(element, liElement) {
         link.classList.add(element.extraLink);
     }
     link.appendChild(document.createTextNode(element.name));
-    link.href = element.pageLink;
+    let href = "";
+    if (element.pageLink === "index.html" && isindex === false){
+        href += "../";
+    }
+    href += element.pageLink;
+    link.href = href;
     let dropDownDiv = null;
     //Tests if the atribut children of element is null. If not it will add these
     //to a div and append them to the dropDown div
@@ -165,12 +191,12 @@ function addNewElementNavbar(element, liElement) {
         link.classList.add("dropdownMainLink")
         //Iterates through the elements of child and ads them by calling this methode recursivly
         for (let e in element.children){
-            dropDownDiv.appendChild(addNewElementNavbar(element.children[e],false));
+            dropDownDiv.appendChild(addNewElementNavbar(element.children[e],false,isindex));
         }
     }
     //Tests if the parameter liElement is true
     //If os, it adds a list element and appends the link to this before it returns the list element
-    if (liElement == true) {
+    if (liElement === true) {
         const list = document.createElement("li");
         list.classList.add("navigationBarLi");
         list.appendChild(link);
@@ -196,7 +222,7 @@ function addHeader(isindex){
     const image = document.createElement("img");
     image.alt = "header image";
     let imageLink = "";
-    if (isindex != true){
+    if (isindex !== true){
         imageLink += "../"
     }
     imageLink += "img/logo.PNG";
@@ -211,7 +237,7 @@ function addHeader(isindex){
 * Add this code and a div with the id "navBarDiv" at the top of the document
 * (Below the header) and this code will insert the navigation bar auto-magically
 * */
-function addNavBar() {
+function addNavBar(isindex) {
     //Finds the navBarDiv where the navigation bar will be inserted
     const navBarDiv = document.getElementById("navBarDiv");
     //Creates a div with class navigationBarWrapper
@@ -229,7 +255,7 @@ function addNavBar() {
     navigationBarDiv.appendChild(navigationBarList);
     //A for lop iterating through the elements in the object navbarElements created with Json at the start of this document
     for (let e in navbarElements) {
-        navigationBarList.appendChild(addNewElementNavbar(navbarElements[e], true));
+        navigationBarList.appendChild(addNewElementNavbar(navbarElements[e], true,isindex));
 
     }
     //Creates a new div and gives it an ID
