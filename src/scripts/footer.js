@@ -1,9 +1,9 @@
 /*
 * Add one div to the bottom of the page (body tag) width the ID-"footer"
 * Link this script at the top of the page.
-* Remember to call the function addFooter() at startup (onload)
+* Remember to call the function addFooter() at startup (onload) width the parameter false
 *   Example:
-*       <body onload="addFooter()">
+*       <body onload="addFooter(false)">
 *           ...
 *       </body>
 * Remember to also add the stylesheet at the top of the page
@@ -62,7 +62,7 @@ links_Footer = {
     },
     activities:{
         text:"Activities",
-        href:"index.html",
+        href:"activities.html",
     },
     about_Sardinia:{
         text:"About Sardinia",
@@ -139,6 +139,8 @@ function addFooter(isindex) {
         let href = "";
         if (links_Footer[e].href == "index.html" && isindex == false){
             href += "../";
+        } else if(links_Footer[e].href !== "index.html" && isindex === true){
+            href += "WebPages/";
         }
         href += links_Footer[e].href;
         linkElement.href = href;

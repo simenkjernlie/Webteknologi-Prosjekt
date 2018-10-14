@@ -4,9 +4,9 @@
 * Second: Add a div width the id-"navBarDiv"
 * Remember to add the script in the head of your html file.
 * You also nead a onload function called from your body.
-* The body tag should rund the function navigationStartup() onload
+* The body tag should rund the function navigationStartup() onload width the parameter false
 *   Example:
-*           <body onload="navigationStartup()">
+*           <body onload="navigationStartup(false)">
 *               ...
 *           </body>
 *
@@ -14,8 +14,8 @@
 *
 * You also need to add a the function changeWidth() to the body
 *   Example:
-*       <body>
-*           onresize="changeWidth()"
+*       <body onresize="changeWidth()">
+*
 *       </body>
 * */
 
@@ -149,7 +149,7 @@ navbarElements = {
         },
         linkClass: "navigationBarListLink",
         extraLink: null,
-        pageLink: "index.html",
+        pageLink: "activities.html",
     },
     sardinia: {
         name: "About Sardinia",
@@ -179,6 +179,8 @@ function addNewElementNavbar(element, liElement,isindex) {
     let href = "";
     if (element.pageLink === "index.html" && isindex === false){
         href += "../";
+    } else if(element.pageLink !== "index.html" && isindex === true){
+        href += "WebPages/";
     }
     href += element.pageLink;
     link.href = href;
