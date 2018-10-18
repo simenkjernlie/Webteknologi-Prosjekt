@@ -10,7 +10,7 @@
     <script src="../scripts/navigationBar.js"></script>
     <script src="../scripts/footer.js"></script>
 </head>
-<body onload="navigationStartup(false),addFooter(false)" onresize="changeWidth()">
+<body onload="navigationStartup(false),addFooter(false)" onresize="changeWidth(), footerWidthResize()">
     <div id="headerDiv">
 
     </div>
@@ -20,8 +20,8 @@
     </div>
 
     <!--- Main body structure --->
-    <div class="pageBody">
-        <h2 class="pageHeader">Activities</h2>
+    <div class="pageBody" id="mainBodyDiv">
+        <p class="pageHeader">Activities</p>
 
         <div class="activitis">
             <a href="activities.html">

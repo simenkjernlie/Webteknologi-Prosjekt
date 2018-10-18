@@ -4,15 +4,18 @@
 }
 
 .pageBody{
+    background-color: white;
     width: 100%;
-    min-height: 60vh;
+    position: relative;
+    height: auto;
+    display: inline-block;
 }
 
 .pageHeader{
     text-align: center;
     font-size: 230%;
     color: #000000;
-    margin-top: 40px;
+    padding-top: 3vh;
     margin-bottom: 0px;
 }
 

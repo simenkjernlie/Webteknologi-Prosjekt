@@ -45,7 +45,12 @@ body{
     text-align: center;
     padding: 7px; /* Margin over and under text link */
     text-decoration: none;
-    font-size: 20px;
+    font-size: 3vh;
+    height: 4vh;
+}
+
+.navigationPlaceholder{
+    height: 3vh;
 }
 
 .navigationBarLi a:hover{
