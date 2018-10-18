@@ -108,7 +108,7 @@ navbarElements = {
         children: null,
         linkClass: "navigationBarListLink",
         extraLink: null,
-        pageLink: "index.html",
+        pageLink: "Hotels.html",
     },
     resturants: {
         name: "Resturants",
@@ -125,7 +125,7 @@ navbarElements = {
                 children: null,
                 linkClass: "dropDownLink",
                 extraLink: null,
-                pageLink: "index.html",
+                pageLink: "Sailing.html",
             },
             biking:{
                 name:"Biking",

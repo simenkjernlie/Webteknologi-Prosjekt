@@ -54,7 +54,7 @@ links_Footer = {
     },
     hotels:{
         text:"Hotels",
-        href:"index.html",
+        href:"Hotels.html",
     },
     resturants:{
         text:"Resturants",
