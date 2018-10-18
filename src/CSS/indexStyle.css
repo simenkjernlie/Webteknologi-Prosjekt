@@ -49,7 +49,7 @@ body{
 
 .activitis{
     width: 31.3%;
-    height: 50%;
+    height: 50%; /* Should be auto, but the images needs to be of the same size for this to work */
     float: left;
     margin: 1%;
     position: relative;
