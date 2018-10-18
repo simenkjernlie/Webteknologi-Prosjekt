@@ -64,7 +64,6 @@
   text-align: right;
   display: inline-block;
   width: 51.5%;
-  vertical-align: top;
 }
 .boat {
   height: 100%;
@@ -85,10 +84,6 @@
   text-align: right;
 }
 
-.verticalLine{
-  border-left: 3px solid #F8F8F8 ;
-}
-
 form {
   color: #F8F8F8;
   font-size: 1vw;
@@ -104,9 +99,37 @@ input{
 }
 
 button{
-  font-size: 1.2vw;
+  font-size: 1.4vw;
+  font-weight: bold;
   width: 12vw;
   height: 3.5vw;
   background-color: #FAC917;
-  color: #F8F8F8;
+  color: #13434b;
+  border-radius: 12px;
+  transition: all 0.5s;
+  cursor: pointer;
 }
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -40px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 30px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
