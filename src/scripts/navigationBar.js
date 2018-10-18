@@ -259,7 +259,7 @@ function addNavBar(isindex) {
     navigationBarDiv.appendChild(navigationBarList);
     //A for lop iterating through the elements in the object navbarElements created with Json at the start of this document
     for (let e in navbarElements) {
-        navigationBarList.appendChild(addNewElementNavbar(navbarElements[e], true,isindex));
+        navigationBarList.appendChild(addNewElementNavbar(navbarElements[e], true, isindex));
 
     }
     //Creates a new div and gives it an ID

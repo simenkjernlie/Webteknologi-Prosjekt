@@ -1,7 +1,7 @@
 /* Footer */
 .footer{
     background-color: #999797;
-    color: #ffffff;
+    color: #f8f8f8;
     height: 25vh;
     width: 100%;
     display: table;
@@ -64,7 +64,7 @@
 }
 
 .footerLinkList a{
-    color: #ffffff;
+    color: #f8f8f8;
     text-decoration: none;
 }
 .footerLinks a:hover{

@@ -160,11 +160,11 @@ function addFooter(isindex) {
 
 function footerWidthResize() {
     console.log(document.getElementById("mainBodyDiv").offsetHeight);
-    if (document.getElementById("mainBodyDiv").offsetHeight > 500 || document.getElementById("mainBodyDiv").offsetWidth < 710){
+    if (document.getElementById("mainBodyDiv").offsetHeight > screen.height/2 || document.getElementById("mainBodyDiv").offsetWidth < 710){
         document.getElementById("footer").style.position = "relative";
-        console.log("Relative")
+        //console.log("Relative")
     } else{
         document.getElementById("footer").style.position = "fixed";
-        console.log("Fixed")
+        //console.log("Fixed")
     }
 }

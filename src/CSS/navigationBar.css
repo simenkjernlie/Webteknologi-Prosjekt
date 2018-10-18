@@ -10,7 +10,7 @@ body{
 /* Navigation bar */
 .navigationBarWrapper{
     width: 100%;
-    background-color: #ffffff;
+    background-color: #f8f8f8;
     position: absolute;
     z-index: 10000;
     height: 1em;
@@ -29,7 +29,7 @@ body{
     margin: 0;
     padding:0;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: #f8f8f8;
     vertical-align: center;
 }
 
@@ -39,14 +39,14 @@ body{
 }
 
 .navigationBarLi a{
-    background-color: white;
+    background-color: #f8f8f8;
     display: block;
     color: #13434b;
     text-align: center;
     padding: 7px; /* Margin over and under text link */
     text-decoration: none;
-    font-size: 3vh;
-    height: 4vh;
+    font-size: 2.5vh;
+    height: 3vh;
 }
 
 .navigationPlaceholder{
@@ -60,7 +60,7 @@ body{
 .navDropdown{
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: #f8f8f8;
     width: inherit;
     z-index: 1;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
