@@ -1,3 +1,4 @@
+
 /*
 * Add two divs to the top of you document body.
 * First: Add a div width the id-"headerDiv"
@@ -77,10 +78,11 @@ function changeWidth(){
 }
 
 function navigationPosition(){
+    /*
     if (String(document.getElementById("navigationBar").offsetHeight)+"px" !== h){
         h = String(document.getElementById("navigationBar").offsetHeight)+"px";
         document.getElementById("navigationPlaceholder").style.height = h;
-    }
+    } */
     if (navigationBar != null){
         if (window.pageYOffset > offSet){
             navigationBar.style = "position:fixed; top:0;";
@@ -106,7 +108,7 @@ navbarElements = {
         children: null,
         linkClass: "navigationBarListLink",
         extraLink: null,
-        pageLink: "index.html",
+        pageLink: "Hotels.html",
     },
     resturants: {
         name: "Resturants",
@@ -123,7 +125,7 @@ navbarElements = {
                 children: null,
                 linkClass: "dropDownLink",
                 extraLink: null,
-                pageLink: "index.html",
+                pageLink: "Sailing.html",
             },
             biking:{
                 name:"Biking",

@@ -54,7 +54,7 @@ links_Footer = {
     },
     hotels:{
         text:"Hotels",
-        href:"index.html",
+        href:"Hotels.html",
     },
     resturants:{
         text:"Resturants",
@@ -155,4 +155,16 @@ function addFooter(isindex) {
 
     footer.appendChild(left_footer);
     footer.appendChild(right_footer);
+    footerWidthResize();
+}
+
+function footerWidthResize() {
+    console.log(document.getElementById("mainBodyDiv").offsetHeight);
+    if (document.getElementById("mainBodyDiv").offsetHeight > 500 || document.getElementById("mainBodyDiv").offsetWidth < 710){
+        document.getElementById("footer").style.position = "relative";
+        console.log("Relative")
+    } else{
+        document.getElementById("footer").style.position = "fixed";
+        console.log("Fixed")
+    }
 }
