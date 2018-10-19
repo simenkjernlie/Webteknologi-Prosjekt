@@ -159,8 +159,9 @@ function addFooter(isindex) {
 }
 
 function footerWidthResize() {
-    console.log(document.getElementById("mainBodyDiv").offsetHeight);
-    if (document.getElementById("mainBodyDiv").offsetHeight > screen.height/2 || document.getElementById("mainBodyDiv").offsetWidth < 710){
+    //console.log(document.getElementById("mainBodyDiv").offsetHeight);
+    //console.log(document.documentElement.clientHeight);
+    if (document.getElementById("mainBodyDiv").offsetHeight > document.documentElement.clientHeight*55/100 || document.getElementById("mainBodyDiv").offsetWidth < 710){
         document.getElementById("footer").style.position = "relative";
         //console.log("Relative")
     } else{
