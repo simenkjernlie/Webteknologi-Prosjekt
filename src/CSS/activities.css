@@ -73,4 +73,13 @@
     .pageBody{
         min-height: 71.58vh;
     }
+    .activitis{
+        width: 40%;
+        margin-left:5%;
+        margin-right:5%;
+    }
+    .pageHeader{
+        font-size: 350%;
+        margin-bottom: 20px;
+    }
 }
