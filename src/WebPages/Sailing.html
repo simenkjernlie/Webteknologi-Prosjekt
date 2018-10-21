@@ -12,7 +12,7 @@
     <script src="../scripts/footer.js"></script>
     <script src="../scripts/price.js"></script>
 </head>
-<body onload="navigationStartup(false),addFooter(false)" onresize="changeWidth()">
+<body onload="null_ut(),navigationStartup(false),addFooter(false)" onresize="changeWidth()">
 
     <div id="headerDiv"></div>
 
@@ -39,8 +39,7 @@
                         <p>A Luxury yacht (also super-yacht, large yacht and mega-yacht) is a very expensive, privately owned, professionally crewed sailing or motor yacht.
                             There is no industry-wide standard for the difference between super-yacht and mega-yacht.</p>
                             <br>
-                        <p id="price">
-                            <img src="../img/euro-vector.png" alt="euro-vector" width="6%">
+                        <p class="price" >
                         </p>
                     </div>
                 </div>
@@ -50,11 +49,11 @@
                                 <label for="date">
                                     Pick-Up Date:
                                     <br>
-                                    <input type="date" id="input_start" onchange="price(value)" name="hentedato" placeholder="Pick-Up Date" value="" required>
+                                    <input type="date" class="input_start" onchange="calc_price(0)" name="hentedato" placeholder="Pick-Up Date" value="" required>
                                     <br>
                                     End of Trip Date:
                                     <br>
-                                    <input type="date" class="input_end" onchange="price(value)" name="leveringsdato" placeholder="End of Trip Date" value="" required>
+                                    <input type="date" class="input_end" onchange="calc_price(0)" name="leveringsdato" placeholder="End of Trip Date" value="" required>
                                 </label>
                                 <br><br><br>
                                 <label for="name">
@@ -109,8 +108,6 @@
                                     There is no industry-wide standard for the difference between super-yacht and mega-yacht.Luxury yacht (also super-yacht, large yacht and mega-yacht) is a very expensive, privately owned, professionally crewed sailing or motor yacht.
                                 </p>
                         <p class="price">
-                            <img src="../img/euro-vector.png" alt="euro-vector" width="6%">
-                            50,00
                         </p>
                     </div>
                 </div>
@@ -120,11 +117,11 @@
                                 <label for="date">
                                     Pick-Up Date:
                                     <br>
-                                    <input type="date" name="hentedato" placeholder="Pick-Up Date" value="" required>
+                                    <input type="date" class="input_start" onchange="calc_price(1)" name="hentedato" placeholder="Pick-Up Date" value="" required>
                                     <br>
                                     End of Trip Date:
                                     <br>
-                                    <input type="date" name="leveringsdato" placeholder="End of Trip Date" value="" required>
+                                    <input type="date" class="input_end" onchange="calc_price(1)"name="leveringsdato" placeholder="End of Trip Date" value="" required>
                                 </label>
                                 <br><br><br>
                                 <label for="name">
@@ -173,7 +170,6 @@
                         <p>A Luxury yacht (also super-yacht, large yacht and mega-yacht) is a very expensive, privately owned, professionally crewed sailing or motor yacht.
                             There is no industry-wide standard for the difference between super-yacht and mega-yacht.</p>
                         <p class="price">
-                            <img src="../img/euro-vector.png" alt="euro-vector" width="6%">
                         </p>
                     </div>
                 </div>
@@ -183,11 +179,11 @@
                                 <label for="date">
                                     Pick-Up Date:
                                     <br>
-                                    <input type="date" name="hentedato" placeholder="Pick-Up Date" value="" required>
+                                    <input type="date" class="input_start" onchange="calc_price(2)" name="hentedato" placeholder="Pick-Up Date" value="" required>
                                     <br>
                                     End of Trip Date:
                                     <br>
-                                    <input type="date" name="leveringsdato" placeholder="End of Trip Date" value="" required>
+                                    <input type="date" class="input_end" onchange="calc_price(2)" name="leveringsdato" placeholder="End of Trip Date" value="" required>
                                 </label>
                                 <br><br><br>
                                 <label for="name">
