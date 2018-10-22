@@ -96,7 +96,10 @@ input{
   width: 15vw;
 }
 
-.input_time {
+.input_start_time {
+  width: 8vw;
+}
+.input_end_time{
   width: 8vw;
 }
 
