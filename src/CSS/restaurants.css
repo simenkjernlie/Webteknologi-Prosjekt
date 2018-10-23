@@ -1,0 +1,102 @@
+.hotelRestaurantBox {
+  /* Equal to the hotel_blocks class in Hotels.css */
+  background-color: #13434b;
+  width: 80%;
+  height: 200px;
+  margin: 5px;
+  position: relative;
+  text-align: center;
+  margin-left: 10%;
+  margin-bottom: 0%;
+  color: #f8f8f8;
+  /* Added */
+  border-radius: 3px;
+}
+.hotelRestaurantExpansion {
+  display: none;
+  width: 80%;
+  height: 200px;
+  background-color: #13434b;
+  top: -10px; /* To cover the radius of the previous box*/
+  color: #f8f8f8;
+  margin-left: 10%;
+  position: relative;
+  border-radius: 3px;
+}
+.hotelRestaurantBox img {
+  /* Equal to hot_images class in Hotels.css */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+  height: 180px;
+  width: 180px;
+  /* Added */
+  object-fit: cover;
+  border-radius: 6%;
+}
+.information {
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  left: 200px;
+  width: 40%;
+  padding: 10px;
+}
+.hotelRestaurantExpansion .information {
+  font-size: 10pt;
+  width: 60%;
+  margin-left: -15%;
+  margin-top: 10px;
+}
+.hotelRestaurantBox .quickInfo {
+  font-style: italic;
+  font-size: 10pt;
+}
+.hotelRestaurantBox .description {
+  padding-top: 10px;
+}
+.hotelRestaurantBox .sidebar,
+.hotelRestaurantExpansion .sidebar {
+  position: absolute;
+  text-align: left;
+  top: 0;
+  left: 70%;
+  padding: 5px 5px 5px 15px;
+  width: 25%;
+  height: 170px;
+  margin: 10px;
+  border-left: solid white 1px;
+}
+.hotelRestaurantExpansion .sidebar {
+  padding-top: 0;
+  margin-top: -10px;
+  height: 195px;
+}
+.hotelRestaurantBox p {
+  padding: 10px;
+  font-size: 10pt;
+}
+.arrowDownContainer {
+  position: absolute;
+  right: 50%;
+  bottom: -10px;
+}
+img.arrowDown {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.hotelRestaurantBox .rating {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#mapPizza,
+#mapSteak,
+#mapSeafood,
+#mapLobster {
+  width: 100%;
+  height: 100%;
+}
