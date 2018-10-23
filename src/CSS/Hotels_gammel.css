@@ -1,4 +1,4 @@
-#hotel_block1, #hotel_block2, #hotel_block3, #hotel_block4{
+.hotel_blocks{
     background-color: #13434b;
     width: 80%;
     height: 200px;
@@ -11,9 +11,11 @@
 }
 
 #utvidelse1, #utvidelse2, #utvidelse3, #utvidelse4{
+    width: 80%;
     height: 500px;  
     background-color:#13434b;
     bottom: 0px;
+    margin-left: 10%;
     position: relative;
 }
 
@@ -25,15 +27,8 @@
     cursor: pointer;
     padding-left: 40px;
     padding-right: 40px;
-    z-index: 1;
 }
 
-#hot_map1{
-    width: 180px;
-    right: 10px;
-    top: -200px;
-    position: absolute;
-}
 
 .pageHeader{
     text-align: center;
@@ -55,9 +50,9 @@
 
 
 
-#gul_boks1, #gul_boks2, #gul_boks3, #gul_boks4{
+.gul_boks{
     background-color: rgb(255, 196, 0);
-    height: 40%;
+    height: 60%;
     width: 100% -20px;
     margin-left: 10px;
     margin-right: 10px;
