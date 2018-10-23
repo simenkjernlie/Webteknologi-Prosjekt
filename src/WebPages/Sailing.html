@@ -12,7 +12,7 @@
     <script src="../scripts/footer.js"></script>
     <script src="../scripts/price.js"></script>
 </head>
-<body onload="navigationStartup(false),addFooter(false)" onresize="changeWidth()">
+<body onload="set_todays_date(), null_ut(),navigationStartup(false),addFooter(false)" onresize="changeWidth()">
 
     <div id="headerDiv"></div>
 
@@ -39,53 +39,56 @@
                         <p>A Luxury yacht (also super-yacht, large yacht and mega-yacht) is a very expensive, privately owned, professionally crewed sailing or motor yacht.
                             There is no industry-wide standard for the difference between super-yacht and mega-yacht.</p>
                             <br>
-                        <p id="price">
-                            <img src="../img/euro-vector.png" alt="euro-vector" width="6%">
+                        <p class="price" >
                         </p>
                     </div>
                 </div>
                 <div class="side2">
-                    <div class="leftside2">
-                        <form action="Sailing.html" method="post" accept-charset="UTF-8">
-                                <label for="date">
-                                    Pick-Up Date:
-                                    <br>
-                                    <input type="date" id="input_start" onchange="price(value)" name="hentedato" placeholder="Pick-Up Date" value="" required>
-                                    <br>
-                                    End of Trip Date:
-                                    <br>
-                                    <input type="date" class="input_end" onchange="price(value)" name="leveringsdato" placeholder="End of Trip Date" value="" required>
-                                </label>
-                                <br><br><br>
-                                <label for="name">
-                                    Full name
-                                    <br>
-                                    <input type="text" name="name" placeholder="Name"  pattern="[A-Za-z \s]+" required autocomplete="name">
-                                    <br>
-                                </label>
-                                <label for="email">
-                                    E-Mail
-                                    <br>
-                                    <input type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
-                                </label>
-                        </form>
-                    </div>
-                    <div class="rightside2">
-                        <form class="" action="index.html" method="post">
-                            Pic-Up Time
-                            <br>
-                            <input class="input_time" type="time" name="hentetid" value="" required>
-                            <br>
-                            End of trip Time
-                            <br>
-                            <input class="input_time" type="time" name="hentetid" value="" required>
-                            <br><br><br><br><br>
-                            <button type="submit" name="submit"><span>Book Now</span></button>
-                        </form>
-                    </div>
+                    <form action="Sailing.html" method="post" accept-charset="UTF-8">
+                        <div class="leftside2">
+                            <label for="date">
+                                Pick-Up Date:
+                                <br>
+                                <input type="date" class="input_start" onchange="calc_price(0)" name="hentedato" placeholder="Pick-Up Date" value="" required>
+                                <br>
+                                End of Trip Date:
+                                <br>
+                                <input type="date" class="input_end" onchange="calc_price(0)"name="leveringsdato" placeholder="End of Trip Date" value="" required>
+                            </label>
+                            <br><br><br>
+                            <label for="name">
+                                Full name
+                                <br>
+                                <input type="text" name="name" id="name" placeholder="Name"  pattern="[A-Za-z \s]+" autocomplete="name" required>
+                                <br>
+                            </label>
+                            <label for="email">
+                                E-Mail
+                                <br>
+                                <input type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
+                            </label>
+                        </div>
+                        <div class="rightside2">
+                            <label for="time">
+                                Pic-Up Time
+                                <br>
+                                <input class="input_start_time" type="time" name="hentetid" value="" required>
+                                <br>
+                                End of trip Time
+                                <br>
+                                <input class="input_end_time" type="time" name="leveringstid" value="" required>
+                                <br><br><br><br><br>
+                            </label>
+                            <label for="button">
+                                <button type="submit" name="submit"><span>Book Now</span></button>
+                            </label>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+
+
 
 
 
@@ -109,50 +112,50 @@
                                     There is no industry-wide standard for the difference between super-yacht and mega-yacht.Luxury yacht (also super-yacht, large yacht and mega-yacht) is a very expensive, privately owned, professionally crewed sailing or motor yacht.
                                 </p>
                         <p class="price">
-                            <img src="../img/euro-vector.png" alt="euro-vector" width="6%">
-                            50,00
                         </p>
                     </div>
                 </div>
                 <div class="side2">
-                    <div class="leftside2">
-                        <form action="Sailing.html" method="post" accept-charset="UTF-8">
-                                <label for="date">
-                                    Pick-Up Date:
-                                    <br>
-                                    <input type="date" name="hentedato" placeholder="Pick-Up Date" value="" required>
-                                    <br>
-                                    End of Trip Date:
-                                    <br>
-                                    <input type="date" name="leveringsdato" placeholder="End of Trip Date" value="" required>
-                                </label>
-                                <br><br><br>
-                                <label for="name">
-                                    Full name
-                                    <br>
-                                    <input type="text" name="name" id="name" placeholder="Name"  pattern="[A-Za-z \s]+" required autocomplete="name">
-                                    <br>
-                                </label>
-                                <label for="email">
-                                    E-Mail
-                                    <br>
-                                    <input type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
-                                </label>
-                        </form>
-                    </div>
-                    <div class="rightside2">
-                        <form class="" action="index.html" method="post">
-                            Pic-Up Time
-                            <br>
-                            <input class="input_time" type="time" name="hentetid" value="" required>
-                            <br>
-                            End of trip Time
-                            <br>
-                            <input class="input_time" type="time" name="hentetid" value="" required>
-                            <br><br><br><br><br>
-                            <button type="submit" name="submit"><span>Book Now</span></button>
-                        </form>
-                    </div>
+                    <form action="Sailing.html" method="post" accept-charset="UTF-8">
+                        <div class="leftside2">
+                            <label for="date">
+                                Pick-Up Date:
+                                <br>
+                                <input type="date" class="input_start" onchange="calc_price(1)" name="hentedato" placeholder="Pick-Up Date" value="" required>
+                                <br>
+                                End of Trip Date:
+                                <br>
+                                <input type="date" class="input_end" onchange="calc_price(1)"name="leveringsdato" placeholder="End of Trip Date" value="" required>
+                            </label>
+                            <br><br><br>
+                            <label for="name">
+                                Full name
+                                <br>
+                                <input type="text" name="name" id="name" placeholder="Name"  pattern="[A-Za-z \s]+" autocomplete="name" required>
+                                <br>
+                            </label>
+                            <label for="email">
+                                E-Mail
+                                <br>
+                                <input type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
+                            </label>
+                        </div>
+                        <div class="rightside2">
+                            <label for="time">
+                                Pic-Up Time
+                                <br>
+                                <input class="input_start_time" type="time" name="hentetid" value="" required>
+                                <br>
+                                End of trip Time
+                                <br>
+                                <input class="input_end_time" type="time" name="leveringstid" value="" required>
+                                <br><br><br><br><br>
+                            </label>
+                            <label for="button">
+                                <button type="submit" name="submit"><span>Book Now</span></button>
+                            </label>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -173,49 +176,50 @@
                         <p>A Luxury yacht (also super-yacht, large yacht and mega-yacht) is a very expensive, privately owned, professionally crewed sailing or motor yacht.
                             There is no industry-wide standard for the difference between super-yacht and mega-yacht.</p>
                         <p class="price">
-                            <img src="../img/euro-vector.png" alt="euro-vector" width="6%">
                         </p>
                     </div>
                 </div>
                 <div class="side2">
-                    <div class="leftside2">
-                        <form action="Sailing.html" method="post" accept-charset="UTF-8">
-                                <label for="date">
-                                    Pick-Up Date:
-                                    <br>
-                                    <input type="date" name="hentedato" placeholder="Pick-Up Date" value="" required>
-                                    <br>
-                                    End of Trip Date:
-                                    <br>
-                                    <input type="date" name="leveringsdato" placeholder="End of Trip Date" value="" required>
-                                </label>
-                                <br><br><br>
-                                <label for="name">
-                                    Full name
-                                    <br>
-                                    <input type="text" name="name" id="name" placeholder="Name"  pattern="[A-Za-z \s]+" required autocomplete="name">
-                                    <br>
-                                </label>
-                                <label for="email">
-                                    E-Mail
-                                    <br>
-                                    <input type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
-                                </label>
-                        </form>
-                    </div>
-                    <div class="rightside2">
-                        <form class="" action="index.html" method="post">
-                            Pic-Up Time
-                            <br>
-                            <input class="input_time" type="time" name="hentetid" value="" required>
-                            <br>
-                            End of trip Time
-                            <br>
-                            <input class="input_time" type="time" name="hentetid" value="" required>
-                            <br><br><br><br><br>
-                            <button type="submit" name="submit"><span>Book Now</span></button>
-                        </form>
-                    </div>
+                    <form action="Sailing.html" method="post" accept-charset="UTF-8">
+                        <div class="leftside2">
+                            <label for="date">
+                                Pick-Up Date:
+                                <br>
+                                <input type="date" class="input_start" onchange="calc_price(2)" name="hentedato" placeholder="Pick-Up Date" value="" required>
+                                <br>
+                                End of Trip Date:
+                                <br>
+                                <input type="date" class="input_end" onchange="calc_price(2)"name="leveringsdato" placeholder="End of Trip Date" value="" required>
+                            </label>
+                            <br><br><br>
+                            <label for="name">
+                                Full name
+                                <br>
+                                <input type="text" name="name" id="name" placeholder="Name"  pattern="[A-Za-z \s]+" autocomplete="name" required>
+                                <br>
+                            </label>
+                            <label for="email">
+                                E-Mail
+                                <br>
+                                <input type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
+                            </label>
+                        </div>
+                        <div class="rightside2">
+                            <label for="time">
+                                Pic-Up Time
+                                <br>
+                                <input class="input_start_time" type="time" name="hentetid" value="" required>
+                                <br>
+                                End of trip Time
+                                <br>
+                                <input class="input_end_time" type="time" name="leveringstid" value="" required>
+                                <br><br><br><br><br>
+                            </label>
+                            <label for="button">
+                                <button type="submit" name="submit"><span>Book Now</span></button>
+                            </label>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

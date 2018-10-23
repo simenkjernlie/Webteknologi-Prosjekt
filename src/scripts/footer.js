@@ -66,7 +66,7 @@ links_Footer = {
     },
     about_Sardinia:{
         text:"About Sardinia",
-        href:"index.html",
+        href:"about_sardinia.html",
     },
     about_us:{
         text:"About us",

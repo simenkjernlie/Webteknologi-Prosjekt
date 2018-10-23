@@ -158,7 +158,7 @@ navbarElements = {
         children: null,
         linkClass: "navigationBarListLink",
         extraLink: null,
-        pageLink: "index.html",
+        pageLink: "about_sardinia.html",
     },
     us: {
         name: "About us",
