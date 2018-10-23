@@ -47,28 +47,19 @@ function set_todays_date() {
 }
 
 let price_per_day = [32000, 540, 350]
-let price_per_month = [900000,15000 ,9000]
 
 function calc_price(number) {
   let calculated_price = 0;
-  let start_value = document.getElementsByClassName("input_start")[number].value.split("-");
-  let end_value = document.getElementsByClassName("input_end")[number].value.split("-");
-  let dif_days = end_value[2] - start_value[2];
-  let dif_months = end_value[1] - start_value[1];
-  let dif_years = end_value[0] - start_value[0]
-  if (dif_years < 0) {
+  let start_value = new Date(document.getElementsByClassName("input_start")[number].value);
+  let end_value = new Date(document.getElementsByClassName("input_end")[number].value);
+  calculated_price = (parseInt(end_value.getTime() - start_value.getTime())/(1000*60*60*24))*price_per_day[number];
+  console.log(calculated_price);
+
+  if (calculated_price < 0) {
     alert("The 'End Of Trip Date' is before the 'Pick-Up Date'. \nPlease rewrite the form, thank you.");
   }
-  else if (dif_months < 0 && dif_years === 0) {
-    alert("The 'End Of Trip Date' is before the 'Pick-Up Date'. \nPlease rewrite the form, thank you.");
-}
-  else if (dif_days < 0 && dif_months === 0 && dif_years === 0) {
-    alert("The 'End Of Trip Date' is before the 'Pick-Up Date'. \nPlease rewrite the form, thank you.");
-}
   else {
-  calculated_price = dif_days*price_per_day[number] + dif_months*price_per_month[number];
-  null_ut();
-  make_price_elements(number, calculated_price);
-}
-
+    null_ut();
+    make_price_elements(number, calculated_price);
+  }
 }
