@@ -4,3 +4,5 @@ function heightAdjuster(){
     let aboutMain = document.getElementById("aboutIndex").offsetHeight;
     aboutWrapper.style.paddingTop = String(aboutMain/2 - aboutWrapper.offsetHeight/2)+"px";
 }
+
+function slideshow():
