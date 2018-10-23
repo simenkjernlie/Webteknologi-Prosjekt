@@ -130,21 +130,21 @@ navbarElements = {
         children: null,
         linkClass: "dropDownLink",
         extraLink: null,
-        pageLink: "index.html"
+        pageLink: "Biking.html"
       },
       culture: {
         name: "Culture",
         children: null,
         linkClass: "dropDownLink",
         extraLink: null,
-        pageLink: "index.html"
+        pageLink: "Culture.html"
       },
       nature: {
         name: "Nature",
         children: null,
         linkClass: "dropDownLink",
         extraLink: null,
-        pageLink: "index.html"
+        pageLink: "Nature.html"
       }
     },
     linkClass: "navigationBarListLink",
@@ -156,14 +156,14 @@ navbarElements = {
     children: null,
     linkClass: "navigationBarListLink",
     extraLink: null,
-    pageLink: "about_sardinia.html"
+    pageLink: "About_Sardinia.html"
   },
   us: {
     name: "About us",
     children: null,
     linkClass: "navigationBarListLink",
     extraLink: null,
-    pageLink: "index.html"
+    pageLink: "About_Us.html"
   }
 };
 
