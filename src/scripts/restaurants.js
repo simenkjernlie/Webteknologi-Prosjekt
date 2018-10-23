@@ -10,6 +10,7 @@ function RestaurantExpand(arrowImage, restaurantExpansion) {
     image.src = "../img/expand-arrow.png";
   }
 }
+
 var pizza, steak, seafood, lobster;
 function initMap() {
   pizza = { lat: 39.898, lng: 8.597 };

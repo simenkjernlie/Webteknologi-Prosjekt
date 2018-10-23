@@ -45,9 +45,8 @@
 }
 .hotelRestaurantExpansion .information {
   font-size: 10pt;
-  width: 60%;
-  margin-left: -15%;
-  margin-top: 10px;
+  width: 50%;
+  margin-left: -80px;
 }
 .hotelRestaurantBox .quickInfo {
   font-style: italic;
@@ -55,6 +54,12 @@
 }
 .hotelRestaurantBox .description {
   padding-top: 10px;
+}
+.hotelRestaurantBox .rating {
+  right: 25%;
+  padding: 10px;
+  top: 0px;
+  position: absolute;
 }
 .hotelRestaurantBox .sidebar,
 .hotelRestaurantExpansion .sidebar {
@@ -99,4 +104,62 @@ img.arrowDown {
 #mapLobster {
   width: 100%;
   height: 100%;
+}
+@media only screen and (max-width: 1000px) {
+  .hotelRestaurantBox {
+    width: 100%;
+    height: 300px;
+  }
+  .hotelRestaurantBox img {
+    height: 100px;
+    width: 130px;
+  }
+  .hotelRestaurantBox .information {
+    position: absolute;
+    width: 100%;
+    top: 110px;
+    left: 0;
+  }
+  .hotelRestaurantBox .sidebar {
+    height: 90px;
+    left: 140px;
+    width: 80%;
+  }
+  .hotelRestaurantBox .sidebar p {
+    padding: 2px;
+    padding-left: 0;
+  }
+  .hotelRestaurantBox .rating {
+    position: absolute;
+    right: 25px;
+  }
+  .arrowDownContainer {
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+  }
+  img.arrowDown {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .hotelRestaurantExpansion {
+    width: 100%;
+    height: 270px;
+  }
+  .hotelRestaurantExpansion .information {
+    float: top;
+    width: 90%;
+    height: 100px;
+    margin-right: 20px;
+    margin-left: -180px;
+  }
+  .hotelRestaurantExpansion .sidebar {
+    position: absolute;
+    width: 90%;
+    top: 120px;
+    left: 0;
+    height: 140px;
+    border: none;
+  }
 }
