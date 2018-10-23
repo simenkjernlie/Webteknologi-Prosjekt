@@ -107,7 +107,8 @@ img.arrowDown {
 }
 @media only screen and (max-width: 1000px) {
   .hotelRestaurantBox {
-    width: 100%;
+    margin-left: 5%;
+    width: 90%;
     height: 300px;
   }
   .hotelRestaurantBox img {
@@ -144,7 +145,8 @@ img.arrowDown {
     cursor: pointer;
   }
   .hotelRestaurantExpansion {
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
     height: 270px;
   }
   .hotelRestaurantExpansion .information {
