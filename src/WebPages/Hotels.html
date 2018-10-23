@@ -31,7 +31,7 @@
     <!--####################################           Hotel 1            ########################-->
 
 
-    <div class=hotel_blocks>
+    <div id=hotel_block1>
         <img id="bilder_slide"  src="../img/hotelbilder/hotel1-1.jpg" class="hot_images" alt="Hotel Adriana">
         <div class="hotel_text">
             <h3>Hotel Adriana</h3>
@@ -48,10 +48,9 @@
         <div class="vertical_line"></div>
         <img class= "expander" id="img_ut1" src="../img/hotelbilder/expand-arrow.png" alt="expander" onclick="utvidelse1()">
 
-    </div>
 
-    <div id="utvidelse1">
-        <div class="gul_boks">
+        <div id="gul_boks1">
+            <div> <img  id="hot_map1" src="../img/hotelbilder/map_hot1.PNG" alt="Directions Hotel Adriana"></div>
             <table class="table">
                 <tr>
                     <td colspan="12">
@@ -111,22 +110,17 @@
         </div>
     </div>
 
+    <!--####################################           Hotel 2            ########################-->
 
-
-    <!--####################################           Hotel 2             ########################-->
-
-
-
-
-    <div class=hotel_blocks>
-        <img id="bilder_slide3" src="../img/hotelbilder/hotel2-1.jpg" class="hot_images" alt="Hotel Adriana">
+    <div id=hotel_block2>
+        <img id="bilder_slide"  src="../img/hotelbilder/hotel1-1.jpg" class="hot_images" alt="Hotel Adriana">
         <div class="hotel_text">
             <h3>Hotel Adriana</h3>
             <h4> <i style="font-size:15px" class="fa">&#xf041;</i> Cagliari</h4>
             <br>
-            <p id="hot_text3">Hotel Adriana is one of the best known hotels in the Cagliari area. It is known
-                for its beautiful location by the beach, along with unbeatable service and chefs working around the
-                clock to always offer freash mediterranean courses.
+            <p id="hot_text1"> Hotel Adriana is one of the best known hotels in the Cagliari area. 
+                It is known for its beautiful location by the beach, along with unbeatable service and 
+                chefs working around the clock to always offer freash mediterranean courses.
             </p>
         </div>
         <div class="rating">
@@ -134,10 +128,10 @@
         </div>
         <div class="vertical_line"></div>
         <img class= "expander" id="img_ut2" src="../img/hotelbilder/expand-arrow.png" alt="expander" onclick="utvidelse2()">
-    </div>
 
-    <div id="utvidelse2">
-        <div class="gul_boks">
+
+        <div id="gul_boks2">
+            <div> <img  id="hot_map1" src="../img/hotelbilder/map_hot1.PNG" alt="Directions Hotel Adriana"></div>
             <table class="table">
                 <tr>
                     <td colspan="12">
@@ -199,171 +193,169 @@
 
 
 
-    <!--####################################           Hotel 3            ########################-->
+     <!--####################################           Hotel 3            ########################-->
 
-    <div class=hotel_blocks>
-            <img id="bilder_slide3" src="../img/hotelbilder/hotel3-1.jpeg" class="hot_images" alt="Hotel Adriana">
-            <div class="hotel_text">
-                <h3>Hotel Adriana</h3>
-                <h4> <i style="font-size:15px" class="fa">&#xf041;</i> Cagliari</h4>
-                <br>
-                <p id="hot_text3">Hotel Adriana is one of the best known hotels in the Cagliari area. It is known
-                    for its beautiful location by the beach, along with unbeatable service and chefs working around the
-                    clock to always offer freash mediterranean courses.
-                </p>
-            </div>
-            <div class="rating">
-                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-            </div>
-            <div class="vertical_line"></div>
-         
-            <img  class= "expander" id="img_ut3" src="../img/hotelbilder/expand-arrow.png" alt="expander" onclick="utvidelse3()">
-        
+     <div id=hotel_block3>
+        <img id="bilder_slide"  src="../img/hotelbilder/hotel1-1.jpg" class="hot_images" alt="Hotel Adriana">
+        <div class="hotel_text">
+            <h3>Hotel Adriana</h3>
+            <h4> <i style="font-size:15px" class="fa">&#xf041;</i> Cagliari</h4>
+            <br>
+            <p id="hot_text1"> Hotel Adriana is one of the best known hotels in the Cagliari area. 
+                It is known for its beautiful location by the beach, along with unbeatable service and 
+                chefs working around the clock to always offer freash mediterranean courses.
+            </p>
         </div>
-    
-        <div id="utvidelse3">
-            <div class="gul_boks">
-                <table class="table">
-                    <tr>
-                        <td colspan="12">
-                            <h2>When would you like to stay at Hotel Adriana?</h2>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> <br>
-                            Check in date: <br>
-                            <input type="date" name="check_in_date" id="check_in_date">
-                        </td>
-                        <td>
-                            Check out date: <br>
-                            <input type="date" name="check_out_date" id="check_out_date">
-                        </td>
-    
-                    </tr>
-                    <tr class="row_last">
-                        <td>
-                            Rooms: <select name="nr_rooms">
-                                <option value="none">0</option>
-                                <option value="one">1</option>
-                                <option value="two">2</option>
-                                <option value="three">3</option>
-                                <option value="four">4</option>
-                            </select>
-                        </td>
-                        <td>
-                            Adults: <select name="nr_adults">
-                                <option value="none">0</option>
-                                <option value="one">1</option>
-                                <option value="two">2</option>
-                                <option value="three">3</option>
-                                <option value="four">4</option>
-                        </td>
-                        <td>
-                            Children: <select name="nr_children">
-                                <option value="none">0</option>
-                                <option value="one">1</option>
-                                <option value="two">2</option>
-                                <option value="three">3</option>
-                                <option value="four">4</option>
-                            </select>
-                        </td>
-                        <td class="fpe">
-                            Full name: <input type="text" name="full_name" id="full_name" size="4">
-                            Phone: <input type="text" name="full_name" id="full_name" size="4">
-                            Email: <input type="text" name="full_name" id="full_name" size="1">
-                        </td>
-                        <td>
-                            <input class="booking_btn" type="submit" value="Book now">
-                        </td>
-                    </tr>
-                </table>
-                <div class="tot_cost">Total cost: <h1> €</h1>
-                </div>
+        <div class="rating">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <div class="vertical_line"></div>
+        <img class= "expander" id="img_ut3" src="../img/hotelbilder/expand-arrow.png" alt="expander" onclick="utvidelse3()">
+
+
+        <div id="gul_boks3">
+            <div> <img  id="hot_map1" src="../img/hotelbilder/map_hot1.PNG" alt="Directions Hotel Adriana"></div>
+            <table class="table">
+                <tr>
+                    <td colspan="12">
+                        <h2>When would you like to stay at Hotel Adriana?</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <br>
+                        Check in date: <br>
+                        <input type="date" name="check_in_date" id="check_in_date">
+                    </td>
+                    <td>
+                        Check out date: <br>
+                        <input type="date" name="check_out_date" id="check_out_date">
+                    </td>
+
+                </tr>
+                <tr class="row_last">
+                    <td>
+                        Rooms: <select name="nr_rooms">
+                            <option value="none">0</option>
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="four">4</option>
+                        </select>
+                    </td>
+                    <td>
+                        Adults: <select name="nr_adults">
+                            <option value="none">0</option>
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="four">4</option>
+                    </td>
+                    <td>
+                        Children: <select name="nr_children">
+                            <option value="none">0</option>
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="four">4</option>
+                        </select>
+                    </td>
+                    <td class="fpe">
+                        Full name: <input type="text" name="full_name" id="full_name" size="4">
+                        Phone: <input type="text" name="full_name" id="full_name" size="4">
+                        Email: <input type="text" name="full_name" id="full_name" size="1">
+                    </td>
+                    <td>
+                        <input class="booking_btn" type="submit" value="Book now">
+                    </td>
+                </tr>
+            </table>
+            <div class="tot_cost">Total cost: <h1> €</h1>
             </div>
         </div>
+    </div>
 
+     <!--####################################           Hotel 4            ########################-->
 
-
-    <!--####################################           Hotel 4             ########################-->
-
-    <div class=hotel_blocks>
-            <img id="bilder_slide3" src="../img/hotelbilder/hotel4-1.jpg" class="hot_images" alt="Hotel Adriana">
-            <div class="hotel_text">
-                <h3>Hotel Adriana</h3>
-                <h4> <i style="font-size:15px" class="fa">&#xf041;</i> Cagliari</h4>
-                <br>
-                <p>Hotel Adriana is one of the best known hotels in the Cagliari area. It is known
-                    for its beautiful location by the beach, along with unbeatable service and chefs working around the
-                    clock to always offer freash mediterranean courses.
-                </p>
-            </div>
-            <div class="rating">
-                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-            </div>
-            <div class="vertical_line"></div>
-            <img class= "expander" id="img_ut4" src="../img/hotelbilder/expand-arrow.png" alt="expander" onclick="utvidelse4()">
+     <div id=hotel_block4>
+        <img id="bilder_slide"  src="../img/hotelbilder/hotel1-1.jpg" class="hot_images" alt="Hotel Adriana">
+        <div class="hotel_text">
+            <h3>Hotel Adriana</h3>
+            <h4> <i style="font-size:15px" class="fa">&#xf041;</i> Cagliari</h4>
+            <br>
+            <p id="hot_text1"> Hotel Adriana is one of the best known hotels in the Cagliari area. 
+                It is known for its beautiful location by the beach, along with unbeatable service and 
+                chefs working around the clock to always offer freash mediterranean courses.
+            </p>
         </div>
-    
-        <div id="utvidelse4">
-            <div class="gul_boks">
-                <table class="table">
-                    <tr>
-                        <td colspan="12">
-                            <h2>When would you like to stay at Hotel Adriana?</h2>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> <br>
-                            Check in date: <br>
-                            <input type="date" name="check_in_date" id="check_in_date">
-                        </td>
-                        <td>
-                            Check out date: <br>
-                            <input type="date" name="check_out_date" id="check_out_date">
-                        </td>
-    
-                    </tr>
-                    <tr class="row_last">
-                        <td>
-                            Rooms: <select name="nr_rooms">
-                                <option value="none">0</option>
-                                <option value="one">1</option>
-                                <option value="two">2</option>
-                                <option value="three">3</option>
-                                <option value="four">4</option>
-                            </select>
-                        </td>
-                        <td>
-                            Adults: <select name="nr_adults">
-                                <option value="none">0</option>
-                                <option value="one">1</option>
-                                <option value="two">2</option>
-                                <option value="three">3</option>
-                                <option value="four">4</option>
-                        </td>
-                        <td>
-                            Children: <select name="nr_children">
-                                <option value="none">0</option>
-                                <option value="one">1</option>
-                                <option value="two">2</option>
-                                <option value="three">3</option>
-                                <option value="four">4</option>
-                            </select>
-                        </td>
-                        <td class="fpe">
-                            Full name: <input type="text" name="full_name" id="full_name" size="4">
-                            Phone: <input type="text" name="full_name" id="full_name" size="4">
-                            Email: <input type="text" name="full_name" id="full_name" size="1">
-                        </td>
-                        <td>
-                            <input class="booking_btn" type="submit" value="Book now">
-                        </td>
-                    </tr>
-                </table>
-                <div class="tot_cost">Total cost: <h1> €</h1>
-                </div>
+        <div class="rating">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+        </div>
+        <div class="vertical_line"></div>
+        <img class= "expander" id="img_ut4" src="../img/hotelbilder/expand-arrow.png" alt="expander" onclick="utvidelse4()">
+
+
+        <div id="gul_boks4">
+            <div> <img  id="hot_map1" src="../img/hotelbilder/map_hot1.PNG" alt="Directions Hotel Adriana"></div>
+            <table class="table">
+                <tr>
+                    <td colspan="12">
+                        <h2>When would you like to stay at Hotel Adriana?</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <br>
+                        Check in date: <br>
+                        <input type="date" name="check_in_date" id="check_in_date">
+                    </td>
+                    <td>
+                        Check out date: <br>
+                        <input type="date" name="check_out_date" id="check_out_date">
+                    </td>
+
+                </tr>
+                <tr class="row_last">
+                    <td>
+                        Rooms: <select name="nr_rooms">
+                            <option value="none">0</option>
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="four">4</option>
+                        </select>
+                    </td>
+                    <td>
+                        Adults: <select name="nr_adults">
+                            <option value="none">0</option>
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="four">4</option>
+                    </td>
+                    <td>
+                        Children: <select name="nr_children">
+                            <option value="none">0</option>
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="four">4</option>
+                        </select>
+                    </td>
+                    <td class="fpe">
+                        Full name: <input type="text" name="full_name" id="full_name" size="4">
+                        Phone: <input type="text" name="full_name" id="full_name" size="4">
+                        Email: <input type="text" name="full_name" id="full_name" size="1">
+                    </td>
+                    <td>
+                        <input class="booking_btn" type="submit" value="Book now">
+                    </td>
+                </tr>
+            </table>
+            <div class="tot_cost">Total cost: <h1> €</h1>
             </div>
         </div>
+    </div>
+
+
 
 
 
