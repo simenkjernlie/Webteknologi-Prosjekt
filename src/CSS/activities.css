@@ -57,14 +57,14 @@
 }
 
 
-@media only screen and (max-width: 960px){
+@media only screen and (max-width: 800px){
     .pageBody{
         min-width: 620px;
     }
     .activitis{
-        width: 40%;
-        margin-left:5%;
-        margin-right:5%;
+        width: 35%;
+        margin-left:7.5%;
+        margin-right:7.5%;
     }
 }
 

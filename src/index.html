@@ -12,20 +12,18 @@
         <script src="scripts/indexFunction.js"></script>
         <script src="scripts/footer.js"></script>
     </head>
-    <body onload="navigationStartup(true),addFooter(true)" onresize="changeWidth(), footerWidthResize()">
+    <body onload="navigationStartup(true),addFooter(true), indexPageChange()" onresize="changeWidth(), footerWidthResize(), indexPageChange()">
+    <div id="mainPageBody">
         <div id="headerDiv">
 
         </div>
         <!--- Navigation bar --->
         <div id="navBarDiv">
-
-
         </div>
 
         <!--- Main body of page --->
-        <div class="pageBody" id="mainBodyDiv">
         <!--- Image of beach at top of page --->
-        <div class="portraitImage">
+        <div id="portraitImage">
             <img alt="Portrait" src="img/portraitImg.jpg" class="portraitImage">
         </div>
         
@@ -33,6 +31,7 @@
         <div class="aboutFile" id="aboutIndex">
             <div class="textWrapper" id="textWrapper">
                 <h2>About us</h2>
+                <br>
                 <p>We are a dynamic niche PR agency that has been helping visionary luxury travel and hotel brands convey their true essence since 2010.  We are a small tight-knit team of PR professionals and industry influencers that collectively has over 35 years </p>
             </div>
         </div> 
@@ -41,8 +40,8 @@
         <div class="recomendedSection">
             <h2>Special offers</h2>
             <div class="activitis">
-                <a href="hotels.html">
-                    <img src="img/hotelbilder/hotel1-1.jpg">
+                <a href="WebPages/Hotels.html">
+                    <img src="img/restaurant.jpeg">
                     <div class="hoverInf">
                         <p class="recomendedHeader">Hotel</p>
                         <br><br>
@@ -51,7 +50,7 @@
                 </a>
             </div>
             <div class="activitis">
-                <a href="restaurants">
+                <a href="WebPages/Restaurants.html">
                     <img src="img/restaurant.jpeg" class="activitiesLink">
                     <div class="hoverInf">
                         <p class="recomendedHeader">Resturant</p>
@@ -61,8 +60,8 @@
                 </a>
             </div>
             <div class="activitis">
-                <a href="activities.html">
-                    <img src="img/vineTest.jpeg">
+                <a href="WebPages/Activities.html">
+                    <img src="img/restaurant.jpeg">
                     <div class="hoverInf">
                         <p class="recomendedHeader">Activities</p>
                         <br><br>
@@ -71,7 +70,7 @@
                 </a>
             </div>
         </div>
-        </div>
+    </div>
         <!--- Footer --->
         <div class="footer" id="footer">
 

@@ -7,6 +7,8 @@
 *           ...
 *       </body>
 * Remember to also add the stylesheet at the top of the page
+*
+* The entire page must be wrapped in an div width id="mainPageBody"
 * */
 
 
