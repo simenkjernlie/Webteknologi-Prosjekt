@@ -106,7 +106,7 @@ function addFooter(isindex) {
     for (let e in images.contactInf){
         contactInf.appendChild(createImg(images.contactInf[e],isindex));
         if (images.contactInf[e].text != null){
-            console.log(images.contactInf[e].text);
+            //console.log(images.contactInf[e].text);
             const t = document.createTextNode(images.contactInf[e].text)
             contactInf.appendChild(t);
             contactInf.appendChild(document.createElement("br"));
@@ -165,8 +165,8 @@ function footerWidthResize() {
     //console.log(document.documentElement.clientHeight);
     const height = document.documentElement.clientHeight;
     const heightFooter = document.getElementById("footer").offsetHeight;
-    console.log(document.getElementById("mainBodyDiv").offsetHeight, "Offset");
-    console.log(height, "Height", heightFooter);
+    //console.log(document.getElementById("mainBodyDiv").offsetHeight, "Offset");
+    //console.log(height, "Height", heightFooter);
     if (document.getElementById("mainPageBody").offsetHeight >= height - heightFooter || document.getElementById("mainBodyDiv").offsetWidth < 710){
         document.getElementById("footer").style.position = "relative";
         //console.log("Relative")

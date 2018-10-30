@@ -7,7 +7,6 @@
     display: table;
     overflow: hidden;
     vertical-align: center;
-    min-width: 620px;
 }
 
 #footer{
@@ -76,20 +75,20 @@
 }
 .footerLinks > li {
     float:left;
-    width: 50%;
+    width: 40%;
     margin-bottom: 2%;
 }
 
 /* Activates when the device is an phone */
 @media only screen and (max-device-width: 800px){
     .footer{
-        height: 10vh;
+        height: 30vh;
     }
 
     .footerPart{
         float: none;
         margin: auto;
-        height: 10vh;
+        height: 15vh;
     }
     #right_footer{
         width: 60%;
@@ -107,6 +106,7 @@
     }
     .footerLinkListHeader{
         text-align: center;
+        margin-left: 0px;
     }
 }
 
@@ -136,5 +136,6 @@
     }
     .footerLinkListHeader{
         text-align: center;
+        margin-left: 0px;
     }
 }
