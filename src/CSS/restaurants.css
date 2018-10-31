@@ -166,3 +166,23 @@ img.arrowDown {
     border: none;
   }
 }
+@media only screen and (max-width: 1099px) and (min-width: 650px) {
+  .hotelRestaurantExpansion {
+    height: 305px;
+  }
+  .hotelRestaurantExpansion .sidebar {
+    top: 168px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .hotelRestaurantExpansion {
+    height: 430px;
+  }
+  .hotelRestaurantExpansion .sidebar {
+    top: 293px;
+  }
+  .hotelRestaurantBox .rating {
+    font-size: 7pt;
+  }
+}
