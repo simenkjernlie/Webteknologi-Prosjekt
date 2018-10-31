@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/Style.css">
     <link rel="stylesheet" href="../CSS/infosider.css">
+    <link rel="stylesheet" href="../CSS/contact_us_form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../scripts/navigationBar.js"></script>
     <script src="../scripts/footer.js"></script>
+    <script src="../scripts/contact_us_form.js"></script>
 
 
 </head>
@@ -73,10 +75,10 @@
 
     <!-- Fun facts -->
     <div class="section">
-            <div class="sectionText">
-                <h1 class="sectionHeader">Fun facts</h1>
+        <div class="sectionText">
+            <h1 class="sectionHeader">Fun facts</h1>
     
-                <p class="sectionContent">
+            <p class="sectionContent">
                     Sardinia is politically a region of Italy, whose official name is 
                     Regione Autonoma della Sardegna / Regione Autònoma de Sardigna (Autonomous Region of Sardinia),
                     and enjoys some degree of domestic autonomy granted by a specific Statute.[4] It is divided into 
@@ -84,14 +86,50 @@
                     Sardinia's indigenous language and the other minority languages (Sassarese, Corsican Gallurese, 
                     Algherese Catalan and Ligurian Tabarchino) spoken on the island are recognized by the regional 
                     law and enjoy "equal dignity" with Italian.
-                </p>
-            </div>
-            
-            <div class="vertical_line" id="vertical_line_3"></div>
-            
-            <img class="sectionImg" src="../img/about_sardinia/facts.jpg">
+            </p>
         </div>
+            
+        <div class="vertical_line" id="vertical_line_3"></div>
+            
+        <img class="sectionImg" src="../img/about_sardinia/facts.jpg">
+    </div>
+
     
+    <div class="section">
+
+        <!--- Contact form --->
+        <div class="sectionText">
+            <div class="contact_us">
+                <h3>Send us a mail</h3>
+
+                <form onSubmit="JavaScript:confirm()">
+            
+                    <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+                
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                    <textarea id="message" name="message" placeholder="Enter message..." required></textarea>
+                
+                    <input type="submit" id="submit" value="Send">
+            
+                </form>
+            </div>
+        </div> 
+
+        <div class="vertical_line" id="vertical_line_hide"></div>
+
+        <!--- Contact info --->
+        <div class="sectionText">
+            <h1>You can also find us at</h1>
+            <p>+35 678 86 253</p>
+            <p>contact@visitasardegna.com</p>
+            <p>202 Cambridge st, Levin</p>
+        </div>
+    </div>
+
+       
 
     <!--- Footer --->
     <div class="footer" id="footer">
