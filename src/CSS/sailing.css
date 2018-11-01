@@ -195,3 +195,59 @@ button:hover span:after {
     border-top: 2px solid #F8F8F8;
   }
 }
+
+@media only screen and (max-device-width: 800px) {
+  .leftside1 {
+    width: 100%;
+    overflow: auto;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .rightside1, .leftside2, .rightside2 {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .rightside1 {
+    text-align: left;
+  }
+
+  .overskrift{
+    font-size: 70px;
+  }
+
+  #header {
+    font-size: 100px;
+  }
+
+  .description, form, input, .price, .input_start_time, .input_end_time {
+    font-size: 40px;
+  }
+
+  input, .input_start_time, .input_end_time{
+    height: 80px;
+    width: 700px;
+  }
+  .input_start_time, .input_end_time {
+    width: 250px;
+  }
+  button {
+    width: 600px;
+    height: 170px;
+    font-size: 60px;
+  }
+
+  .backbox {
+    padding: 30px;
+  }
+
+  button span:after {
+    right: -80px;
+  }
+
+  button:hover span {
+    padding-right: 80px;
+  }
+}

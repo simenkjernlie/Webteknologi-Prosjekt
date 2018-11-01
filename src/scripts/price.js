@@ -57,7 +57,7 @@ function calc_price(number) {
   console.log(calculated_price);
 
   if (calculated_price < 0) {
-    document.getElementsByClassName("input_start")[number].style.boxShadow = "0px 0px 30px 5px #FAC917"
+    document.getElementsByClassName("input_start")[number].style.boxShadow = "0px 0px 30px 10px #FAC917"
   }
   else {
     null_ut();
