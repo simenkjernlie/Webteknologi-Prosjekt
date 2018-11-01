@@ -25,10 +25,11 @@ function make_price_elements(i, pris) {
   let space = document.createTextNode("\xa0");
   img.src = "../img/euro-vector.png";
   img.style.width = "6%";
-  document.getElementsByClassName('price')[i].innerHTML = "";
-  document.getElementsByClassName('price')[i].appendChild(img);
-  document.getElementsByClassName('price')[i].appendChild(space);
-  document.getElementsByClassName('price')[i].appendChild(tall);
+  let price_class = document.getElementsByClassName('price')[i];
+  price_class.innerHTML = "";
+  price_class.appendChild(img);
+  price_class.appendChild(space);
+  price_class.appendChild(tall);
 }
 
 function null_ut() {
@@ -56,10 +57,17 @@ function calc_price(number) {
   console.log(calculated_price);
 
   if (calculated_price < 0) {
-    alert("The 'End Of Trip Date' is before the 'Pick-Up Date'. \nPlease rewrite the form, thank you.");
+    document.getElementsByClassName("input_start")[number].style.boxShadow = "0px 0px 30px 5px #FAC917"
   }
   else {
     null_ut();
     make_price_elements(number, calculated_price);
+    document.getElementsByClassName("input_start")[number].style.boxShadow = "none"
+
+    //Effekt på pristallet
+    document.getElementsByClassName('price')[number].classList.toggle("price_zoom");
+    setTimeout(function () {
+    document.getElementsByClassName('price')[number].classList.toggle("price_zoom");
+  }, 300);
   }
 }
