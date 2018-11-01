@@ -3,10 +3,12 @@
 * Link this script at the top of the page.
 * Remember to call the function addFooter() at startup (onload) width the parameter false
 *   Example:
-*       <body onload="addFooter(false)">
+*       <body onload="addFooter(false)" onresize="footerWidthResize()">
 *           ...
 *       </body>
 * Remember to also add the stylesheet at the top of the page
+*
+* The entire page must be wrapped in an div width id="mainPageBody"
 * */
 
 
@@ -66,7 +68,7 @@ links_Footer = {
     },
     about_Sardinia:{
         text:"About Sardinia",
-        href:"about_sardinia.html",
+        href:"About_Sardinia.html",
     },
     about_us:{
         text:"About us",
@@ -104,7 +106,7 @@ function addFooter(isindex) {
     for (let e in images.contactInf){
         contactInf.appendChild(createImg(images.contactInf[e],isindex));
         if (images.contactInf[e].text != null){
-            console.log(images.contactInf[e].text);
+            //console.log(images.contactInf[e].text);
             const t = document.createTextNode(images.contactInf[e].text)
             contactInf.appendChild(t);
             contactInf.appendChild(document.createElement("br"));
@@ -161,7 +163,11 @@ function addFooter(isindex) {
 function footerWidthResize() {
     //console.log(document.getElementById("mainBodyDiv").offsetHeight);
     //console.log(document.documentElement.clientHeight);
-    if (document.getElementById("mainBodyDiv").offsetHeight > document.documentElement.clientHeight*55/100 || document.getElementById("mainBodyDiv").offsetWidth < 710){
+    const height = document.documentElement.clientHeight;
+    const heightFooter = document.getElementById("footer").offsetHeight;
+    //console.log(document.getElementById("mainBodyDiv").offsetHeight, "Offset");
+    //console.log(height, "Height", heightFooter);
+    if (document.getElementById("mainPageBody").offsetHeight >= height - heightFooter || document.getElementById("mainBodyDiv").offsetWidth < 710){
         document.getElementById("footer").style.position = "relative";
         //console.log("Relative")
     } else{
