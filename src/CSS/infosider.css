@@ -61,7 +61,7 @@
     margin-right: 7%;
 }
 
-@media only screen and (max-width: 1360px) and (min-width: 691px) {
+@media only screen and (max-width: 1360px) and (min-width: 961px) {
     .section {
         width: calc(100% - 60px);
     }
