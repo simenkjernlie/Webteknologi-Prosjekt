@@ -55,6 +55,7 @@ body{
 
 .navigationBarLi a:hover{
     background-color: #e4e4e4;
+    transition: 0.7s;
 }
 
 .navDropdown{
@@ -139,4 +140,3 @@ body{
         background-color: #f0f0f0;
     } */
 }
-
