@@ -19,6 +19,8 @@
 *       </body>
 * */
 
+//Se https://www.w3schools.com/howto/howto_css_menu_icon.asp
+
 var navigationBar = null;
 var offSet = null;
 var h = null;
@@ -27,29 +29,18 @@ function navigationStartup(isindex) {
   addHeader(isindex);
   addNavBar(isindex);
   const navBar = document.getElementById("navBarDiv");
+
   navBar.addEventListener("mouseover", function() {
-    let element = document.getElementsByClassName("navigationBarListLink");
-    for (i in element) {
-      if (element[i].style === undefined) {
-        break;
-      }
-      element[i].style.display = "block";
-    }
+      displayNavigationbar("block");
   });
+
   navBar.addEventListener("mouseout", function() {
     if (window.innerWidth > 960) {
       return null;
     }
-    let element = document.getElementsByClassName("navigationBarListLink");
-    for (i in element) {
-      if (element[i].style === undefined) {
-        break;
-      }
-      if (element[i].innerHTML !== "Home") {
-        element[i].style.display = "none";
-      }
-    }
+      displayNavigationbar("none");
   });
+
   navigationBar = document.getElementById("navigationBar");
   offSet = navigationBar.offsetTop;
   h = String(document.getElementById("navigationBarDiv").offsetHeight) + "px";
@@ -57,6 +48,11 @@ function navigationStartup(isindex) {
 
   window.onscroll = function() {
     navigationPosition();
+    //Adds the animation when scrolling the window
+    const menuIconDiv = document.getElementsByClassName("menuIconDiv")[0];
+    if (menuIconDiv.classList.contains("changeMenuIcon")){
+        menuIconDiv.classList.remove("changeMenuIcon")
+    }
   };
 }
 
@@ -65,18 +61,27 @@ function changeWidth() {
   if (window.innerWidth <= 960) {
     displaytype = "none";
   }
-  let element = document.getElementsByClassName("navigationBarListLink");
-  for (i in element) {
-    if (element[i].style === undefined) {
-      break;
+  displayNavigationbar(displaytype);
+  clickMenuIcon(document.getElementsByClassName("menuIconDiv")[0],false);
+}
+
+function displayNavigationbar(displaytype){
+    let element = document.getElementsByClassName("navigationBarListLink");
+    for (i in element) {
+        if (element[i].style === undefined) {
+            break;
+        }
+        if (element[i].innerHTML !== "Home") {
+            element[i].style.display = displaytype;
+        }
     }
-    if (element[i].innerHTML !== "Home") {
-      element[i].style.display = displaytype;
-    }
-  }
 }
 
 function navigationPosition() {
+  //console.log(window.innerWidth);
+    if (window.innerWidth - 40 <= 960){
+        displayNavigationbar("none");
+    }
   /*
     if (String(document.getElementById("navigationBar").offsetHeight)+"px" !== h){
         h = String(document.getElementById("navigationBar").offsetHeight)+"px";
@@ -176,9 +181,11 @@ function addNewElementNavbar(element, liElement, isindex) {
   }
   link.appendChild(document.createTextNode(element.name));
   let href = "";
+
   if (element.pageLink === "index.html" && isindex === false) {
     href += "../";
-  } else if (element.pageLink !== "index.html" && isindex === true) {
+  }
+  else if (element.pageLink !== "index.html" && isindex === true) {
     href += "WebPages/";
   }
   href += element.pageLink;
@@ -207,6 +214,12 @@ function addNewElementNavbar(element, liElement, isindex) {
       list.setAttribute("id", "DropdownLink");
       list.appendChild(dropDownDiv);
     }
+
+    //Ads the menu icon to the Home button
+
+     if(element.pageLink === "index.html"){
+        list.appendChild(createMenuIcon())
+     }
     return list;
   }
 
@@ -240,6 +253,51 @@ function addHeader(isindex) {
 * Add this code and a div with the id "navBarDiv" at the top of the document
 * (Below the header) and this code will insert the navigation bar auto-magically
 * */
+
+//Function of menu bar
+function clickMenuIcon(menuIconDiv, click){
+  const navigationBarListLink = document.getElementsByClassName("navigationBarListLink");
+  if (!click){
+    if (navigationBarListLink[1].style.display = "none" && menuIconDiv.classList.contains("changeMenuIcon")){
+        togleMenuIconDiv(menuIconDiv);
+    } else if (navigationBarListLink[1].style.display = "block" && !menuIconDiv.classList.contains("changeMenuIcon")){
+        togleMenuIconDiv(menuIconDiv);
+    }
+  } else {
+      togleMenuIconDiv(menuIconDiv);
+      if (menuIconDiv.classList.contains("changeMenuIcon")){
+          displayNavigationbar("block");
+      } else {
+          displayNavigationbar("none");
+      }
+  }
+}
+
+function togleMenuIconDiv(menuIconDiv){
+    if (menuIconDiv.classList.contains("changeMenuIcon")){
+        menuIconDiv.classList.remove("changeMenuIcon");
+    } else{
+        menuIconDiv.classList.add("changeMenuIcon");
+    }
+}
+
+//Ads a Munu icon to the nav bar
+//Should only be visible when on mobile
+function createMenuIcon(){
+    const div = document.createElement("div");
+    div.classList.add("menuIconDiv");
+    div.addEventListener("click", function(evt){
+        clickMenuIcon(this, true);
+    });
+    for (let j = 1; j <= 3; j++) {
+        const menubarDiv = document.createElement("div");
+        menubarDiv.classList.add("menuBar"+String(j));
+        div.appendChild(menubarDiv);
+    }
+    return div
+}
+
+
 function addNavBar(isindex) {
   //Finds the navBarDiv where the navigation bar will be inserted
   const navBarDiv = document.getElementById("navBarDiv");

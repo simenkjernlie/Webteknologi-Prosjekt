@@ -14,7 +14,7 @@ body{
     position: absolute;
     z-index: 10000;
     height: 1em;
-    min-width: 620px;
+    /*min-width: 620px;*/
 }
 
 .navigationBarDiv{
@@ -46,7 +46,7 @@ body{
     padding: 7px; /* Margin over and under text link */
     text-decoration: none;
     font-size: 20px;
-    height: 3vh;
+    height: 30px;
 }
 
 .navigationPlaceholder{
@@ -76,6 +76,40 @@ body{
     display: block;
 }
 
+/* Menu icon */
+.menuIconDiv{
+    display: none;
+    position: absolute;
+    color:red;
+    left: 10px;
+    top: 0px;
+}
+
+/* Menu icon bars */
+.menuBar1, .menuBar2, .menuBar3{
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.2s;
+}
+
+/* Menu icon bars transformation */
+.changeMenuIcon .menuBar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.changeMenuIcon .menuBar2 {opacity: 0;}
+
+.changeMenuIcon .menuBar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+
+/* Mobile device */
 @media only screen and (max-device-width: 800px){
     .navigationBarLi{
         float: none;
@@ -92,9 +126,16 @@ body{
     .navigationBarLi .navBarHome{
         display: block;
     }
+
+    /* Menu icon only show on mobile device */
+    .menuIconDiv{
+        display: block;
+    }
 }
 
 
+
+/* Smaller screen */
 @media only screen and (max-width: 960px){
     .navigationBarLi{
         float: none;
