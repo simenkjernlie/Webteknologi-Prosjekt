@@ -8,9 +8,6 @@
   margin-top: 1%;
 }
 
-.insidebox{
-}
-
 .main_body {
   background-color: #F8F8F8;
   font-family: Roboto Slab;
@@ -24,6 +21,7 @@
   height: auto;
   margin: 70px 70px;
   padding: 1%;
+  border-radius: 5px;
 }
 
 .side1{
@@ -48,10 +46,10 @@
 .side2{
   display: inline-block;
   width: 35%;
-  vertical-align: top;
   text-align: center;
+  vertical-align: top;
   padding: 2%;
-  border-left: 2px solid #F8F8F8 ;
+  border-left: 2px solid #F8F8F8;
 }
 
 .leftside2 {
@@ -62,18 +60,20 @@
 
 .rightside2 {
   text-align: right;
+  vertical-align: top;
   display: inline-block;
   width: 51.5%;
 }
+
 .boat {
   height: 100%;
   width: 98%;
+  border-radius: 5px;
 }
 
 .description {
   color: #F8F8F8;
   font-size: 1.1vw;
-  font
 }
 
 .overskrift{
@@ -82,6 +82,14 @@
 
 .price{
   font-size: 2vw;
+  text-align: right;
+  vertical-align: middle;
+  transition: 0.7s;
+}
+
+.price_zoom{
+  transition: 0.7s;
+  font-size: 2.2vw;
   text-align: right;
   vertical-align: middle;
 }
@@ -94,12 +102,12 @@ form {
 input{
   height: 1.5vw;
   width: 15vw;
+  font-style: italic;
+  font-family: Roboto Slab;
+  transition: 0.7s;
 }
 
-.input_start_time {
-  width: 8vw;
-}
-.input_end_time{
+.input_start_time, .input_end_time {
   width: 8vw;
 }
 
@@ -111,7 +119,7 @@ button{
   background-color: #FAC917;
   color: #13434b;
   border-radius: 12px;
-  transition: all 0.5s;
+  transition: all 0.7s;
   cursor: pointer;
 }
 
@@ -119,7 +127,7 @@ button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  transition: 0.5s;
+  transition: 0.7s;
 }
 
 button span:after {
@@ -128,7 +136,7 @@ button span:after {
   opacity: 0;
   top: 0;
   right: -40px;
-  transition: 0.5s;
+  transition: 0.7s;
 }
 
 button:hover span {
@@ -138,3 +146,52 @@ button:hover span {
 button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+@media only screen and (max-width: 1350px)  {
+  .side1 {
+    width: 100%;
+    position: relative;
+    padding-bottom: 15px;
+  }
+  .side2{
+    width: 100%;
+    border-left: none;
+    padding: 10px 0px 0px ;
+    margin: 10px 0px 0px;
+  }
+  .leftside2, .rightside2{
+    text-align: center;
+  }
+  .description {
+    font-size: 18px;
+  }
+  form, input {
+    font-size: 20px;
+  }
+  .price, .overskrift{
+    font-size: 30px;
+  }
+  input{
+    height: 20px;
+    width: 300px;
+  }
+  .input_start_time, .input_end_time {
+    width: 200px;
+    font-size: 20px;
+  }
+  button {
+    width: 200px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  .side1::before {
+    content : "";
+    position: absolute;
+    left    : 5%;
+    bottom  : 0;
+    height  : 0%;
+    width   : 90%;  /* or 100px */
+    border-top: 2px solid #F8F8F8;
+  }
+}
