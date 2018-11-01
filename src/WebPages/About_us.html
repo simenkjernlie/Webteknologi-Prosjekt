@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Sardinia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../CSS/navigationBar.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <link rel="stylesheet" href="../CSS/infosider.css">
+    <link rel="stylesheet" href="../CSS/contact_us_form.css">
+    <link rel="stylesheet" href="../CSS/about_us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <script src="../scripts/navigationBar.js"></script>
+    <script src="../scripts/footer.js"></script>
+    <script src="../scripts/contact_us_form.js"></script>
+
+
+</head>
+
+<body onload="navigationStartup(false),addFooter(false)" onresize="changeWidth(), footerWidthResize()" onload="changeImg()">
+    <div id="headerDiv">
+
+    </div>
+    <!--- Navigation bar --->
+    <div id="navBarDiv">
+    </div>
+    
+
+    <!--- Header -->
+    <h2 class="pageHeader">About Us</h2>
+
+    <!-- Who are we? -->
+    <div class="section">
+        <div class="sectionText">
+            <h1 class="sectionHeader">Who are we?</h1>
+
+            <p class="sectionContent">
+                    We are a group of young adults who have started a travel guide / travel agency for those who want to vacation in 
+                    Sardinia. In the management we are four good friends, but we have many employees distributed over many offices, 
+                    hotels and activity centers throughout Sardinia.
+            </p>
+        </div>
+        
+        <div class="vertical_line" id="vertical_line_1"></div>
+        
+        <img class="sectionImg" src="../img/about_us/who are we.jpeg">
+    </div>
+
+    <!-- What do we do? -->
+    <div class="section">
+        <img class="sectionImg" src="../img/about_us/what do we do.jpg">
+
+        <div class="vertical_line" id="vertical_line_2"></div>
+
+        <div class="sectionText">
+            <h1 class="sectionHeader">What do we do?</h1>
+    
+            <p class="sectionContent">
+                    We are working to find the best deals on the best experiences, hotels and hospitality in Sardinia.
+                     We want to offer the very best for our customers and you will feel that you make the most of your holiday at a 
+                     reasonable price. We travel a lot and test hotels and activities before we recommend them further to give you 
+                     realistic recommendations and great deals.
+            </p>
+        </div>
+    </div>
+
+    <!-- What can we do for you? -->
+    <div class="section">
+        <div class="sectionText">
+            <h1 class="sectionHeader">What can we do for you?</h1>
+    
+            <p class="sectionContent">
+                    We offer the best deals of all travel agencies in Sardinia. We have many employees ready to help you with what you may 
+                    need. Our 24-hour phone makes us ready to assist you at any time. We offer activities for the whole family, couples or 
+                    singles. We can also offer good group offers and activities. We hope you will be satisfied and will contact you if you 
+                    have any questions.
+            </p>
+        </div>
+            
+        <div class="vertical_line" id="vertical_line_3"></div>
+            
+        <img class="sectionImg" src="../img/about_us/what can we do for you.jpeg">
+    </div>
+
+    
+    <div class="section">
+
+        <!--- Contact form --->
+        <div class="sectionText">
+            <div class="contact_us">
+                <h3>Send us a mail</h3>
+
+                <form onSubmit="JavaScript:confirm()">
+            
+                    <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+                
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                    <textarea id="message" name="message" placeholder="Enter message..." required></textarea>
+                
+                    <input type="submit" id="submit" value="Send">
+            
+                </form>
+            </div>
+        </div> 
+
+        <div class="vertical_line" id="vertical_line_hide"></div>
+
+        <!--- Contact info --->
+        <div class="sectionText" id="contact_info">
+            <h1>You can also find us at</h1>
+            <p><i class="fas fa-phone"></i> &ensp;+35 678 86 253</p>
+            <p><i class="fas fa-envelope"></i> &ensp;contact@visitasardegna.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> &ensp;202 Cambridge st, Levin</p> <br/>
+            <img class="icon" src="../img/ikoner/twitter-icon.svg">
+            <div class="vertical_line_short" id="vertical_line_short_1"></div>
+            <img class="icon" src="../img/ikoner/facebook-icon.svg">
+            <div class="vertical_line_short" id="vertical_line_short_2"></div>
+            <img class="icon" src="../img/ikoner/instagram-icon.svg">
+        </div>
+    </div>
+
+       
+
+    <!--- Footer --->
+    <div class="footer" id="footer">
+
+    </div>
+</body>
+
+</html>
