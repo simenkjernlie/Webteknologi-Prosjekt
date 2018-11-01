@@ -50,6 +50,10 @@ input, textarea {
     visibility: hidden;
 }
 
+h3 {
+    color: #13434b;
+}
+
 @media only screen and (max-width: 960px) {
     #name {
         width: calc(100% - 4px);
