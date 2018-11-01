@@ -21,206 +21,219 @@
 </head>
 
 <body onload="navigationStartup(false),addFooter(false)" onresize="changeWidth()" onload="changeImg()">
-    <div id="headerDiv">
+    <div id="mainPageBody">
+        <div id="headerDiv">
 
-    </div>
-    <!--- Navigation bar --->
-    <div id="navBarDiv">
-    </div>
-    <h2 class="pageHeader">Restaurants</h2>
-    <div class="hotelRestaurantBox">
-        <img src="../img/Restaurants/pizza.jpg" alt="Pizza">
-        <div class="information">
-            <h3>
-                Impasto Con Guarnizione
-            </h3>
-            <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+        </div>
+        <!--- Navigation bar --->
+        <div id="navBarDiv">
+        </div>
+        <h2 class="pageHeader">Restaurants</h2>
+        <div class="hotelRestaurantBox">
+            <img src="../img/Restaurants/pizza.jpg" alt="Pizza">
+            <div class="information">
+                <h3>
+                    Impasto Con Guarnizione
+                </h3>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="quickInfo">
+                    $$ <br>
+                    Italian, pizza, pasta
+                </p>
+                <p class="description"> Impasto Con Guarnizione is an authentic Italian restaurant, known for its
+                    amazing
+                    pizza.</p>
+                <div class="arrowDownContainer">
+                    <img id="pizzaArrow" class="arrowDown" src="../img/expand-arrow.png" alt="Downward arrow" onclick="RestaurantExpand('pizzaArrow','pizzaExpansion')">
+                </div>
             </div>
-            <p class="quickInfo">
-                $$ <br>
-                Italian, pizza, pasta
-            </p>
-            <p class="description"> Impasto Con Guarnizione is an authentic Italian restaurant, known for its amazing
-                pizza.</p>
-            <div class="arrowDownContainer">
-                <img id="pizzaArrow" class="arrowDown" src="../img/expand-arrow.png" alt="Downward arrow" onclick="RestaurantExpand('pizzaArrow','pizzaExpansion')">
-            </div>
-        </div>
-        <div class="sidebar">
-            <p> <i class="fas fa-phone"></i> +39 373 76 4232</p>
-            <p> <i class="far fa-clock"></i> 12:00 - 23:30</p>
-            <p> <i class="fas fa-map-marker-alt"></i> Viale Indipendenza, 26-18 <br> 09170 Oristano OR, Italy
-            </p>
-        </div>
-
-    </div>
-    <div id="pizzaExpansion" class="hotelRestaurantExpansion">
-        <div class="information">
-            <ul>
-                <li>The food: Impasto Con Guarnizione serves mainly pizza, but select pasta dishes are available.
-                    Local desserts are also available for low prices.</li>
-                <li>When to go: The restaurant is popular every afternoon and usually packed on weekends. With seating
-                    for up to 90 people
-                    available
-                    there is still rarely a need to book ahead.</li>
-            </ul>
-
-        </div>
-        <div class="sidebar">
-            <div id="mapPizza">
+            <div class="sidebar">
+                <p> <i class="fas fa-phone"></i> +39 373 76 4232</p>
+                <p> <i class="far fa-clock"></i> 12:00 - 23:30</p>
+                <p> <i class="fas fa-map-marker-alt"></i> Viale Indipendenza, 26-18 <br> 09170 Oristano OR, Italy
+                </p>
             </div>
 
         </div>
-    </div>
-    <div class="hotelRestaurantBox">
-        <img src="../img/Restaurants/steak.jpg" alt="Steak">
-        <div class="information">
-            <h3>
-                Carne Troppo Cotta
-            </h3>
-            <p class="quickInfo">
-                $$$$ <br>
-                Steakhouse
-            </p>
-            <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <p class="description"> Carne Troppo Cotta specializes in high quality beef and serves the best steaks on
-                Sardinia.</p>
-            <div class="arrowDownContainer">
-                <img id="steakArrow" class="arrowDown" src="../img/expand-arrow.png" alt="Downward arrow" onclick="RestaurantExpand('steakArrow','steakExpansion')">
-            </div>
-        </div>
-        <div class="sidebar">
-            <p> <i class="fas fa-phone"></i> +39 373 74 7263</p>
-            <p> <i class="far fa-clock"></i> 12:00 - 02:00</p>
-            <p> <i class="fas fa-map-marker-alt"></i> Viale Isola Bianca, 24
-                <br> 07026 Olbia OT, Italy</p>
-        </div>
-    </div>
-    <div id="steakExpansion" class="hotelRestaurantExpansion">
-        <div class="information">
-            <ul>
-                <li>The food: The 35-day aged rib steak is signature item at Carne Troppo Cotta,
-                    with other dishes including brisket and sirloin steaks. It is the only steak house on Sardinia to
-                    grill over charcoal. </li>
-                <li>When to go: With the limited number of tables, serving only 25 people at any on time, is is a good
-                    idea to book ahead
-                    when attending Carne Troppo Cotta. </li>
-            </ul>
-        </div>
-        <div class="sidebar">
-            <div id="mapSteak">
-            </div>
-        </div>
-    </div>
+        <div id="pizzaExpansion" class="hotelRestaurantExpansion">
+            <div class="information">
+                <ul>
+                    <li>The food: Impasto Con Guarnizione serves mainly pizza, but select pasta dishes are available.
+                        Local desserts are also available for low prices.</li>
+                    <li>When to go: The restaurant is popular every afternoon and usually packed on weekends. With
+                        seating
+                        for up to 90 people
+                        available
+                        there is still rarely a need to book ahead.</li>
+                </ul>
 
-    <div class="hotelRestaurantBox">
-        <img src="../img/Restaurants/seafood.jpg" alt="Seafood">
-        <div class="information">
-            <h3>
-                Frutti di Congelati
-            </h3>
-            <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
             </div>
-            <p class="quickInfo">
-                $$$ <br>
-                Italian, seafood
-            </p>
-            <p class="description"> Frutti di Congelati is a mediterranean seafood restaurant.</p>
-            <div class="arrowDownContainer">
-                <img id="seafoodArrow" class="arrowDown" src="../img/expand-arrow.png" alt="Downward arrow" onclick="RestaurantExpand('seafoodArrow', 'seafoodExpansion')">
-            </div>
+            <div class="sidebar">
+                <div id="mapPizza">
+                </div>
 
-        </div>
-        <div class="sidebar">
-            <p> <i class="fas fa-phone"></i> +39 373 99 6243</p>
-            <p> <i class="far fa-clock"></i> 12:00 - 00:30</p>
-            <p> <i class="fas fa-map-marker-alt"></i> Via Vincenzo Bruscu, 1-19 <br> 09123 Cagliari CA, Italy</p>
-        </div>
-    </div>
-    <div id="seafoodExpansion" class="hotelRestaurantExpansion">
-        <div class="information">
-            <ul>
-                <li>The food: Frutti di Congelati serves a variety of mediterranean seafood, including
-                    salt-roasted
-                    shrimp and sea urchin linguine. Its roots date back to the early 1960s, with a local family opening
-                    a restaurant
-                    to sell their fresh seafood. The restaurant is still kept in the family and prides itself over
-                    local and fresh ingredients. </li>
-                <li>When to go: Tables are usually available without reserving ahead, but short waiting times may occur
-                    during busy times during the weekends. </li>
-            </ul>
-        </div>
-        <div class="sidebar">
-            <div id="mapSeafood">
             </div>
         </div>
-    </div>
-    <div class="hotelRestaurantBox">
-        <img src="../img/Restaurants/lobster_pasta.jpg" alt="Lobster pasta">
-        <div class="information">
-            <h3>
-                Aragosta Bollita Viva
-            </h3>
-            <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+        <div class="hotelRestaurantBox">
+            <img src="../img/Restaurants/steak.jpg" alt="Steak">
+            <div class="information">
+                <h3>
+                    Carne Troppo Cotta
+                </h3>
+                <p class="quickInfo">
+                    $$$$ <br>
+                    Steakhouse
+                </p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="description"> Carne Troppo Cotta specializes in high quality beef and serves the best steaks
+                    on
+                    Sardinia.</p>
+                <div class="arrowDownContainer">
+                    <img id="steakArrow" class="arrowDown" src="../img/expand-arrow.png" alt="Downward arrow" onclick="RestaurantExpand('steakArrow','steakExpansion')">
+                </div>
             </div>
-            <p class="quickInfo">
-                $$$$ <br>
-                Italian, seafood, pasta
-            </p>
-            <p class="description"> Aragosta Bollita Viva is an Italian seafood restaurant, most known for its
-                delicious
-                shrimps, lobsters and crabs. </p>
-            <div class="arrowDownContainer">
-                <img id="lobsterArrow" class="arrowDown" src="../img/expand-arrow.png" alt="Downward arrow" onclick="RestaurantExpand('lobsterArrow', 'LobsterExpansion')">
-            </div>
-        </div>
-        <div class="sidebar">
-            <p> <i class="fas fa-phone"></i> +39 373 54 2936</p>
-            <p> <i class="far fa-clock"></i> 11:00 - 23:30</p>
-            <p> <i class="fas fa-map-marker-alt"></i> Viale Trieste, 95-137 <br> 09123 Cagliari CA, Italy</p>
-        </div>
-    </div>
-    <div id="LobsterExpansion" class="hotelRestaurantExpansion">
-        <div class="information">
-            <ul>
-                <li>The food: Aragosta Bollita Viva is a high-end restaurant with a focus on local shellfood.
-                    Lobsters are served roasted, steamed, grilled or stuffed, and with is delicious fresh pasta you
-                    won't be dissapointed. </li>
-                <li>When to go: Aragosta Bollite Viva is a popular lunch destination on weekends and reservations are
-                    usually needed if that is your plan.
-                </li>
-            </ul>
-        </div>
-        <div class="sidebar">
-            <div id="mapLobster">
+            <div class="sidebar">
+                <p> <i class="fas fa-phone"></i> +39 373 74 7263</p>
+                <p> <i class="far fa-clock"></i> 12:00 - 02:00</p>
+                <p> <i class="fas fa-map-marker-alt"></i> Viale Isola Bianca, 24
+                    <br> 07026 Olbia OT, Italy</p>
             </div>
         </div>
-    </div>
+        <div id="steakExpansion" class="hotelRestaurantExpansion">
+            <div class="information">
+                <ul>
+                    <li>The food: The 35-day aged rib steak is signature item at Carne Troppo Cotta,
+                        with other dishes including brisket and sirloin steaks. It is the only steak house on Sardinia
+                        to
+                        grill over charcoal. </li>
+                    <li>When to go: With the limited number of tables, serving only 25 people at any on time, is is a
+                        good
+                        idea to book ahead
+                        when attending Carne Troppo Cotta. </li>
+                </ul>
+            </div>
+            <div class="sidebar">
+                <div id="mapSteak">
+                </div>
+            </div>
+        </div>
 
-    <script src="../scripts/restaurants.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFLGoMfLcbvXg9_8uS5aUSy9yucPtLg7k&callback=initMap"></script>
+        <div class="hotelRestaurantBox">
+            <img src="../img/Restaurants/seafood.jpg" alt="Seafood">
+            <div class="information">
+                <h3>
+                    Frutti di Congelati
+                </h3>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p class="quickInfo">
+                    $$$ <br>
+                    Italian, seafood
+                </p>
+                <p class="description"> Frutti di Congelati is a mediterranean seafood restaurant.</p>
+                <div class="arrowDownContainer">
+                    <img id="seafoodArrow" class="arrowDown" src="../img/expand-arrow.png" alt="Downward arrow" onclick="RestaurantExpand('seafoodArrow', 'seafoodExpansion')">
+                </div>
 
+            </div>
+            <div class="sidebar">
+                <p> <i class="fas fa-phone"></i> +39 373 99 6243</p>
+                <p> <i class="far fa-clock"></i> 12:00 - 00:30</p>
+                <p> <i class="fas fa-map-marker-alt"></i> Via Vincenzo Bruscu, 1-19 <br> 09123 Cagliari CA, Italy</p>
+            </div>
+        </div>
+        <div id="seafoodExpansion" class="hotelRestaurantExpansion">
+            <div class="information">
+                <ul>
+                    <li>The food: Frutti di Congelati serves a variety of mediterranean seafood, including
+                        salt-roasted
+                        shrimp and sea urchin linguine. Its roots date back to the early 1960s, with a local family
+                        opening
+                        a restaurant
+                        to sell their fresh seafood. The restaurant is still kept in the family and prides itself over
+                        local and fresh ingredients. </li>
+                    <li>When to go: Tables are usually available without reserving ahead, but short waiting times may
+                        occur
+                        during busy times during the weekends. </li>
+                </ul>
+            </div>
+            <div class="sidebar">
+                <div id="mapSeafood">
+                </div>
+            </div>
+        </div>
+        <div class="hotelRestaurantBox">
+            <img src="../img/Restaurants/lobster_pasta.jpg" alt="Lobster pasta">
+            <div class="information">
+                <h3>
+                    Aragosta Bollita Viva
+                </h3>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="quickInfo">
+                    $$$$ <br>
+                    Italian, seafood, pasta
+                </p>
+                <p class="description"> Aragosta Bollita Viva is an Italian seafood restaurant, most known for its
+                    delicious
+                    shrimps, lobsters and crabs. </p>
+                <div class="arrowDownContainer">
+                    <img id="lobsterArrow" class="arrowDown" src="../img/expand-arrow.png" alt="Downward arrow" onclick="RestaurantExpand('lobsterArrow', 'LobsterExpansion')">
+                </div>
+            </div>
+            <div class="sidebar">
+                <p> <i class="fas fa-phone"></i> +39 373 54 2936</p>
+                <p> <i class="far fa-clock"></i> 11:00 - 23:30</p>
+                <p> <i class="fas fa-map-marker-alt"></i> Viale Trieste, 95-137 <br> 09123 Cagliari CA, Italy</p>
+            </div>
+        </div>
+        <div id="LobsterExpansion" class="hotelRestaurantExpansion">
+            <div class="information">
+                <ul>
+                    <li>The food: Aragosta Bollita Viva is a high-end restaurant with a focus on local shellfood.
+                        Lobsters are served roasted, steamed, grilled or stuffed, and with is delicious fresh pasta you
+                        won't be dissapointed. </li>
+                    <li>When to go: Aragosta Bollite Viva is a popular lunch destination on weekends and reservations
+                        are
+                        usually needed if that is your plan.
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar">
+                <div id="mapLobster">
+                </div>
+            </div>
+        </div>
+        <!--- Footer --->
+        <div class="footer" id="footer">
+        </div>
+        <script src="../scripts/restaurants.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFLGoMfLcbvXg9_8uS5aUSy9yucPtLg7k&callback=initMap"></script>
+
+
+    </div>
 </body>
 
 </html>
