@@ -22,5 +22,5 @@ function widthChangeBoxes() {
 }
 
 function slideshow(){
-
+    //TODO Should give a slideshow animation to the main page, modular so that evry image of a given class can use it
 }
