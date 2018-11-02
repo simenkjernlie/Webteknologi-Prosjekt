@@ -39,7 +39,7 @@
 
 .hoverInf{
     width: 100%;
-    height: 1.5em;
+    height: calc(1.5em);
     z-index: 1000;
     position: absolute;
     float: left;
@@ -50,17 +50,17 @@
     -webkit-transition: height 0.4s;
     transition: height 0.4s;
     overflow: hidden;
+    margin-bottom: 4px;
+    padding-bottom: 5px;
 }
 
 .activitis a img:hover + .hoverInf, .hoverInf:hover{
-    height: 100%;
+    height: calc(100% - 9px);
 }
 
 
 @media only screen and (max-width: 800px){
-    .pageBody{
-        min-width: 620px;
-    }
+
     .activitis{
         width: 35%;
         margin-left:7.5%;
@@ -69,9 +69,7 @@
 }
 
 @media only screen and (max-device-width: 800px){
-    .pageBody{
-        min-height: 71.58vh;
-    }
+
     .activitis{
         width: 40%;
         margin-left:5%;
