@@ -118,7 +118,7 @@ navbarElements = {
     children: null,
     linkClass: "navigationBarListLink",
     extraLink: null,
-    pageLink: "restaurants.html"
+    pageLink: "Restaurants.html"
   },
   activities: {
     name: "Activities",
@@ -154,7 +154,7 @@ navbarElements = {
     },
     linkClass: "navigationBarListLink",
     extraLink: null,
-    pageLink: "activities.html"
+    pageLink: "Activities.html"
   },
   sardinia: {
     name: "About Sardinia",
@@ -168,7 +168,7 @@ navbarElements = {
     children: null,
     linkClass: "navigationBarListLink",
     extraLink: null,
-    pageLink: "About_Us.html"
+    pageLink: "About_us.html"
   }
 };
 
