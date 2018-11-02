@@ -60,11 +60,11 @@ links_Footer = {
     },
     resturants:{
         text:"Resturants",
-        href:"index.html",
+        href:"Restaurants.html",
     },
     activities:{
         text:"Activities",
-        href:"activities.html",
+        href:"Activities.html",
     },
     about_Sardinia:{
         text:"About Sardinia",
@@ -72,7 +72,7 @@ links_Footer = {
     },
     about_us:{
         text:"About us",
-        href:"index.html",
+        href:"About_us.html",
     },
 }
 

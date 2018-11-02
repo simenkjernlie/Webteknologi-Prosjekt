@@ -89,6 +89,8 @@
         float: none;
         margin: auto;
         height: 15vh;
+        font-size: 2vh;
+        line-height: 1.5vh;
     }
     #right_footer{
         width: 60%;
@@ -100,6 +102,26 @@
         overflow: auto;
         z-index: 1;
     }
+
+    #contactInf, socialMedia{
+        width: 60%;
+        float: left;
+        position: relative;
+    }
+
+    #contactInf{
+        margin-top: 0.5vh;
+        line-height: 150%;
+        margin-left: 2vh;
+        width: 60vw;
+    }
+
+    #socialMedia{
+        position: relative;
+        margin-left: 2vh;
+        bottom: 0;
+    }
+
     .footerLinkList{
         width: 150%;
         margin-left: 5%;
@@ -108,6 +130,11 @@
         text-align: center;
         margin-left: 0px;
     }
+    .footerImages{
+        height: 1.5vh;
+        width: 1.5vh;
+    }
+
 }
 
 /* When the screen less than 800px. A computer screen */
