@@ -19,13 +19,13 @@
 *       </body>
 * */
 
-//Se https://www.w3schools.com/howto/howto_css_menu_icon.asp
 
 var navigationBar = null;
 var offSet = null;
 var h = null;
 
 function navigationStartup(isindex) {
+  console.log(window.innerWidth);
   addHeader(isindex);
   addNavBar(isindex);
   const navBar = document.getElementById("navBarDiv");

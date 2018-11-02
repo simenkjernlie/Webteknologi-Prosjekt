@@ -76,7 +76,6 @@ body{
 .menuIconDiv{
     display: none;
     position: absolute;
-    color:red;
     left: 10px;
     top: 0px;
 }
@@ -118,6 +117,9 @@ body{
     }
     .navigationBarLi a{
         display: none;
+        font-size: 3vh;
+        height: 3.5vh;
+        padding: 0.5vh;
     }
     .navigationBarLi .navBarHome{
         display: block;
@@ -126,7 +128,36 @@ body{
     /* Menu icon only show on mobile device */
     .menuIconDiv{
         display: block;
+        left: 0.6vh;
+        top: 0.3vh;
     }
+
+    /* ManuIcon Div */
+    .menuBar1, .menuBar2, .menuBar3{
+        height: 0.4vh;
+        width: 3vh;
+        margin: 0.6vh 0;
+    }
+
+    /*
+    0.4vh == 5px
+    3vh == 35px
+    6px == 0.6vh
+    9px == 0.8vh
+    */
+
+    .changeMenuIcon .menuBar1 {
+        -webkit-transform: rotate(-45deg) translate(-0.8vh, 0.6vh);
+        transform: rotate(-45deg) translate(-0.8vh, 0.6vh);
+    }
+
+    .changeMenuIcon .menuBar2 {opacity: 0;}
+
+    .changeMenuIcon .menuBar3 {
+        -webkit-transform: rotate(45deg) translate(-0.8vh, -0.6vh);
+        transform: rotate(45deg) translate(-0.8vh, -0.6vh);
+    }
+
 }
 
 
