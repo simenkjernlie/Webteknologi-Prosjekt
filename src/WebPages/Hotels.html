@@ -70,7 +70,7 @@
 
 
         <div class="gul_boks" id="gul_boks1">
-            <div> <img id="hot_map1" src="../img/hotelbilder/map_hot1.PNG" alt="Directions Hotel Adriana"></div>
+            <div> <img id="hot_map1" class="google_map" src="../img/hotelbilder/map_hot1.PNG" alt="Directions Hotel Adriana"></div>
             <div class="information">
 
                 <ul>
@@ -104,29 +104,29 @@
                 </tr>
                 <tr class="row_last">
                     <td>
-                        Rooms: <select name="nr_rooms">
-                            <option value="none">0</option>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
+                        Rooms: <select name="nr_rooms" id="nr_rooms">
+                            <option value=0>0</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
                         </select>
                     </td>
                     <td>
-                        Adults: <select name="nr_adults">
-                            <option value="none">0</option>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
+                        Adults: <select name="nr_adults", id="nr_adults">
+                            <option value=0>0</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
                     </td>
                     <td>
-                        Children: <select name="nr_children">
-                            <option value="none">0</option>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
+                        Children: <select name="nr_children" id="nr_children">
+                            <option value=0>0</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
                         </select>
                     </td>
                     <td class="fpe">
@@ -135,11 +135,11 @@
                         Email: <input type="text" name="full_name" id="full_name" size="1">
                     </td>
                     <td>
-                        <input class="booking_btn" type="submit" value="Book now">
+                        <input class="booking_btn" type="submit" value="Book now" onclick="price(check_in_date, check_out_date, nr_rooms, nr_adults, nr_children)">
                     </td>
                 </tr>
             </table>
-            <div class="tot_cost">Total cost: <h1> €</h1>
+            <div class="tot_cost">Total cost: <div id="calc_price"></div> <h1> €</h1>
             </div>
         </div>
     </div>
