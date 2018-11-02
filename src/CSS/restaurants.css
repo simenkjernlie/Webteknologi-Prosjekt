@@ -1,3 +1,6 @@
+.bottom_div {
+  margin-top: 20px;
+}
 .hotelRestaurantBox {
   /* Equal to the hotel_blocks class in Hotels.css */
   background-color: #13434b;
