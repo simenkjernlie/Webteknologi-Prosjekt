@@ -241,7 +241,7 @@ function addHeader(isindex) {
   if (isindex !== true) {
     imageLink += "../";
   }
-  imageLink += "img/logo.PNG";
+  imageLink += "img/logo.png";
   image.src = imageLink;
   image.classList.add("headerImg");
   titleBar.appendChild(image);
