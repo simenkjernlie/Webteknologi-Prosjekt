@@ -14,7 +14,6 @@ body{
     position: absolute;
     z-index: 10000;
     height: 1em;
-    /*min-width: 620px;*/
 }
 
 .navigationBarDiv{
@@ -49,13 +48,9 @@ body{
     height: 30px;
 }
 
-.navigationPlaceholder{
-    height: 3vh;
-}
-
 .navigationBarLi a:hover{
     background-color: #e4e4e4;
-    transition: 0.7s;
+     /* transition: 0.7s; */
 }
 
 .navDropdown{

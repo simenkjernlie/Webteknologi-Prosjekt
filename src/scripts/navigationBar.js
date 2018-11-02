@@ -286,6 +286,7 @@ function togleMenuIconDiv(menuIconDiv){
 function createMenuIcon(){
     const div = document.createElement("div");
     div.classList.add("menuIconDiv");
+
     div.addEventListener("click", function(evt){
         clickMenuIcon(this, true);
     });

@@ -17,7 +17,11 @@ function widthChangeBoxes() {
     const boxText = document.getElementsByClassName("hoverInf");
     const width = boxes[0].offsetWidth;
     for (e of boxText){
-        e.style.fontSize = (String(width/220)+"em");
+        if (width > 280){
+            e.style.fontSize = (String(width/300)+"em");
+        } else{
+            e.style.fontSize = (String(width/250)+"em");
+        }
     }
 }
 
