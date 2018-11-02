@@ -1,3 +1,6 @@
+.bottom_div {
+  margin-top: 20px;
+}
 .hotelRestaurantBox {
   /* Equal to the hotel_blocks class in Hotels.css */
   background-color: #13434b;
@@ -184,5 +187,40 @@ img.arrowDown {
   }
   .hotelRestaurantBox .rating {
     font-size: 7pt;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .hotelRestaurantBox img {
+    height: 70px;
+    width: 90px;
+  }
+  .hotelRestaurantBox .sidebar {
+    height: 65px;
+    left: 100px;
+    width: 80%;
+  }
+  img.arrowDown {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  .hotelRestaurantBox .rating {
+    position: absolute;
+    right: 20px;
+    font-size: 5pt;
+  }
+  .hotelRestaurantExpansion {
+    height: 330px;
+  }
+  .hotelRestaurantExpansion .sidebar {
+    top: 200px;
+    height: 110px;
+  }
+  .hotelRestaurantBox .description {
+    font-size: 10pt;
+  }
+  .hotelRestaurantExpansion .information {
+    font-size: 10pt;
+    padding: 4px;
   }
 }

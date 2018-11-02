@@ -19,13 +19,13 @@
 *       </body>
 * */
 
-//Se https://www.w3schools.com/howto/howto_css_menu_icon.asp
 
 var navigationBar = null;
 var offSet = null;
 var h = null;
 
 function navigationStartup(isindex) {
+  console.log(window.innerWidth);
   addHeader(isindex);
   addNavBar(isindex);
   const navBar = document.getElementById("navBarDiv");
@@ -118,7 +118,7 @@ navbarElements = {
     children: null,
     linkClass: "navigationBarListLink",
     extraLink: null,
-    pageLink: "restaurants.html"
+    pageLink: "Restaurants.html"
   },
   activities: {
     name: "Activities",
@@ -154,7 +154,7 @@ navbarElements = {
     },
     linkClass: "navigationBarListLink",
     extraLink: null,
-    pageLink: "activities.html"
+    pageLink: "Activities.html"
   },
   sardinia: {
     name: "About Sardinia",
@@ -168,7 +168,7 @@ navbarElements = {
     children: null,
     linkClass: "navigationBarListLink",
     extraLink: null,
-    pageLink: "About_Us.html"
+    pageLink: "About_us.html"
   }
 };
 
@@ -241,7 +241,7 @@ function addHeader(isindex) {
   if (isindex !== true) {
     imageLink += "../";
   }
-  imageLink += "img/logo.PNG";
+  imageLink += "img/logo.png";
   image.src = imageLink;
   image.classList.add("headerImg");
   titleBar.appendChild(image);

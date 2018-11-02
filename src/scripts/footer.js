@@ -16,13 +16,13 @@ images = {
     contactInf:{
         phone:{
             alt:"phoneIcon",
-            src:"img/phoneicon.png",
+            src:"img/ikoner/phone-icon.svg",
             class:"footerImages",
             text:"   +35 678 86 253",
         },
         mail:{
             alt:"mailIcon",
-            src:"img/mailicon.jpg",
+            src:"img/ikoner/mail-icon.svg",
             class:"footerImages",
             text:"   contact@visitasardegna.com",
         },
@@ -30,19 +30,19 @@ images = {
     sosialmedia:{
         twitter:{
             alt:"twitterIcon",
-            src:"img/twitter-icon.svg",
+            src:"img/ikoner/twitter-icon.svg",
             class:"footerImages",
             text:null,
         },
         facebook:{
             alt:"facebookIcon",
-            src:"img/facebook-icon.svg",
+            src:"img/ikoner/facebook-icon.svg",
             class:"footerImages",
             text:null,
         },
         instagram:{
             alt:"instagramIcon",
-            src:"img/instagram-icon.svg",
+            src:"img/ikoner/instagram-icon.svg",
             class:"footerImages",
             text:null,
         },
@@ -60,11 +60,11 @@ links_Footer = {
     },
     resturants:{
         text:"Resturants",
-        href:"index.html",
+        href:"Restaurants.html",
     },
     activities:{
         text:"Activities",
-        href:"activities.html",
+        href:"Activities.html",
     },
     about_Sardinia:{
         text:"About Sardinia",
@@ -72,7 +72,7 @@ links_Footer = {
     },
     about_us:{
         text:"About us",
-        href:"index.html",
+        href:"About_us.html",
     },
 }
 
