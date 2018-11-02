@@ -3,6 +3,6 @@ function widthChangeBoxes() {
     const boxText = document.getElementsByClassName("hoverInf");
     const width = boxes[0].offsetWidth;
     for (e of boxText){
-        e.style.fontSize = (String(width/190)+"em");
+        e.style.fontSize = "2vh";//(String(width/190)+"em");
     }
 }
