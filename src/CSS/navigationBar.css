@@ -1,193 +1,199 @@
-*{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    width: 100%;
+body {
+  width: 100%;
 }
 
 /* Navigation bar */
-.navigationBarWrapper{
-    width: 100%;
-    background-color: #f8f8f8;
-    position: absolute;
-    z-index: 10000;
-    height: 1em;
+.navigationBarWrapper {
+  width: 100%;
+  background-color: #f8f8f8;
+  position: absolute;
+  z-index: 10000;
+  height: 1em;
 }
 
-.navigationBarDiv{
-    width: 100%;
-    display: table;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+.navigationBarDiv {
+  width: 100%;
+  display: table;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-family: Roboto Slab, serif;
+  font-weight: 100;
 }
 
-.navigationBarList{
-    color: #186fad;
-    list-style-type: none;
-    margin: 0;
-    padding:0;
-    overflow: hidden;
-    background-color: #f8f8f8;
-    vertical-align: center;
+.navigationBarList {
+  color: #186fad;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  vertical-align: center;
 }
 
-.navigationBarLi{
-    float: left;
-    width: 16.6%; /* Width of navigation bar link */
+.navigationBarLi {
+  float: left;
+  width: 16.6%; /* Width of navigation bar link */
 }
 
-.navigationBarLi a{
-    background-color: #f8f8f8;
-    display: block;
-    color: #13434b;
-    text-align: center;
-    padding: 7px; /* Margin over and under text link */
-    text-decoration: none;
-    font-size: 20px;
-    height: 30px;
+.navigationBarLi a {
+  background-color: #f8f8f8;
+  display: block;
+  color: #13434b;
+  text-align: center;
+  padding: 7px; /* Margin over and under text link */
+  text-decoration: none;
+  font-size: 20px;
+  height: 30px;
 }
 
-.navigationBarLi a:hover{
-    background-color: #e4e4e4;
-     /* transition: 0.7s; */
+.navigationBarLi a:hover {
+  background-color: #e4e4e4;
+  /* transition: 0.7s; */
 }
 
 /* Ads style to the active link. Only defines the color of the currently active link */
-.activeLink{
-    background-color: #e4e4e4 !important;
+.activeLink {
+  background-color: #e4e4e4 !important;
 }
 
-
-.navDropdown{
-    display: none;
-    position: absolute;
-    background-color: #f8f8f8;
-    width: inherit;
-    z-index: 1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+.navDropdown {
+  display: none;
+  position: absolute;
+  background-color: #f8f8f8;
+  width: inherit;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-.navDropdown a{
-    display: block;
-    text-align: center;
-    color: #000000;
+.navDropdown a {
+  display: block;
+  text-align: center;
+  color: #000000;
 }
 
-#DropdownLink:hover .navDropdown{
-    display: block;
+#DropdownLink:hover .navDropdown {
+  display: block;
 }
 
 /* Menu icon */
-.menuIconDiv{
-    display: none;
-    position: absolute;
-    left: 10px;
-    top: 0px;
+.menuIconDiv {
+  display: none;
+  position: absolute;
+  left: 10px;
+  top: 0px;
 }
 
 /* Menu icon bars */
-.menuBar1, .menuBar2, .menuBar3{
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.2s;
+.menuBar1,
+.menuBar2,
+.menuBar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
 }
 
 /* Menu icon bars transformation */
 .changeMenuIcon .menuBar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-.changeMenuIcon .menuBar2 {opacity: 0;}
+.changeMenuIcon .menuBar2 {
+  opacity: 0;
+}
 
 .changeMenuIcon .menuBar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
-
-
 /* Mobile device */
-@media only screen and (max-device-width: 800px){
-    .navigationBarLi{
-        float: none;
-        width: 100%;
-    }
-    .navDropdown :hover, #DropdownLink:hover .navDropdown{
-        height: 0;
-        display: none;
-        overflow: hidden;
-    }
-    .navigationBarLi a{
-        display: none;
-        font-size: 3vh;
-        height: 3.5vh;
-        padding: 0.5vh;
-    }
-    .navigationBarLi .navBarHome{
-        display: block;
-    }
+@media only screen and (max-device-width: 800px) {
+  .navigationBarLi {
+    float: none;
+    width: 100%;
+  }
+  .navDropdown :hover,
+  #DropdownLink:hover .navDropdown {
+    height: 0;
+    display: none;
+    overflow: hidden;
+  }
+  .navigationBarLi a {
+    display: none;
+    font-size: 3vh;
+    height: 3.5vh;
+    padding: 0.5vh;
+  }
+  .navigationBarLi .navBarHome {
+    display: block;
+  }
 
-    /* Menu icon only show on mobile device */
-    .menuIconDiv{
-        display: block;
-        left: 0.6vh;
-        top: 0.3vh;
-    }
+  /* Menu icon only show on mobile device */
+  .menuIconDiv {
+    display: block;
+    left: 0.6vh;
+    top: 0.3vh;
+  }
 
-    /* ManuIcon Div */
-    .menuBar1, .menuBar2, .menuBar3{
-        height: 0.4vh;
-        width: 3vh;
-        margin: 0.6vh 0;
-    }
+  /* ManuIcon Div */
+  .menuBar1,
+  .menuBar2,
+  .menuBar3 {
+    height: 0.4vh;
+    width: 3vh;
+    margin: 0.6vh 0;
+  }
 
-    /*
+  /*
     0.4vh == 5px
     3vh == 35px
     6px == 0.6vh
     9px == 0.8vh
     */
 
-    .changeMenuIcon .menuBar1 {
-        -webkit-transform: rotate(-45deg) translate(-0.8vh, 0.6vh);
-        transform: rotate(-45deg) translate(-0.8vh, 0.6vh);
-    }
+  .changeMenuIcon .menuBar1 {
+    -webkit-transform: rotate(-45deg) translate(-0.8vh, 0.6vh);
+    transform: rotate(-45deg) translate(-0.8vh, 0.6vh);
+  }
 
-    .changeMenuIcon .menuBar2 {opacity: 0;}
+  .changeMenuIcon .menuBar2 {
+    opacity: 0;
+  }
 
-    .changeMenuIcon .menuBar3 {
-        -webkit-transform: rotate(45deg) translate(-0.8vh, -0.6vh);
-        transform: rotate(45deg) translate(-0.8vh, -0.6vh);
-    }
-
+  .changeMenuIcon .menuBar3 {
+    -webkit-transform: rotate(45deg) translate(-0.8vh, -0.6vh);
+    transform: rotate(45deg) translate(-0.8vh, -0.6vh);
+  }
 }
 
-
-
 /* Smaller screen */
-@media only screen and (max-width: 960px){
-    .navigationBarLi{
-        float: none;
-        width: 100%;
-    }
-    .navDropdown :hover, #DropdownLink:hover .navDropdown{
-        height: 0;
-        display: none;
-        overflow: hidden;
-    }
-    .navigationBarLi a{
-        display: none;
-    }
-    .navigationBarLi .navBarHome{
-        display: block;
-    }
+@media only screen and (max-width: 960px) {
+  .navigationBarLi {
+    float: none;
+    width: 100%;
+  }
+  .navDropdown :hover,
+  #DropdownLink:hover .navDropdown {
+    height: 0;
+    display: none;
+    overflow: hidden;
+  }
+  .navigationBarLi a {
+    display: none;
+  }
+  .navigationBarLi .navBarHome {
+    display: block;
+  }
 
-
-    /*
+  /*
     #DropdownLink{
         height: auto;
         -webkit-transition: height 1s;
