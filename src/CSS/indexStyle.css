@@ -103,6 +103,9 @@
         width: auto;
         overflow: hidden;
     }
+    #portraitImage{
+        margin-bottom: -30px;
+    }
 
 
     .textWrapper{
