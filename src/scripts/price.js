@@ -34,7 +34,7 @@ function make_price_elements(i, pris) {
 }
 
 function null_ut() {
-  for (i = 0; i < 4; i++) {
+  for (i = 0; i < 3; i++) {
     make_price_elements(i, 0);
   }
 }
