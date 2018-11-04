@@ -25,7 +25,6 @@ var offSet = null;
 var h = null;
 
 function navigationStartup(isindex) {
-  console.log(window.innerWidth);
   addHeader(isindex);
   addNavBar(isindex);
   const navBar = document.getElementById("navBarDiv");
@@ -188,6 +187,13 @@ function addNewElementNavbar(element, liElement, isindex) {
   else if (element.pageLink !== "index.html" && isindex === true) {
     href += "WebPages/";
   }
+
+  //Ads active navBar listener
+  const url = (window.location.pathname.split("/").pop());
+  if (url == element.pageLink){
+      link.classList.add("activeLink");
+  }
+
   href += element.pageLink;
   link.href = href;
   let dropDownDiv = null;
@@ -208,6 +214,7 @@ function addNewElementNavbar(element, liElement, isindex) {
   //If os, it adds a list element and appends the link to this before it returns the list element
   if (liElement === true) {
     const list = document.createElement("li");
+
     list.classList.add("navigationBarLi");
     list.appendChild(link);
     if (dropDownDiv != null) {

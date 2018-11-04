@@ -53,6 +53,12 @@ body{
      /* transition: 0.7s; */
 }
 
+/* Ads style to the active link. Only defines the color of the currently active link */
+.activeLink{
+    background-color: #e4e4e4 !important;
+}
+
+
 .navDropdown{
     display: none;
     position: absolute;
