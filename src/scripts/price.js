@@ -19,6 +19,7 @@ if(hours<10) {
 let today_date_string = yyyy + "-" + mm + "-" + dd;
 let time_now_string = hours + ":" + minutes;
 
+
 function make_price_elements(i, pris) {
   let img = document.createElement('img');
   let tall = document.createTextNode(pris);
@@ -33,13 +34,13 @@ function make_price_elements(i, pris) {
 }
 
 function null_ut() {
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 4; i++) {
     make_price_elements(i, 0);
   }
 }
 
 function set_todays_date() {
-  for (i=0; i < 3; i++) {
+  for (i=0; i < 4; i++) {
     document.getElementsByClassName("input_start")[i].value = today_date_string;
     document.getElementsByClassName("input_end")[i].value = today_date_string;
     document.getElementsByClassName("input_start_time")[i].value = time_now_string;
@@ -47,19 +48,26 @@ function set_todays_date() {
   }
 }
 
-let price_per_day = [32000, 540, 350]
+let wrong_date_alert = 0;
+let wrong_date_flag = 0;
 
-function calc_price(number) {
+function calc_price(number, price_per_day) {
   let calculated_price = 0;
   let start_value = new Date(document.getElementsByClassName("input_start")[number].value);
   let end_value = new Date(document.getElementsByClassName("input_end")[number].value);
-  calculated_price = (parseInt(end_value.getTime() - start_value.getTime())/(1000*60*60*24))*price_per_day[number];
+  calculated_price = (parseInt(end_value.getTime() - start_value.getTime())/(1000*60*60*24))*price_per_day;
   console.log(calculated_price);
 
   if (calculated_price < 0) {
-    document.getElementsByClassName("input_start")[number].style.boxShadow = "0px 0px 30px 10px #FAC917"
+    document.getElementsByClassName("input_start")[number].style.boxShadow = "2px 0px 10px 5px red";
+    if ((wrong_date_alert % 10)===0) {
+      alert("The 'Pick-Up date' is set after the 'End date' of the renting period. \nPlease refill the form.");
+    }
+    wrong_date_alert += 1;
+    wrong_date_flag = 1;
   }
   else {
+    wrong_date_flag = 0;
     null_ut();
     make_price_elements(number, calculated_price);
     document.getElementsByClassName("input_start")[number].style.boxShadow = "none"
@@ -69,5 +77,16 @@ function calc_price(number) {
     setTimeout(function () {
     document.getElementsByClassName('price')[number].classList.toggle("price_zoom");
   }, 300);
+  document.getElementsByClassName("input_start")[number].style.boxShadow = "2px 0px 10px 5px green";
+  }
+}
+
+
+function verify_and_notify(i) {
+  if (wrong_date_flag) {
+    alert("Sorry, but you need to refill the form. Your date is not realistic.\nPick-Up date cannot be set after the End-of-trip date" )
+  }
+  else {
+    alert("Thank you for using our webiste. \nWe will contact you as soon as we have a tailored offer for you. (1-2 working days)" )
   }
 }
