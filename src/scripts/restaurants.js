@@ -4,10 +4,10 @@ function RestaurantExpand(arrowImage, restaurantExpansion) {
 
   if (element.style.display === "none" || element.style.display === "") {
     element.style.display = "block";
-    image.src = "../img/arrow.png";
+    image.src = "../img/arrow-up.svg";
   } else {
     element.style.display = "none";
-    image.src = "../img/expand-arrow.png";
+    image.src = "../img/arrow-down.svg";
   }
 }
 
