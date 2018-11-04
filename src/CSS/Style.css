@@ -1,18 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 /* Header */
-body{
-    background-color: #f8f8f8;
+body {
+  background-color: #f8f8f8;
+  font-family: Roboto, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Roboto Slab, serif;
+  font-weight: 100;
 }
 
-.titleBar{
-    background-color: #13434b;
-    width: 100%;
-    height: 6vh;
-    text-align: center;
-    vertical-align: middle;
-    color:#f8f8f8;
-    /*min-width: 620px;*/
+.titleBar {
+  background-color: #13434b;
+  width: 100%;
+  height: 6vh;
+  text-align: center;
+  vertical-align: middle;
+  color: #f8f8f8;
+  /*min-width: 620px;*/
 }
 
-.headerImg{
-    height: inherit;
+.headerImg {
+  height: inherit;
 }
