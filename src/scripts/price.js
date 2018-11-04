@@ -34,13 +34,17 @@ function make_price_elements(i, pris) {
 }
 
 function null_ut() {
-  for (i = 0; i < 4; i++) {
+  //The for loop was defined to run 4 iterations despite the fact that Biking only had 3 elements.
+  //This was solved by reading the number of elements the exists
+  for (let i = 0; i < document.getElementsByClassName('price').length; i++) {
     make_price_elements(i, 0);
   }
 }
 
 function set_todays_date() {
-  for (i=0; i < 4; i++) {
+  //The for loop was defined to run 4 iterations despite the fact that Biking only had 3 elements.
+  //This was solved by reading the number of elements the exists
+  for (let i = 0; i < document.getElementsByClassName("input_start").length; i++) {
     document.getElementsByClassName("input_start")[i].value = today_date_string;
     document.getElementsByClassName("input_end")[i].value = today_date_string;
     document.getElementsByClassName("input_start_time")[i].value = time_now_string;
