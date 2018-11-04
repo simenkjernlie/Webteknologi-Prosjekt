@@ -104,7 +104,7 @@ input{
   width: 15vw;
   font-style: italic;
   font-family: Roboto Slab;
-  transition: 0.7s;
+  transition: 0.5s;
 }
 
 .input_start_time, .input_end_time {
@@ -163,27 +163,25 @@ button:hover span:after {
   .leftside2, .rightside2{
     text-align: center;
   }
-  .description {
-    font-size: 18px;
-  }
-  form, input {
+  .description, form, input, .input_start_time, .input_end_time {
     font-size: 20px;
   }
+
   .price, .overskrift{
     font-size: 30px;
   }
   input{
-    height: 20px;
-    width: 300px;
+    height: 2.5vw;
+    width: 30vw;
   }
   .input_start_time, .input_end_time {
-    width: 200px;
-    font-size: 20px;
+    width: 30vw;
   }
   button {
-    width: 200px;
-    height: 50px;
+    width: 25vw;
+    height: 60px;
     margin-bottom: 20px;
+    font-size: 20px;
   }
   .side1::before {
     content : "";
