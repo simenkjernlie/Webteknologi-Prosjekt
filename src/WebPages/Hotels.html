@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../scripts/navigationBar.js"></script>
     <script src="../scripts/footer.js"></script>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
 
 </head>
 
-<body onload="navigationStartup(false),addFooter(false)" onresize="changeWidth()" onload="changeImg()">
+<body onload="navigationStartup(false)", addFooter(false)", onresize="changeWidth()" onload="changeImg()">
     <div id="headerDiv">
 
     </div>
@@ -33,450 +34,503 @@
 
 
     <div class="hotel_block" id="hotel_block1">
-        <img id="bilder_slide" src="../img/hotelbilder/hotel1-1.jpg" class="hot_images" alt="Hotel Adriana">
-        
-        <div class="hotel_text">
-            <h3>Hotel Adriana        
-                <div>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div></h3>
-            <h4> <i style="font-size:15px" class="fa">&#xf041;</i> Cagliari</h4>
-            <br>
-            <p id="hot_text1"> Hotel Adriana is one of the best known hotels in the Cagliari area.
-                It is known for its beautiful location by the beach, along with unbeatable service and
-                chefs working around the clock to always offer freash mediterranean courses.
-            </p>
+        <div>
+            <img class="hotelbilde" src="../img/hotelbilder/hotel1-1.jpg" alt="Hotel Adriana">
         </div>
- 
-        <div class="container_text_img">
-        <div class="side" id="side1">
+        <div class="hot_name">
+            <h3>Hotel Adriana
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </h3>
+        </div>
 
-            <p> <i class="fas fa-swimming-pool"></i> 12:00 - 23:30</p>
-            <p> <i class="fas fa-umbrella-beach"></i> 500 meters </p>
-            <p><i class="fas fa-cocktail"></i> Bar in common area</p>
+
+
+        <div class="side" id="side1" onresize="side_height(side1)">
+
+            <p> <i class="fas fa-swimming-pool"></i> 12:00 - 21:30</p>
+            <p> <i class="fas fa-umbrella-beach"></i> 1000 meters </p>
             <p> <i class="fas fa-phone"></i> +39 373 74 7263</p>
             <p> <i class="fas fa-map-marker-alt"></i> Viale Indipendenza, 26-18 <br> 09170 Oristano OR, Italy
             </p>
 
         </div>
-    
+        <div class="linje" id="linje1">
 
-    </div>
-        <img class="expander" id="img_ut1" src="../img/hotelbilder/expand-arrow.png" alt="expander" onclick="utvidelse('gul_boks1','hotel_block1', 'side1', 'img_ut1')">
-
-
-        <div class="gul_boks" id="gul_boks1">
-            <div> <img id="hot_map1" class="google_map" src="../img/hotelbilder/map_hot1.PNG" alt="Directions Hotel Adriana"></div>
-            <div class="information">
-
-                <ul>
-                    <li>The food: Impasto Con Guarnizione serves mainly pizza, but select pasta dishes are also
-                        available.
-                        Local desserts are also available for low prices.</li>
-                    <li>When to go: The restaurant is popular every afternoon and usually packed on weekends. With
-                        seating
-                        for up to 90 people
-                        available
-                        there is rearely a need to book ahead.</li>
-                </ul>
-
-            </div>
-            <table class="table">
-                <tr>
-                    <td colspan="12">
-                        <h2>When would you like to stay at Hotel Adriana?</h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td> <br>
-                        Check in date: <br>
-                        <input type="date" name="check_in_date" id="check_in_date">
-                    </td>
-                    <td>
-                        Check out date: <br>
-                        <input type="date" name="check_out_date" id="check_out_date">
-                    </td>
-
-                </tr>
-                <tr class="row_last">
-                    <td>
-                        Rooms: <select name="nr_rooms" id="nr_rooms">
-                            <option value=0>0</option>
-                            <option value=1>1</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                        </select>
-                    </td>
-                    <td>
-                        Adults: <select name="nr_adults", id="nr_adults">
-                            <option value=0>0</option>
-                            <option value=1>1</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                    </td>
-                    <td>
-                        Children: <select name="nr_children" id="nr_children">
-                            <option value=0>0</option>
-                            <option value=1>1</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                        </select>
-                    </td>
-                    <td class="fpe">
-                        Full name: <input type="text" name="full_name" id="full_name" size="4">
-                        Phone: <input type="text" name="full_name" id="full_name" size="4">
-                        Email: <input type="text" name="full_name" id="full_name" size="1">
-                    </td>
-                    <td>
-                        <input class="booking_btn" type="submit" value="Book now" onclick="price(check_in_date, check_out_date, nr_rooms, nr_adults, nr_children)">
-                    </td>
-                </tr>
-            </table>
-            <div class="tot_cost">Total cost: <div id="calc_price"></div> <h1> €</h1>
-            </div>
         </div>
+        <div class="hotel_tekst">
+            <p>Hotel Adriana is one of the best known hotels in the Cagliari area. It is known for its beautiful
+                location by the beach, along with unbeatable service and chefs working around the clock to always offer
+                freash mediterranean courses.</p>
+        </div>
+
+
+
+        <img class="expander" id="img_ut1" src="../img/arrow-down.svg" alt="expander" onclick="utvidelse('utvidelse1', 'img_ut1', 'linje1')">
+    </div>
+    <div class="utivdelse" id="utvidelse1">
+
+        <div class="ekstra_hotel_text">
+            <p>
+                <ul>
+                    <li>
+                        The food: Impasto Con Guarnizione serves mainly pizza, but select pasta dishes are also
+                        available. Local desserts are also available for low prices.
+
+                    </li>
+                    <li>
+                        When to go: The restaurant is popular every afternoon and usually packed on weekends. With
+                        seating for up to 90 people available there is rearely a need to book ahead.
+
+                    </li>
+                </ul>
+            </p>
+
+
+        </div>
+        <div class="google_image_element">
+            <img class="google_image" src="../img/hotelbilder/map_hot1.PNG" alt="expander">
+
+        </div>
+        <div class="gul_boks">
+            <h2>Book your hotel now!</h2>
+            <form action="Hotels.html" method="post" accept-charset="UTF-8">
+                <div class="side1">
+                    Check in date: <br> <input type="date" name="check_in_date" id="check_in_date" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
+                        required>
+                    <br>
+                    Check out date: <br> <input type="date" name="check_out_date" id="check_out_date" min="check_in_date"
+                        onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')" required>
+                </div>
+                <div class="side2">
+                    Rooms: <br> <select name="nr_rooms" id="nr_rooms" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
+                        required>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                    </select>
+                    <br>
+                    Persons: <br> <select name="nr_adults" , id="nr_adults" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
+                        required>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                    </select>
+                </div>
+
+                <div class="side3">
+                    Full name: <br> <input type="text" name="full_name" id="full_name" size="4" placeholder="Your name"
+                        required> <br>
+                    Phone: <br> <input type="number" name="full_name" id="full_name" size="4" placeholder="Your phone number"
+                        required><br>
+                    Email: <br> <input type="email" name="full_name" id="full_name" size="1" placeholder="Your Email"
+                        required><br>
+                </div>
+                <div class="price" id="price1">
+                    Please fill in form for price estimation
+
+                </div>
+                <div class="side4">
+                    <button class="booking_btn" type="submit" name="Book_now" onclick="return form_validater('check_in_date', 'check_out_date')">
+                        <span>Book now</span>
+                    </button>
+
+                </div>
+
+            </form>
+
+
+        </div>
+
     </div>
 
     <!--####################################           Hotel 2            ########################-->
+    <div class="spacing"></div>
+
 
 
 
     <div class="hotel_block" id="hotel_block2">
-        <img id="bilder_slide" src="../img/hotelbilder/hotel1-1.jpg" class="hot_images" alt="Hotel Adriana">
-        <div class="hotel_text">
-            <h3>Hotel Adriana</h3>
-            <h4> <i style="font-size:15px" class="fa">&#xf041;</i> Cagliari</h4>
-            <br>
-            <p id="hot_text1"> Hotel Adriana is one of the best known hotels in the Cagliari area.
-                It is known for its beautiful location by the beach, along with unbeatable service and
-                chefs working around the clock to always offer freash mediterranean courses.
-            </p>
+        <div>
+            <img class="hotelbilde" src="../img/hotelbilder/hotel2-1.jpg" alt="Hotel Adriana">
         </div>
-        <div class="side" id="side2">
+        <div class="hot_name">
+            <h3>Hotel Barbo
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </h3>
+        </div>
 
-            <p> <i class="fas fa-swimming-pool"></i> 12:00 - 23:30</p>
+
+
+        <div class="side" id="side2" onresize="side_height(side1)">
+
+            <p> <i class="fas fa-swimming-pool"></i> 12:00 - 20:30</p>
             <p> <i class="fas fa-umbrella-beach"></i> 500 meters </p>
-            <p><i class="fas fa-cocktail"></i> Bar in common area</p>
-            <p> <i class="fas fa-phone"></i> +39 373 74 7263</p>
+            <p> <i class="fas fa-phone"></i> +39 373 52 8976</p>
             <p> <i class="fas fa-map-marker-alt"></i> Viale Indipendenza, 26-18 <br> 09170 Oristano OR, Italy
             </p>
 
         </div>
-        <div class="rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+        <div class="linje" id="linje2">
+
         </div>
-        <img class="expander" id="img_ut2" src="../img/hotelbilder/expand-arrow.png" alt="expander" onclick="utvidelse('gul_boks2','hotel_block2', 'side2', 'img_ut2')">
+        <div class="hotel_tekst">
+            <p> Hotel Barbo is located 5 km outside the city center, but close to beautiful beaches and the mountain side.
+                It offers a relaxing atmosphere, where you can enjoy a cold mojito with stunning scenery over the landscape.
+
+                </p>
+        </div>
 
 
-        <div class="gul_boks" id="gul_boks2">
-            <div> <img id="hot_map1" src="../img/hotelbilder/map_hot1.PNG" alt="Directions Hotel Adriana"></div>
-            <div class="information">
 
+        <img class="expander" id="img_ut2" src="../img/arrow-down.svg" alt="expander" onclick="utvidelse('utvidelse2', 'img_ut2', 'linje2')">
+    </div>
+    <div class="utivdelse" id="utvidelse2">
+
+        <div class="ekstra_hotel_text">
+            <p>
                 <ul>
-                    <li>The food: Impasto Con Guarnizione serves mainly pizza, but select pasta dishes are also
-                        available.
-                        Local desserts are also available for low prices.</li>
-                    <li>When to go: The restaurant is popular every afternoon and usually packed on weekends. With
-                        seating
-                        for up to 90 people
-                        available
-                        there is rearely a need to book ahead.</li>
+                    <li>
+                        At Hotel Barbo you will be greeted by friendly and helpful staff employees, that will help you with 
+                        whatever you need to realize your holiday dreams at Sardinia.  
+
+                    </li>
+                    <li>
+                        The kitchen serves exclusively dishes inspired from the local area, often with ingredients from the 
+                        surrounding mediterranean ocean. 
+
+                    </li>
                 </ul>
+            </p>
 
-            </div>
-            <table class="table">
-                <tr>
-                    <td colspan="12">
-                        <h2>When would you like to stay at Hotel Adriana?</h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td> <br>
-                        Check in date: <br>
-                        <input type="date" name="check_in_date" id="check_in_date">
-                    </td>
-                    <td>
-                        Check out date: <br>
-                        <input type="date" name="check_out_date" id="check_out_date">
-                    </td>
 
-                </tr>
-                <tr class="row_last">
-                    <td>
-                        Rooms: <select name="nr_rooms">
-                            <option value="none">0</option>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
-                        </select>
-                    </td>
-                    <td>
-                        Adults: <select name="nr_adults">
-                            <option value="none">0</option>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
-                    </td>
-                    <td>
-                        Children: <select name="nr_children">
-                            <option value="none">0</option>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
-                        </select>
-                    </td>
-                    <td class="fpe">
-                        Full name: <input type="text" name="full_name" id="full_name" size="4">
-                        Phone: <input type="text" name="full_name" id="full_name" size="4">
-                        Email: <input type="text" name="full_name" id="full_name" size="1">
-                    </td>
-                    <td>
-                        <input class="booking_btn" type="submit" value="Book now">
-                    </td>
-                </tr>
-            </table>
-            <div class="tot_cost">Total cost: <h1> €</h1>
-            </div>
         </div>
+        <div class="google_image_element">
+            <img class="google_image" src="../img/hotelbilder/map_hot1.PNG" alt="expander">
+
+        </div>
+        <div class="gul_boks">
+            <h2>Book your hotel now!</h2>
+            <form action="Hotels.html" method="post" accept-charset="UTF-8">
+                <div class="side1">
+                    Check in date: <br> <input type="date" name="check_in_date" id="check_in_date2" onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2')"
+                        required>
+                    <br>
+                    Check out date: <br> <input type="date" name="check_out_date" id="check_out_date2" min="check_in_date"
+                        onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2')"
+                        required>
+                </div>
+                <div class="side2">
+                    Rooms: <br> <select name="nr_rooms" id="nr_rooms2" onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2')"
+                        required>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                    </select>
+                    <br>
+                    Persons: <br> <select name="nr_adults" , id="nr_adults2" onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2')"
+                        required>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                    </select>
+                </div>
+
+                <div class="side3">
+                    Full name: <br> <input type="text" name="full_name" id="full_name2" size="4" placeholder="Your name"
+                        required> <br>
+                    Phone: <br> <input type="number" name="full_name" id="full_name2" size="4" placeholder="Your phone number"
+                        required><br>
+                    Email: <br> <input type="email" name="full_name" id="full_name2" size="1" placeholder="Your Email"
+                        required><br>
+                </div>
+                <div class="price" id="price2">
+                    Please fill in form for price estimation
+
+                </div>
+                <div class="side4">
+                    <button class="booking_btn" type="submit" name="Book_now" onclick="return form_validater('check_in_date2', 'check_out_date2')">
+                        <span>Book now</span>
+                    </button>
+
+                </div>
+
+            </form>
+
+
+        </div>
+
     </div>
 
     <!--####################################           Hotel 3            ########################-->
+    <div class="spacing"></div>
 
 
     <div class="hotel_block" id="hotel_block3">
-        <img id="bilder_slide" src="../img/hotelbilder/hotel1-1.jpg" class="hot_images" alt="Hotel Adriana">
-        <div class="hotel_text">
-            <h3>Hotel Adriana</h3>
-            <h4> <i style="font-size:15px" class="fa">&#xf041;</i> Cagliari</h4>
-            <br>
-            <p id="hot_text1"> Hotel Adriana is one of the best known hotels in the Cagliari area.
-                It is known for its beautiful location by the beach, along with unbeatable service and
-                chefs working around the clock to always offer freash mediterranean courses.
-            </p>
+        <div>
+            <img class="hotelbilde" src="../img/hotelbilder/hotel2.jpg" alt="Hotel Barameda">
         </div>
-        <div class="side" id="side3">
+        <div class="hot_name">
+            <h3>Hotel Marameda
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </h3>
+        </div>
 
-            <p> <i class="fas fa-swimming-pool"></i> 12:00 - 23:30</p>
-            <p> <i class="fas fa-umbrella-beach"></i> 500 meters </p>
-            <p><i class="fas fa-cocktail"></i> Bar in common area</p>
-            <p> <i class="fas fa-phone"></i> +39 373 74 7263</p>
+
+
+        <div class="side" id="side3" onresize="side_height(side1)">
+
+            <p> <i class="fas fa-swimming-pool"></i> 12:00 - 21:00</p>
+            <p> <i class="fas fa-child"></i> Family friendly </p>
+            <p> <i class="fas fa-phone"></i> +39 355 65 1192</p>
             <p> <i class="fas fa-map-marker-alt"></i> Viale Indipendenza, 26-18 <br> 09170 Oristano OR, Italy
             </p>
 
         </div>
-        <div class="rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+        <div class="linje" id="linje3">
+
         </div>
-        <img class="expander" id="img_ut3" src="../img/hotelbilder/expand-arrow.png" alt="expander" onclick="utvidelse('gul_boks3','hotel_block3', 'side3', 'img_ut3')">
-
-
-        <div class="gul_boks" id="gul_boks3">
-            <div> <img id="hot_map1" src="../img/hotelbilder/map_hot1.PNG" alt="Directions Hotel Adriana"></div>
-            <div class="information">
-
-                <ul>
-                    <li>The food: Impasto Con Guarnizione serves mainly pizza, but select pasta dishes are also
-                        available.
-                        Local desserts are also available for low prices.</li>
-                    <li>When to go: The restaurant is popular every afternoon and usually packed on weekends. With
-                        seating
-                        for up to 90 people
-                        available
-                        there is rearely a need to book ahead.</li>
-                </ul>
-
-            </div>
-            <table class="table">
-                <tr>
-                    <td colspan="12">
-                        <h2>When would you like to stay at Hotel Adriana?</h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td> <br>
-                        Check in date: <br>
-                        <input type="date" name="check_in_date" id="check_in_date">
-                    </td>
-                    <td>
-                        Check out date: <br>
-                        <input type="date" name="check_out_date" id="check_out_date">
-                    </td>
-
-                </tr>
-                <tr class="row_last">
-                    <td>
-                        Rooms: <select name="nr_rooms">
-                            <option value="none">0</option>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
-                        </select>
-                    </td>
-                    <td>
-                        Adults: <select name="nr_adults">
-                            <option value="none">0</option>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
-                    </td>
-                    <td>
-                        Children: <select name="nr_children">
-                            <option value="none">0</option>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
-                        </select>
-                    </td>
-                    <td class="fpe">
-                        Full name: <input type="text" name="full_name" id="full_name" size="4">
-                        Phone: <input type="text" name="full_name" id="full_name" size="4">
-                        Email: <input type="text" name="full_name" id="full_name" size="1">
-                    </td>
-                    <td>
-                        <input class="booking_btn" type="submit" value="Book now">
-                    </td>
-                </tr>
-            </table>
-            <div class="tot_cost">Total cost: <h1> €</h1>
-            </div>
+        <div class="hotel_tekst">
+            <p>Hotel Barameda is located close to the city center, and is just a couple of blocks away from 
+                the famous Cagliari Cathedral. The hotel is well suited for accommodating families with children, 
+            as the hotels offers several activites to keep the children entertained.  </p>
         </div>
+
+
+
+        <img class="expander" id="img_ut3" src="../img/arrow-down.svg" alt="expander" onclick="utvidelse('utvidelse3', 'img_ut3', 'linje3')">
     </div>
-    <!--####################################           Hotel 4            ########################-->
+    <div class="utivdelse" id="utvidelse3">
+
+        <div class="ekstra_hotel_text">
+            <p>
+                <ul>
+                    <li>
+                        If you want unbeatable service where everything is facilitated for you and your familiy, look no further.
+                        The hotel offers movies and clown shows for the youngest, while the bar is available for the parents.
+
+                    </li>
+                    <li>
+                        The Cagliari Cathedral is a five minute walk away, and is a "must see" if you are staying here. 
+                        The hotel gives you a 20% off on the cathedral tour, if you are staing more than three nights.
+
+                    </li>
+                </ul>
+            </p>
+
+
+        </div>
+        <div class="google_image_element">
+            <img class="google_image" src="../img/hotelbilder/map_hot1.PNG" alt="expander">
+
+        </div>
+        <div class="gul_boks">
+            <h2>Book your hotel now!</h2>
+            <form action="Hotels.html" method="post" accept-charset="UTF-8">
+                <div class="side1">
+                    Check in date: <br> <input type="date" name="check_in_date" id="check_in_date3" onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3')"
+                        required>
+                    <br>
+                    Check out date: <br> <input type="date" name="check_out_date" id="check_out_date3" min="check_in_date"
+                        onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3')" required>
+                </div>
+                <div class="side2">
+                    Rooms: <br> <select name="nr_rooms" id="nr_rooms3" onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3')"
+                        required>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                    </select>
+                    <br>
+                    Persons: <br> <select name="nr_adults" , id="nr_adults3" onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3')"
+                        required>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                    </select>
+                </div>
+
+                <div class="side3">
+                    Full name: <br> <input type="text" name="full_name" id="full_name3" size="4" placeholder="Your name"
+                        required> <br>
+                    Phone: <br> <input type="number" name="full_name" id="full_name3" size="4" placeholder="Your phone number"
+                        required><br>
+                    Email: <br> <input type="email" name="full_name" id="full_name3" size="1" placeholder="Your Email"
+                        required><br>
+                </div>
+                <div class="price" id="price3">
+                    Please fill in form for price estimation
+
+                </div>
+                <div class="side4">
+                    <button class="booking_btn" type="submit" name="Book_now" onclick="return form_validater('check_in_date3', 'check_out_date3')">
+                        <span>Book now</span>
+                    </button>
+
+                </div>
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+  <!--####################################           Hotel 4            ########################-->
+
+
+
+    <div class="spacing"></div>
 
 
 
     <div class="hotel_block" id="hotel_block4">
-        <img id="bilder_slide" src="../img/hotelbilder/hotel1-1.jpg" class="hot_images" alt="Hotel Adriana">
-        <div class="hotel_text">
-            <h3>Hotel Adriana</h3>
-            <h4> <i style="font-size:15px" class="fa">&#xf041;</i> Cagliari</h4>
-            <br>
-            <p id="hot_text1"> Hotel Adriana is one of the best known hotels in the Cagliari area.
-                It is known for its beautiful location by the beach, along with unbeatable service and
-                chefs working around the clock to always offer freash mediterranean courses.
-            </p>
+        <div>
+            <img class="hotelbilde" src="../img/hotelbilder/hotel4.jpg" alt="Hostel BackPacker Cagliari">
         </div>
-        <div class="side" id="side4">
+        <div class="hot_name">
+            <h3>Hostel BP Cagliari
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </h3>
+        </div>
 
-            <p> <i class="fas fa-swimming-pool"></i> 12:00 - 23:30</p>
-            <p> <i class="fas fa-umbrella-beach"></i> 500 meters </p>
-            <p><i class="fas fa-cocktail"></i> Bar in common area</p>
-            <p> <i class="fas fa-phone"></i> +39 373 74 7263</p>
+
+
+        <div class="side" id="side4" onresize="side_height(side1)">
+
+            <p> <i class="fas fa-glass-martini"></i> 12:00 - 23:30</p>
+            <p> <i class="fas fa-umbrella-beach"></i> 100 meters </p>
+            <p> <i class="fas fa-phone"></i> +39 543 44 7733</p>
             <p> <i class="fas fa-map-marker-alt"></i> Viale Indipendenza, 26-18 <br> 09170 Oristano OR, Italy
             </p>
 
         </div>
-        <div class="rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+        <div class="linje" id="linje4">
+
         </div>
-        <img class="expander" id="img_ut4" src="../img/hotelbilder/expand-arrow.png" alt="expander" onclick="utvidelse('gul_boks4','hotel_block4', 'side4', 'img_ut4')">
+        <div class="hotel_tekst">
+            <p> If you are traveling on a budget, this is the perfect place to stay. Hostel BP Cagliari offers a
+                cheap alternative to the mainstream hotels in the area, where it is easy to meet new open minded backpackers and travelers.     </p>
+        </div>
 
 
-        <div class="gul_boks" id="gul_boks4">
-            <div> <img id="hot_map1" src="../img/hotelbilder/map_hot1.PNG" alt="Directions Hotel Adriana"></div>
-            <div class="information">
 
+        <img class="expander" id="img_ut4" src="../img/arrow-down.svg" alt="expander" onclick="utvidelse('utvidelse4', 'img_ut4', 'linje4')">
+    </div>
+    <div class="utivdelse" id="utvidelse4">
+
+        <div class="ekstra_hotel_text">
+            <p>
                 <ul>
-                    <li>The food: Impasto Con Guarnizione serves mainly pizza, but select pasta dishes are also
-                        available.
-                        Local desserts are also available for low prices.</li>
-                    <li>When to go: The restaurant is popular every afternoon and usually packed on weekends. With
-                        seating
-                        for up to 90 people
-                        available
-                        there is rearely a need to book ahead.</li>
+                    <li>
+                        The hostel is located on the beautiful Lia'more Beach, which is a 15 minutes wlak from the city center.
+
+                    </li>
+                    <li>
+                        The bar is open to late at night, with happy hours from 17:00 to 19:00 every day. Is is also 
+                        possible to starte a bonfire on the beach, just remember to contact the staff beforehand.
+
+                    </li>
                 </ul>
+            </p>
 
-            </div>
-            <table class="table">
-                <tr>
-                    <td colspan="12">
-                        <h2>When would you like to stay at Hotel Adriana?</h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td> <br>
-                        Check in date: <br>
-                        <input type="date" name="check_in_date" id="check_in_date">
-                    </td>
-                    <td>
-                        Check out date: <br>
-                        <input type="date" name="check_out_date" id="check_out_date">
-                    </td>
 
-                </tr>
-                <tr class="row_last">
-                    <td>
-                        Rooms: <select name="nr_rooms">
-                            <option value="none">0</option>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
-                        </select>
-                    </td>
-                    <td>
-                        Adults: <select name="nr_adults">
-                            <option value="none">0</option>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
-                    </td>
-                    <td>
-                        Children: <select name="nr_children">
-                            <option value="none">0</option>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
-                        </select>
-                    </td>
-                    <td class="fpe">
-                        Full name: <input type="text" name="full_name" id="full_name" size="4">
-                        Phone: <input type="text" name="full_name" id="full_name" size="4">
-                        Email: <input type="text" name="full_name" id="full_name" size="1">
-                    </td>
-                    <td>
-                        <input class="booking_btn" type="submit" value="Book now">
-                    </td>
-                </tr>
-            </table>
-            <div class="tot_cost">Total cost: <h1> €</h1>
-            </div>
         </div>
+        <div class="google_image_element">
+            <img class="google_image" src="../img/hotelbilder/map_hot1.PNG" alt="expander">
+
+        </div>
+        <div class="gul_boks">
+            <h2>Book your hotel now!</h2>
+            <form action="Hotels.html" method="post" accept-charset="UTF-8">
+                <div class="side1">
+                    Check in date: <br> <input type="date" name="check_in_date" id="check_in_date4" onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4')"
+                        required>
+                    <br>
+                    Check out date: <br> <input type="date" name="check_out_date" id="check_out_date4" min="check_in_date"
+                        onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')" required>
+                </div>
+                <div class="side2">
+                    Rooms: <br> <select name="nr_rooms" id="nr_rooms4" onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4')"
+                        required>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                    </select>
+                    <br>
+                    Persons: <br> <select name="nr_adults" , id="nr_adults4" onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4')"
+                        required>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                    </select>
+                </div>
+
+                <div class="side3">
+                    Full name: <br> <input type="text" name="full_name" id="full_name4" size="4" placeholder="Your name"
+                        required> <br>
+                    Phone: <br> <input type="number" name="full_name" id="full_name4" size="4" placeholder="Your phone number"
+                        required><br>
+                    Email: <br> <input type="email" name="full_name" id="full_name4" size="1" placeholder="Your Email"
+                        required><br>
+                </div>
+                <div class="price" id="price4">
+                    Please fill in form for price estimation
+
+                </div>
+                <div class="side4">
+                    <button class="booking_btn" type="submit" name="Book_now" onclick="return form_validater('check_in_date4', 'check_out_date4')">
+                        <span>Book now</span>
+                    </button>
+
+                </div>
+
+            </form>
+
+
+        </div>
+
     </div>
 
+
+    <div class="spacing"></div>
 
     <div class="footer" id="footer">
 
-    </div>
-
+        </div>
 
     <script src="../scripts/hotel.js"></script>
 </body>

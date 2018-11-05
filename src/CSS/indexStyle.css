@@ -87,10 +87,11 @@
     transition: height 0.4s;
     overflow: hidden;
     font-size: 1em;
+    margin-bottom:4px;
 }
 
 .activitis a img:hover + .hoverInf, .hoverInf:hover{
-    height: 100%;
+    height: calc(100% - 4px);
 }
 
 
@@ -102,6 +103,9 @@
         height: 50vh;
         width: auto;
         overflow: hidden;
+    }
+    #portraitImage{
+        margin-bottom: -30px;
     }
 
 

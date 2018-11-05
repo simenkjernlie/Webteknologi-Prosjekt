@@ -1,86 +1,101 @@
-document.getElementById("gul_boks1").style.display = "none"
-document.getElementById("gul_boks2").style.display = "none"
-document.getElementById("gul_boks3").style.display = "none"
-document.getElementById("gul_boks4").style.display = "none"
+document.getElementById("utvidelse1").style.display = "none"
+document.getElementById("utvidelse2").style.display = "none"
+document.getElementById("utvidelse3").style.display = "none"
+document.getElementById("utvidelse4").style.display = "none"
+
+document.getElementById("linje1").style.display = "none"
+document.getElementById("linje2").style.display = "none"
+document.getElementById("linje3").style.display = "none"
+document.getElementById("linje4").style.display = "none"
 
 
 
 
 
 
-hotel_texts_def = ["Hotel Adriana is one of the best known hotels in the Cagliari area. It is known for its beautiful location by the beach, along with unbeatable service and chefs working around the clock to always offer freash mediterranean courses.", "sdad2", "afa3", "4"]
-hotel_texts_exs = ["Hotel Adriana is one of the best known hotels in the Cagliari area. It is known for its beautiful location by the beach, along with unbeatable service and chefs working around the clock to always offer freash mediterranean courses. <br> <br> The hotel is located in the city center, but the beach is just a 5 minute walk away. Here you can play biljard or hang out in the pool area, while enjoing a feash Mojito from the bar.", "he2", "kl3", "sg4"]
+function utvidelse(utvidelseID, bilde_pil, linje){
+    var utvidelse_block = document.getElementById(utvidelseID)
+    let bilde_path = document.getElementById(bilde_pil)
 
-console.log(window.innerWidth)
+        if (utvidelse_block.style.display == "none"){
+        utvidelse_block.style.display = "block"
+        bilde_path.src = "../img/arrow.png";
+        document.getElementById(linje).style.display = "block"
+    }
 
-
-
-
-
-function utvidelse(ut_element, parent_element, side, arrow) {
-    let element = document.getElementById(ut_element);
-    let parent = document.getElementById(parent_element);
-    let side_ex = document.getElementById(side);
-    let arrow_ex = document.getElementById(arrow);
-    let width_changer = parent.style.width
-
-    let width = document.body.clientWidth   
-    if (element.style.display === "none") {
-        element.style.display = "block"
-        parent.style.height = "700px"
-        side_ex.style.height = '375px'
-        arrow_ex.src = "../img/hotelbilder/arrow.png"
-        console.log(parent.style.width)
-        arrow_ex.style.top = '375px'
-        //document.getElementById("bilder_slide").style.display = "none"
-        if (window.innerWidth >= 1000){
-            parent.style.height = "700px"
-
-            console.log("over")}
-
-
-   
-
-    } else {        
-            parent.style.height = "200px"
-            element.style.display = "none";
-            side_ex.style.height = '170px'
-            arrow_ex.src = "../img/hotelbilder/expand-arrow.png"
-            arrow_ex.style.top = '80%'
-            //document.getElementById("bilder_slide").style.display = "block"
-
-            if (window.innerWidth < 1000){
-                parent.style.height = "400px"
-
-           // console.log(document.getElementById(body).style.width)
-
-        
+    else {
+        utvidelse_block.style.display = "none"
+        bilde_path.src = "../img/expand-arrow.png";
+        document.getElementById(linje).style.display = "none"
     }
 
 }
-}
-
-var days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-//function nr_days(year, month, day){
-//    var nr_days = (year-1)*365 + (month-1)*days_in_month[]
-
-//}
 
 
-function price(check_in_date, check_out_date, nr_rooms, nr_adults, nr_children){
 
 
-    var check_in_date = document.getElementById("check_in_date").value
-    var check_out_date = document.getElementById("check_out_date").value
-    var nr_rooms = nr_rooms.value
-    var nr_adults = nr_adults.value
-    var nr_children = nr_children.value
-    console.log(check_in_date, check_out_date, nr_rooms, nr_adults, nr_children)
+var days_in_month = [31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365]
 
-    var cid_year1 = check_in_date.slice(0,4)
-    var cid_month1 = check_in_date.slice(5,7)
-    var cid_day1 = check_in_date.slice(8,10)
-    console.log(cid_year1, cid_month1, cid_day1)
-
+function nr_days(year, month, day){
+    console.log("aad")
 
 }
+
+
+function price(check_in_date, check_out_date, nr_rooms, nr_adults, price) {
+
+    var price = document.getElementById(price)
+    var check_in_date = document.getElementById(check_in_date).value
+    var check_out_date = document.getElementById(check_out_date).value
+    var nr_rooms = document.getElementById(nr_rooms).value
+    var nr_adults = document.getElementById(nr_adults).value
+    check_in_date = check_in_date.slice(5,7) + "/" + check_in_date.slice(8,10) + "/" + check_in_date.slice(0,4)
+    check_out_date = check_out_date.slice(5,7) + "/" + check_out_date.slice(8,10) + "/" + check_out_date.slice(0,4)
+
+    console.log(nr_rooms, typeof(nr_rooms))
+    check_in_date = parseDate(check_in_date)
+    check_out_date = parseDate(check_out_date)
+    days_diff = datediff(check_in_date, check_out_date)
+    var amount = (days_diff*nr_rooms + days_diff*0.6*nr_adults)*10
+    if (days_diff > 0){
+    price.innerHTML = "Book now for only " + amount + "€"
+    } else {
+        price.innerHTML = "Please fill in form for price estimation"
+    }
+
+
+
+}
+
+function parseDate(str) {
+    var mdy = str.split('/');
+    return new Date(mdy[2], mdy[0]-1, mdy[1]);
+}
+
+function datediff(first, second) {
+    // Take the difference between the dates and divide by milliseconds per day.
+    // Round to nearest whole number to deal with DST.
+    return Math.round((second-first)/(1000*60*60*24));
+}
+
+function form_validater(check_in_date, check_out_date){
+    var check_in_date = document.getElementById(check_in_date)
+    check_in_date = check_in_date.value
+    var check_out_date = document.getElementById(check_out_date).value
+    check_in_date = check_in_date.slice(5,7) + "/" + check_in_date.slice(8,10) + "/" + check_in_date.slice(0,4)
+    check_out_date = check_out_date.slice(5,7) + "/" + check_out_date.slice(8,10) + "/" + check_out_date.slice(0,4)
+
+    console.log("check_in_date, check_out_date")
+    check_in_date = parseDate(check_in_date)
+    check_out_date = parseDate(check_out_date)
+    days_diff = datediff(check_in_date, check_out_date)
+
+    if (days_diff<= 0){
+        alert("Please select valid check in and check out days!")
+        console.log("false")
+        return false;
+    } else {
+        return true
+    }
+}
+
