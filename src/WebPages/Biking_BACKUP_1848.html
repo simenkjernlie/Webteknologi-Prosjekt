@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visita Sardinia - Sailing</title>
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <link rel="stylesheet" href="../CSS/navigationBar.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/activities.css">
+    <link rel="stylesheet" href="../CSS/sailing.css">
+    <script src="../scripts/navigationBar.js"></script>
+    <script src="../scripts/footer.js"></script>
+    <script src="../scripts/price.js"></script>
+</head>
+<<<<<<< HEAD
+<body onload="set_todays_date(), null_ut(), navigationStartup(false), addFooter(false)" onresize="changeWidth()">
+
+=======
+<body onload="set_todays_date(), null_ut(),navigationStartup(false),addFooter(false)" onresize="changeWidth()">
+<div id="mainPageBody">
+>>>>>>> 658ea490f455a2a5d5c92c25955a0ca67b96327b
+    <div id="headerDiv"></div>
+
+    <!--- Navigation bar --->
+
+    <div id="navBarDiv"></div>
+
+    <!--- Main body structure --->
+    <div class="mainPageBody">
+        <p id="header">Biking</p>
+        <div id="one" class="backbox">
+            <div class="insidebox">
+                <div class="side1">
+                    <div class="leftside1">
+                        <img class="boat" src="../img/Cycling/MountainBike.jpg" alt="MountainBike">
+                    </div>
+                    <div class="rightside1 description">
+                        <p class="overskrift">Mountain Bike</p>
+                        <p style="font-style: italic; color: #FAC917;">
+                            <img src="../img/location-vector.png" alt="location-vector" width="4%">
+                            Capoterra, Tèmpiu, Cugnana Verde and others (contact for more available places)
+                        </p>
+                        <br>
+                        <p>At our bike hire in Sardinia you can ride a comfortable bike: Spark 950 Deore/XT. It is difficult to find a more suitable option for comfortable tours offroad; in the forrests, mountains or even on the beach. In this model, everything is done for the comfort of the cyclist,
+                            equiped with multiple suspension that will garantee you a nice ride.
+                            <ul style="margin-left:15px">
+                                <br>
+                                <li>Braking system: Hydraulic disc brake</li>
+                                <li>User: Unisex</li>
+                                <li>Wheel Size: 29</li>
+                                <li>Frame material: Aluminum</li>
+                                <li>Fork: Muffle fork, lockable Fully muffled</li>
+                                <li>Number of gear: 20</li>
+                            </ul></p>
+                            <br>
+                        <p class="price" >
+                        </p>
+                    </div>
+                </div>
+                <div class="side2">
+                    <form onsubmit="verify_and_notify(0)" method="post" accept-charset="UTF-8">
+                        <div class="leftside2">
+                            <label for="date">
+                                Pick-Up Date:
+                                <br>
+                                <input type="date" class="input_start" onchange="calc_price(0, 25)" name="hentedato" placeholder="Pick-Up Date" value="" required>
+                                <br>
+                                End of Trip Date:
+                                <br>
+                                <input type="date" class="input_end" onchange="calc_price(0, 25)"name="leveringsdato" placeholder="End of Trip Date" value="" required>
+                            </label>
+                            <br><br><br>
+                            <label for="name">
+                                Full name
+                                <br>
+                                <input type="text" name="name" id="name" placeholder="Name"  pattern="[A-Za-z \s]+" autocomplete="name" required>
+                                <br>
+                            </label>
+                            <label for="email">
+                                E-Mail
+                                <br>
+                                <input type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
+                            </label>
+                        </div>
+                        <div class="rightside2">
+                            <label for="time">
+                                Pic-Up Time
+                                <br>
+                                <input class="input_start_time" type="time" name="hentetid" value="" required>
+                                <br>
+                                End of trip Time
+                                <br>
+                                <input class="input_end_time" type="time" name="leveringstid" value="" required>
+                                <br><br><br><br><br>
+                            </label>
+                            <label for="button">
+                                <button type="submit" name="submit"><span>Book Now</span></button>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div id="two" class="backbox">
+            <div class="insidebox">
+                <div class="side1">
+                    <div class="leftside1">
+                        <img class="boat" src="../img/Cycling/SpeedBike.jpg" alt="SpeedBike">
+                    </div>
+                    <div class="rightside1 description">
+                        <p class="overskrift">Speed Bike</p>
+                        <p style="font-style: italic; color: #FAC917;">
+                            <img src="../img/location-vector.png" alt="location-vector" width="4%">
+                            All main cities in Sardinia (contact for precise information)
+                        </p>
+                        <br>
+                        <p>Versatile bike for country road, gravel and cyclocross. Aluminum frame and carbide fork, Shimano Tiagra provides hydraulic disc brakes. Weight 9.8 kg. This is a perfect solution for those that want
+                            a professional and fast bike but at the same time with wheels and design that can be match with the Sardinian countryroads.
+                                <ul style="margin-left:15px">
+                                <br>
+                                <li>Braking system: Hydraulic disc brake</li>
+                                <li>User: Unisex</li>
+                                <li>Wheel Size: 28</li>
+                                <li>Frame material: Aluminum</li>
+                                <li>Fork: Carbone fork</li>
+                                <li>Number of gear: 20</li>
+                            </ul></p>
+                        <p class="price">
+                        </p>
+                    </div>
+                </div>
+                <div class="side2">
+                    <form onsubmit="verify_and_notify(1)" method="post" accept-charset="UTF-8">
+                        <div class="leftside2">
+                            <label for="date">
+                                Pick-Up Date:
+                                <br>
+                                <input type="date" class="input_start" onchange="calc_price(1, 17)" name="hentedato" placeholder="Pick-Up Date" value="" required>
+                                <br>
+                                End of Trip Date:
+                                <br>
+                                <input type="date" class="input_end" onchange="calc_price(1, 17)"name="leveringsdato" placeholder="End of Trip Date" value="" required>
+                            </label>
+                            <br><br><br>
+                            <label for="name">
+                                Full name
+                                <br>
+                                <input type="text" name="name" id="name" placeholder="Name"  pattern="[A-Za-z \s]+" autocomplete="name" required>
+                                <br>
+                            </label>
+                            <label for="email">
+                                E-Mail
+                                <br>
+                                <input type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
+                            </label>
+                        </div>
+                        <div class="rightside2">
+                            <label for="time">
+                                Pic-Up Time
+                                <br>
+                                <input class="input_start_time" type="time" name="hentetid" value="" required>
+                                <br>
+                                End of trip Time
+                                <br>
+                                <input class="input_end_time" type="time" name="leveringstid" value="" required>
+                                <br><br><br><br><br>
+                            </label>
+                            <label for="button">
+                                <button type="submit" name="submit"><span>Book Now</span></button>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="three" class="backbox">
+            <div class="insidebox">
+                <div class="side1">
+                    <div class="leftside1">
+                        <img class="boat" src="../img/Cycling/CityBike.jpg" alt="CityBike">
+                    </div>
+                    <div class="rightside1 description">
+                        <p class="overskrift">City Bike</p>
+                        <p style="font-style: italic; color: #FAC917;">
+                            <img src="../img/location-vector.png" alt="location-vector" width="4%">
+                            All main cities in Sardinia (contact for precise information)
+                        </p>
+                        <br>
+                        <p> VeloCity by White(not the one on picture) is a cool city / shuttle bike with stylish, elegant design. Solid and easy to use. With luggage racks, screens, support and room for two bottle holders.
+                            Weight 15.1 kg.ARL FF EQ has Shimano hydraulic disc brakes and gear system, and adjustable steering. Screen prevent spills on wet days.
+                            ARL gives you a lot of pleasure and is an excellent bike for walking, commuting and leisure.
+                            <ul style="margin-left:15px">
+                                <br>
+                                <li>Braking system: Hydraulic disc brake</li>
+                                <li>User: Men and lady models</li>
+                                <li>Wheel Size: 28</li>
+                                <li>Frame material: Aluminum</li>
+                                <li>Fork: Steel fork</li>
+                                <li>Number of gear: 24</li>
+                            </ul></p>
+                        <p><p class="price">
+                        </p>
+                    </div>
+                </div>
+                <div class="side2">
+                    <form onsubmit="verify_and_notify(2)" method="post" accept-charset="UTF-8">
+                        <div class="leftside2">
+                            <label for="date">
+                                Pick-Up Date:
+                                <br>
+                                <input type="date" class="input_start" onchange="calc_price(2, 10)" name="hentedato" placeholder="Pick-Up Date" value="" required>
+                                <br>
+                                End of Trip Date:
+                                <br>
+                                <input type="date" class="input_end" onchange="calc_price(2, 10)"name="leveringsdato" placeholder="End of Trip Date" value="" required>
+                            </label>
+                            <br><br><br>
+                            <label for="name">
+                                Full name
+                                <br>
+                                <input type="text" name="name" id="name" placeholder="Name"  pattern="[A-Za-z \s]+" autocomplete="name" required>
+                                <br>
+                            </label>
+                            <label for="email">
+                                E-Mail
+                                <br>
+                                <input type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
+                            </label>
+                        </div>
+                        <div class="rightside2">
+                            <label for="time">
+                                Pic-Up Time
+                                <br>
+                                <input class="input_start_time" type="time" name="hentetid" value="" required>
+                                <br>
+                                End of trip Time
+                                <br>
+                                <input class="input_end_time" type="time" name="leveringstid" value="" required>
+                                <br><br><br><br><br>
+                            </label>
+                            <label for="button">
+                                <button type="submit" name="submit"><span>Book Now</span></button>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--- Footer --->
+    <div class="footer" id="footer">
+    </div>
+</body>
+</html>
