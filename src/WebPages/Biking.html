@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Visita Sardinia - Sailing</title>
+    <title>Visita Sardinia - Cycling</title>
     <link rel="stylesheet" href="../CSS/Style.css">
     <link rel="stylesheet" href="../CSS/navigationBar.css">
     <link rel="stylesheet" href="../CSS/footer.css">
@@ -12,8 +12,8 @@
     <script src="../scripts/footer.js"></script>
     <script src="../scripts/price.js"></script>
 </head>
-<body onload="set_todays_date(), null_ut(), navigationStartup(false), addFooter(false)" onresize="changeWidth()">
-
+<body onload="set_todays_date(), null_ut(),navigationStartup(false),addFooter(false)" onresize="changeWidth()">
+<div id="mainPageBody">
     <div id="headerDiv"></div>
 
     <!--- Navigation bar --->
@@ -21,7 +21,7 @@
     <div id="navBarDiv"></div>
 
     <!--- Main body structure --->
-    <div class="mainPageBody">
+    <div class="main_body">
         <p id="header">Biking</p>
         <div id="one" class="backbox">
             <div class="insidebox">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="side2">
-                    <form onsubmit="verify_and_notify(0)" method="post" accept-charset="UTF-8">
+                    <form action="Sailing.html" method="post" accept-charset="UTF-8">
                         <div class="leftside2">
                             <label for="date">
                                 Pick-Up Date:
@@ -131,7 +131,7 @@
                     </div>
                 </div>
                 <div class="side2">
-                    <form onsubmit="verify_and_notify(1)" method="post" accept-charset="UTF-8">
+                    <form action="Sailing.html" method="post" accept-charset="UTF-8">
                         <div class="leftside2">
                             <label for="date">
                                 Pick-Up Date:
@@ -205,7 +205,7 @@
                     </div>
                 </div>
                 <div class="side2">
-                    <form onsubmit="verify_and_notify(2)" method="post" accept-charset="UTF-8">
+                    <form action="Sailing.html" method="post" accept-charset="UTF-8">
                         <div class="leftside2">
                             <label for="date">
                                 Pick-Up Date:
@@ -249,8 +249,8 @@
             </div>
         </div>
     </div>
+</div>
     <!--- Footer --->
-    <div class="footer" id="footer">
-    </div>
+    <div class="footer" id="footer"></div>
 </body>
 </html>
