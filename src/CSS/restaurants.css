@@ -2,7 +2,6 @@
   margin-top: 20px;
 }
 .restaurantBox {
-  /* Equal to the hotel_blocks class in Hotels.css */
   background-color: #13434b;
   width: 80%;
   height: 200px;
@@ -11,7 +10,6 @@
   text-align: center;
   margin-left: 10%;
   color: #f8f8f8;
-  /* Added */
   border-radius: 3px;
 }
 .restaurantExpansion {
@@ -26,14 +24,12 @@
   border-radius: 3px;
 }
 .restaurantBox img {
-  /* Equal to hot_images class in Hotels.css */
   position: absolute;
   top: 0px;
   left: 0px;
   padding: 10px;
   height: 180px;
   width: 180px;
-  /* Added */
   object-fit: cover;
   border-radius: 6%;
 }
