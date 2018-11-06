@@ -5,6 +5,7 @@ Neste møte:
 
 Alle til neste gang:
 - Kommenter koden (trenger ikke masse, men litt for å gjøre det oversiktlig)
+- Valider koden
 - Gjør brukertestene og skriv ned tilbakemeldinger (til P4)
 - Skriv ned hva som er forandret på dine sider i forhold til det vi lagde i mockupen og beskrev i P2
 
