@@ -103,15 +103,15 @@
                 <h2>Book your hotel now!</h2>
                 <form action="Hotels.html" method="post" accept-charset="UTF-8">
                     <div class="side1">
-                        Check in date: <br> <input type="date" name="check_in_date" id="check_in_date" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
+                        Check in date: <br> <input type="date" name="check_in_date" id="check_in_date" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1', 40, 21)"
                             required>
                         <br>
                         Check out date: <br> <input type="date" name="check_out_date" id="check_out_date" min="check_in_date"
-                            onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
+                            onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1', 40, 21)"
                             required>
                     </div>
                     <div class="side2">
-                        Rooms: <br> <select name="nr_rooms" id="nr_rooms" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
+                        Rooms: <br> <select name="nr_rooms" id="nr_rooms" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1', 40, 21)"
                             required>
                             <option value=1>1</option>
                             <option value=2>2</option>
@@ -119,7 +119,7 @@
                             <option value=4>4</option>
                         </select>
                         <br>
-                        Persons: <br> <select name="nr_adults" , id="nr_adults" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
+                        Persons: <br> <select name="nr_adults" , id="nr_adults" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1', 40, 21)"
                             required>
                             <option value=1>1</option>
                             <option value=2>2</option>
@@ -234,15 +234,15 @@
             <h2>Book your hotel now!</h2>
             <form action="Hotels.html" method="post" accept-charset="UTF-8">
                 <div class="side1">
-                    Check in date: <br> <input type="date" name="check_in_date" id="check_in_date2" onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2')"
+                    Check in date: <br> <input type="date" name="check_in_date" id="check_in_date2" onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2', 20, 10)"
                         required>
                     <br>
                     Check out date: <br> <input type="date" name="check_out_date" id="check_out_date2" min="check_in_date"
-                        onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2')"
+                        onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2', 20, 10)"
                         required>
                 </div>
                 <div class="side2">
-                    Rooms: <br> <select name="nr_rooms" id="nr_rooms2" onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2')"
+                    Rooms: <br> <select name="nr_rooms" id="nr_rooms2" onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2', 20, 10)"
                         required>
                         <option value=1>1</option>
                         <option value=2>2</option>
@@ -250,7 +250,7 @@
                         <option value=4>4</option>
                     </select>
                     <br>
-                    Persons: <br> <select name="nr_adults" , id="nr_adults2" onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2')"
+                    Persons: <br> <select name="nr_adults" , id="nr_adults2" onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2', 20, 10)"
                         required>
                         <option value=1>1</option>
                         <option value=2>2</option>
@@ -361,15 +361,15 @@
             <h2>Book your hotel now!</h2>
             <form action="Hotels.html" method="post" accept-charset="UTF-8">
                 <div class="side1">
-                    Check in date: <br> <input type="date" name="check_in_date" id="check_in_date3" onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3')"
+                    Check in date: <br> <input type="date" name="check_in_date" id="check_in_date3" onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3', 20, 12)"
                         required>
                     <br>
                     Check out date: <br> <input type="date" name="check_out_date" id="check_out_date3" min="check_in_date"
-                        onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3')"
+                        onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3', 20, 12)"
                         required>
                 </div>
                 <div class="side2">
-                    Rooms: <br> <select name="nr_rooms" id="nr_rooms3" onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3')"
+                    Rooms: <br> <select name="nr_rooms" id="nr_rooms3" onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3', 20, 12)"
                         required>
                         <option value=1>1</option>
                         <option value=2>2</option>
@@ -377,7 +377,7 @@
                         <option value=4>4</option>
                     </select>
                     <br>
-                    Persons: <br> <select name="nr_adults" , id="nr_adults3" onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3')"
+                    Persons: <br> <select name="nr_adults" , id="nr_adults3" onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3', 20, 12)"
                         required>
                         <option value=1>1</option>
                         <option value=2>2</option>
@@ -492,14 +492,15 @@
             <h2>Book your hotel now!</h2>
             <form action="Hotels.html" method="post" accept-charset="UTF-8">
                 <div class="side1">
-                    Check in date: <br> <input type="date" name="check_in_date" id="check_in_date4" onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4')"
+                    Check in date: <br> <input type="date" name="check_in_date" id="check_in_date4" onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4', 10, 5)"
                         required>
                     <br>
                     Check out date: <br> <input type="date" name="check_out_date" id="check_out_date4" min="check_in_date"
-                        onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')" required>
+                        onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4', 10, 5)" required>
                 </div>
+
                 <div class="side2">
-                    Rooms: <br> <select name="nr_rooms" id="nr_rooms4" onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4')"
+                    Rooms: <br> <select name="nr_rooms" id="nr_rooms4" onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4', 10, 5)"
                         required>
                         <option value=1>1</option>
                         <option value=2>2</option>
@@ -507,7 +508,7 @@
                         <option value=4>4</option>
                     </select>
                     <br>
-                    Persons: <br> <select name="nr_adults" , id="nr_adults4" onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4')"
+                    Persons: <br> <select name="nr_adults" , id="nr_adults4" onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4', 10, 5)"
                         required>
                         <option value=1>1</option>
                         <option value=2>2</option>
