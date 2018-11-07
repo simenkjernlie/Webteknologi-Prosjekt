@@ -1,3 +1,4 @@
+//Changes the font size of the activities bokses when the wrappers
 function widthChangeBoxes() {
     const boxes = document.getElementsByClassName("activitis");
     const boxText = document.getElementsByClassName("hoverInf");

@@ -11,7 +11,7 @@
 * The entire page must be wrapped in an div width id="mainPageBody"
 * */
 
-
+//JSON object/list with information about the images contained in the footer
 images = {
     contactInf:{
         phone:{
@@ -48,7 +48,7 @@ images = {
         },
     },
 }
-
+//JSON object/list containing the text and links of the links containd in the footer
 links_Footer = {
     home:{
         text:"Home",
@@ -76,7 +76,7 @@ links_Footer = {
     },
 }
 
-
+//Creates and returns a image element
 function createImg(element, isindex){
     const img = document.createElement("img");
     img.alt = element.alt;
@@ -90,6 +90,7 @@ function createImg(element, isindex){
     return img;
 }
 
+//Creates and adds the footer to the page
 function addFooter(isindex) {
     const footer = document.getElementById("footer");
 
@@ -160,6 +161,7 @@ function addFooter(isindex) {
     footerWidthResize();
 }
 
+//Function for adjusting the width of the footer in resize
 function footerWidthResize() {
     //console.log(document.getElementById("mainBodyDiv").offsetHeight);
     //console.log(document.documentElement.clientHeight);
