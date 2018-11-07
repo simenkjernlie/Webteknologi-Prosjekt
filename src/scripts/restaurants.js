@@ -1,4 +1,5 @@
 function RestaurantExpand(arrowImage, restaurantExpansion) {
+  // Expands the restaurant box with more information and switches the arrow-button direction
   let element = document.getElementById(restaurantExpansion);
   let image = document.getElementById(arrowImage);
 
@@ -13,6 +14,7 @@ function RestaurantExpand(arrowImage, restaurantExpansion) {
 
 var pizza, steak, seafood, lobster;
 function initMap() {
+  // Adding Google maps to each restaurant
   pizza = { lat: 39.898, lng: 8.597 };
   steak = { lat: 40.923, lng: 9.5165 };
   seafood = { lat: 39.219, lng: 9.105 };

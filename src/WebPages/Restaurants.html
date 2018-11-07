@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/Style.css">
     <link rel="stylesheet" href="../CSS/restaurants.css">
-    <link rel="stylesheet" href="../CSS/Hotels.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
@@ -20,16 +19,16 @@
 
 </head>
 
-<body onload="navigationStartup(false),addFooter(false)" onresize="changeWidth()" onload="changeImg()">
+<body onload="navigationStartup(false), addFooter(false)" onresize="changeWidth(), footerWidthResize()">
     <div id="mainPageBody">
         <div id="headerDiv">
 
         </div>
-        <!--- Navigation bar --->
+        <!-- Navigation bar -->
         <div id="navBarDiv">
         </div>
         <br>
-        <div class="hotelRestaurantBox">
+        <div class="restaurantBox">
             <img src="../img/Restaurants/pizza.jpg" alt="Pizza">
             <div class="information">
                 <h3>
@@ -55,12 +54,12 @@
             <div class="sidebar">
                 <p> <i class="fas fa-phone"></i> +39 373 76 4232</p>
                 <p> <i class="far fa-clock"></i> 12:00 - 23:30</p>
-                <p> <i class="fas fa-map-marker-alt"></i> Viale Indipendenza, 26-18 <br> 09170 Oristano OR, Italy
+                <p> <i class="fas fa-map-marker-alt"></i> Viale Indipendenza, 26 <br> 09170 Oristano OR, Italy
                 </p>
             </div>
 
         </div>
-        <div id="pizzaExpansion" class="hotelRestaurantExpansion">
+        <div id="pizzaExpansion" class="restaurantExpansion">
             <div class="information">
                 <ul>
                     <li>The food: Impasto Con Guarnizione serves mainly pizza, but select pasta dishes are available.
@@ -76,10 +75,9 @@
             <div class="sidebar">
                 <div id="mapPizza">
                 </div>
-
             </div>
         </div>
-        <div class="hotelRestaurantBox">
+        <div class="restaurantBox">
             <img src="../img/Restaurants/steak.jpg" alt="Steak">
             <div class="information">
                 <h3>
@@ -109,7 +107,7 @@
                     <br> 07026 Olbia OT, Italy</p>
             </div>
         </div>
-        <div id="steakExpansion" class="hotelRestaurantExpansion">
+        <div id="steakExpansion" class="restaurantExpansion">
             <div class="information">
                 <ul>
                     <li>The food: The 35-day aged rib steak is signature item at Carne Troppo Cotta,
@@ -128,7 +126,7 @@
             </div>
         </div>
 
-        <div class="hotelRestaurantBox">
+        <div class="restaurantBox">
             <img src="../img/Restaurants/seafood.jpg" alt="Seafood">
             <div class="information">
                 <h3>
@@ -154,10 +152,10 @@
             <div class="sidebar">
                 <p> <i class="fas fa-phone"></i> +39 373 99 6243</p>
                 <p> <i class="far fa-clock"></i> 12:00 - 00:30</p>
-                <p> <i class="fas fa-map-marker-alt"></i> Via Vincenzo Bruscu, 1-19 <br> 09123 Cagliari CA, Italy</p>
+                <p> <i class="fas fa-map-marker-alt"></i> Via Vincenzo Bruscu, 19 <br> 09123 Cagliari CA, Italy</p>
             </div>
         </div>
-        <div id="seafoodExpansion" class="hotelRestaurantExpansion">
+        <div id="seafoodExpansion" class="restaurantExpansion">
             <div class="information">
                 <ul>
                     <li>The food: Frutti di Congelati serves a variety of mediterranean seafood, including
@@ -177,7 +175,7 @@
                 </div>
             </div>
         </div>
-        <div class="hotelRestaurantBox">
+        <div class="restaurantBox">
             <img src="../img/Restaurants/lobster_pasta.jpg" alt="Lobster pasta">
             <div class="information">
                 <h3>
@@ -203,10 +201,10 @@
             <div class="sidebar">
                 <p> <i class="fas fa-phone"></i> +39 373 54 2936</p>
                 <p> <i class="far fa-clock"></i> 11:00 - 23:30</p>
-                <p> <i class="fas fa-map-marker-alt"></i> Viale Trieste, 95-137 <br> 09123 Cagliari CA, Italy</p>
+                <p> <i class="fas fa-map-marker-alt"></i> Viale Trieste, 137 <br> 09123 Cagliari CA, Italy</p>
             </div>
         </div>
-        <div id="LobsterExpansion" class="hotelRestaurantExpansion">
+        <div id="LobsterExpansion" class="restaurantExpansion">
             <div class="information">
                 <ul>
                     <li>The food: Aragosta Bollita Viva is a high-end restaurant with a focus on local shellfood.
@@ -223,15 +221,13 @@
                 </div>
             </div>
         </div>
-        <!--- Footer --->
+        <!-- Footer -->
         <div class="bottom_div">
             <div class="footer" id="footer">
             </div>
         </div>
         <script src="../scripts/restaurants.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFLGoMfLcbvXg9_8uS5aUSy9yucPtLg7k&callback=initMap"></script>
-
-
     </div>
 </body>
 

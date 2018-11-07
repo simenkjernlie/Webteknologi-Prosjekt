@@ -1,8 +1,7 @@
 .bottom_div {
   margin-top: 20px;
 }
-.hotelRestaurantBox {
-  /* Equal to the hotel_blocks class in Hotels.css */
+.restaurantBox {
   background-color: #13434b;
   width: 80%;
   height: 200px;
@@ -11,10 +10,9 @@
   text-align: center;
   margin-left: 10%;
   color: #f8f8f8;
-  /* Added */
   border-radius: 3px;
 }
-.hotelRestaurantExpansion {
+.restaurantExpansion {
   display: none;
   width: 80%;
   height: 200px;
@@ -25,15 +23,13 @@
   position: relative;
   border-radius: 3px;
 }
-.hotelRestaurantBox img {
-  /* Equal to hot_images class in Hotels.css */
+.restaurantBox img {
   position: absolute;
   top: 0px;
   left: 0px;
   padding: 10px;
   height: 180px;
   width: 180px;
-  /* Added */
   object-fit: cover;
   border-radius: 6%;
 }
@@ -45,27 +41,27 @@
   width: 40%;
   padding: 10px;
 }
-.hotelRestaurantExpansion .information {
+.restaurantExpansion .information {
   font-size: 13pt;
   width: 50%;
   margin-left: -80px;
 }
-.hotelRestaurantBox .quickInfo {
+.restaurantBox .quickInfo {
   font-style: italic;
   font-size: 10pt;
 }
-.hotelRestaurantBox .description {
+.restaurantBox .description {
   padding-top: 10px;
   font-size: 13pt;
 }
-.hotelRestaurantBox .rating {
+.restaurantBox .rating {
   right: 25%;
   padding: 10px;
   top: 0px;
   position: absolute;
 }
-.hotelRestaurantBox .sidebar,
-.hotelRestaurantExpansion .sidebar {
+.restaurantBox .sidebar,
+.restaurantExpansion .sidebar {
   position: absolute;
   text-align: left;
   top: 0;
@@ -76,12 +72,12 @@
   margin: 10px;
   border-left: solid white 1px;
 }
-.hotelRestaurantExpansion .sidebar {
+.restaurantExpansion .sidebar {
   padding-top: 0;
   margin-top: -10px;
   height: 195px;
 }
-.hotelRestaurantBox p {
+.restaurantBox p {
   padding: 10px;
   font-size: 10pt;
 }
@@ -95,7 +91,7 @@ img.arrowDown {
   height: 30px;
   cursor: pointer;
 }
-.hotelRestaurantBox .rating {
+.restaurantBox .rating {
   position: absolute;
   top: 0;
   right: 0;
@@ -114,31 +110,31 @@ img.arrowDown {
   }
 }
 @media only screen and (max-width: 1100px) {
-  .hotelRestaurantBox {
+  .restaurantBox {
     margin-left: 5%;
     width: 90%;
     height: 320px;
   }
-  .hotelRestaurantBox img {
+  .restaurantBox img {
     height: 100px;
     width: 130px;
   }
-  .hotelRestaurantBox .information {
+  .restaurantBox .information {
     position: absolute;
     width: 100%;
     top: 110px;
     left: 0;
   }
-  .hotelRestaurantBox .sidebar {
+  .restaurantBox .sidebar {
     height: 90px;
     left: 140px;
     width: 80%;
   }
-  .hotelRestaurantBox .sidebar p {
+  .restaurantBox .sidebar p {
     padding: 2px;
     padding-left: 0;
   }
-  .hotelRestaurantBox .rating {
+  .restaurantBox .rating {
     position: absolute;
     right: 25px;
   }
@@ -152,19 +148,19 @@ img.arrowDown {
     height: 30px;
     cursor: pointer;
   }
-  .hotelRestaurantExpansion {
+  .restaurantExpansion {
     width: 90%;
     margin-left: 5%;
     height: 370px;
   }
-  .hotelRestaurantExpansion .information {
+  .restaurantExpansion .information {
     float: top;
     width: 90%;
     height: 100px;
     margin-right: 20px;
     margin-left: -180px;
   }
-  .hotelRestaurantExpansion .sidebar {
+  .restaurantExpansion .sidebar {
     position: absolute;
     width: 90%;
     top: 233px;
@@ -174,31 +170,31 @@ img.arrowDown {
   }
 }
 @media only screen and (max-width: 1099px) and (min-width: 650px) {
-  .hotelRestaurantExpansion {
+  .restaurantExpansion {
     height: 305px;
   }
-  .hotelRestaurantExpansion .sidebar {
+  .restaurantExpansion .sidebar {
     top: 168px;
   }
 }
 
 @media only screen and (max-width: 440px) {
-  .hotelRestaurantExpansion {
+  .restaurantExpansion {
     height: 430px;
   }
-  .hotelRestaurantExpansion .sidebar {
+  .restaurantExpansion .sidebar {
     top: 293px;
   }
-  .hotelRestaurantBox .rating {
+  .restaurantBox .rating {
     font-size: 7pt;
   }
 }
 @media only screen and (max-width: 350px) {
-  .hotelRestaurantBox img {
+  .restaurantBox img {
     height: 70px;
     width: 90px;
   }
-  .hotelRestaurantBox .sidebar {
+  .restaurantBox .sidebar {
     height: 65px;
     left: 100px;
     width: 80%;
@@ -208,22 +204,22 @@ img.arrowDown {
     height: 25px;
     cursor: pointer;
   }
-  .hotelRestaurantBox .rating {
+  .restaurantBox .rating {
     position: absolute;
     right: 20px;
     font-size: 5pt;
   }
-  .hotelRestaurantExpansion {
+  .restaurantExpansion {
     height: 330px;
   }
-  .hotelRestaurantExpansion .sidebar {
+  .restaurantExpansion .sidebar {
     top: 200px;
     height: 110px;
   }
-  .hotelRestaurantBox .description {
+  .restaurantBox .description {
     font-size: 10pt;
   }
-  .hotelRestaurantExpansion .information {
+  .restaurantExpansion .information {
     font-size: 10pt;
     padding: 4px;
   }

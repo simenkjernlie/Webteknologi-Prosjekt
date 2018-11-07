@@ -64,6 +64,7 @@ body {
 /* Ads style to the active link. Only defines the color of the currently active link */
 .activeLink {
   background-color: #e4e4e4 !important;
+  box-shadow: inset 0px 0px 20px #c1c1c1;
 }
 
 .navDropdown {

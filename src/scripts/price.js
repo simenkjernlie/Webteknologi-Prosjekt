@@ -19,7 +19,6 @@ if(hours<10) {
 let today_date_string = yyyy + "-" + mm + "-" + dd;
 let time_now_string = hours + ":" + minutes;
 
-
 function make_price_elements(i, pris) {
   let img = document.createElement('img');
   let tall = document.createTextNode(pris);
@@ -60,12 +59,20 @@ function calc_price(number, price_per_day) {
   let start_value = new Date(document.getElementsByClassName("input_start")[number].value);
   let end_value = new Date(document.getElementsByClassName("input_end")[number].value);
   calculated_price = (parseInt(end_value.getTime() - start_value.getTime())/(1000*60*60*24))*price_per_day;
-  console.log(calculated_price);
+  let diff_date_today = parseInt(start_value.getTime() - today.getTime());
 
   if (calculated_price < 0) {
     document.getElementsByClassName("input_start")[number].style.boxShadow = "2px 0px 10px 5px red";
     if ((wrong_date_alert % 10)===0) {
       alert("The 'Pick-Up date' is set after the 'End date' of the renting period. \nPlease refill the form.");
+    }
+    wrong_date_alert += 1;
+    wrong_date_flag = 1;
+  }
+  else if (diff_date_today <= -100000000) {
+    document.getElementsByClassName("input_start")[number].style.boxShadow = "2px 0px 10px 5px red";
+    if ((wrong_date_alert % 10)===0) {
+      alert("The 'Pick-Up date' cannot be set in the past. \nPlease refill the form.");
     }
     wrong_date_alert += 1;
     wrong_date_flag = 1;
@@ -86,7 +93,7 @@ function calc_price(number, price_per_day) {
 }
 
 
-function verify_and_notify(i) {
+function verify_and_notify() {
   if (wrong_date_flag) {
     alert("Sorry, but you need to refill the form. Your date is not realistic.\nPick-Up date cannot be set after the End-of-trip date" )
   }
