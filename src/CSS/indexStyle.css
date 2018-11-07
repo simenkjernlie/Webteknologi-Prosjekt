@@ -40,12 +40,13 @@
     margin: auto;
     padding-top: 20%;
     line-height: normal;
+    min-font-size: 10px;
 }
 
 
 
 
-/* Recomended activitis */
+/* Offers */
 .recomendedSection{
     height: 55vh;
     width: 100%;
@@ -54,11 +55,11 @@
     color: #13434b;
 }
 
-.recomendedHeader {
+.offerHeader {
     font-size: 150%;
 }
 
-.activitis{
+.offers{
     width: 31.3%;
     height: auto; /* Should be auto, but the images needs to be of the same size for this to work */
     float: left;
@@ -67,13 +68,13 @@
 }
 
 
-.activitis a img{
+.offers a img{
     width: 100%;
     height: 100%;
 }
 
 
-.hoverInf{
+.hoverInfOffer {
     width: 100%;
     height: 2em;
     z-index: 1000;
@@ -90,7 +91,7 @@
     margin-bottom:4px;
 }
 
-.activitis a img:hover + .hoverInf, .hoverInf:hover{
+.offers a img:hover + .hoverInfOffer, .hoverInfOffer:hover{
     height: calc(100% - 4px);
 }
 
@@ -121,14 +122,14 @@
         font-size: 40px;
     }
     
-    .activitis{
+    .offers{
         float: left;
         width: 60%;
         margin-left:20%;
         margin-bottom: 2%;
 
     }
-    .hoverInf{
+    .hoverInfOffer{
         left:inherit;
     }
 }
@@ -149,13 +150,13 @@
         padding-top: 2vh;
     }
     
-    .activitis{
+    .offers{
         float: left;
         width: 40%;
         margin-left:30%;
         margin-bottom: 2%;
     }
-    .hoverInf{
+    .hoverInfOffer{
         left:inherit;
     }
 }

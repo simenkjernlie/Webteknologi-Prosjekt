@@ -1,3 +1,8 @@
+/*
+* Inspirasjon for navigasjonsbar hentet fra: https://www.w3schools.com/css/css_navbar.asp
+* Inspirasjon og kode for oprettelse og animasjon av menuIcon hentet fra: https://www.w3schools.com/howto/howto_css_menu_icon.asp
+*/
+
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
 * {
   margin: 0;
@@ -192,30 +197,4 @@ body {
   .navigationBarLi .navBarHome {
     display: block;
   }
-
-  /*
-    #DropdownLink{
-        height: auto;
-        -webkit-transition: height 1s;
-        transition: height 1s;
-    }
-
-    .navDropdown{
-        display: block;
-        height: 0px;
-        overflow: hidden;
-        -webkit-transition: height 1s;
-        transition: height 1s;
-    }
-    .dropdownMainLink:hover + .navDropdown, .navDropdown:hover{
-        height: 146px;
-    }
-
-    .navigationBarLi .dropdownMainLink:hover + .navigationBarLi a{
-        color:red;
-    }
-
-    .navDropdown a{
-        background-color: #f0f0f0;
-    } */
 }
