@@ -42,6 +42,7 @@ input, textarea {
     color: #f8f8f8;
     width: 75px;
     right: 7px;
+    border-radius: 3px;
 }
 
 #vertical_line_hide{
