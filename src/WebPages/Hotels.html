@@ -19,7 +19,7 @@
 
 </head>
 
-<body onload="navigationStartup(false)", addFooter(false)", onresize="changeWidth()" onload="changeImg()">
+<body onload="navigationStartup(false) , addFooter(false)", onresize="changeWidth()" onload="changeImg()">
     <div id="headerDiv">
 
     </div>
@@ -38,7 +38,7 @@
             <img class="hotelbilde" src="../img/hotelbilder/hotel1-1.jpg" alt="Hotel Adriana">
         </div>
         <div class="hot_name">
-            <h3>Hotel Adriana
+            <h3>Hotel Adriana, Oristano
                 <div>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -56,7 +56,7 @@
             <p> <i class="fas fa-swimming-pool"></i> 12:00 - 21:30</p>
             <p> <i class="fas fa-umbrella-beach"></i> 1000 meters </p>
             <p> <i class="fas fa-phone"></i> +39 373 74 7263</p>
-            <p> <i class="fas fa-map-marker-alt"></i> Viale Indipendenza, 26-18 <br> 09170 Oristano OR, Italy
+            <p> <i class="fas fa-map-marker-alt"></i> Piazza Mariano, 50 <br> 09170 Oristano OR, Italy
             </p>
 
         </div>
@@ -79,14 +79,16 @@
             <p>
                 <ul>
                     <li>
-                        The food: Impasto Con Guarnizione serves mainly pizza, but select pasta dishes are also
-                        available. Local desserts are also available for low prices.
+                        <p>
+                            The food: Impasto Con Guarnizione serves mainly pizza, but select pasta dishes are also
+                            available. Local desserts are also available for low prices.</p>
 
-                    </li>
+                    </li> <br>
                     <li>
-                        When to go: The restaurant is popular every afternoon and usually packed on weekends. With
-                        seating for up to 90 people available there is rearely a need to book ahead.
-
+                        <p>
+                            When to go: The restaurant is popular every afternoon and usually packed on weekends. With
+                            seating for up to 90 people available there is rearely a need to book ahead.
+                        </p>
                     </li>
                 </ul>
             </p>
@@ -94,61 +96,62 @@
 
         </div>
         <div class="google_image_element">
-            <img class="google_image" src="../img/hotelbilder/map_hot1.PNG" alt="expander">
-
+            <div id="mapAdriana"></div>
         </div>
-        <div class="gul_boks">
-            <h2>Book your hotel now!</h2>
-            <form action="Hotels.html" method="post" accept-charset="UTF-8">
-                <div class="side1">
-                    Check in date: <br> <input type="date" name="check_in_date" id="check_in_date" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
-                        required>
-                    <br>
-                    Check out date: <br> <input type="date" name="check_out_date" id="check_out_date" min="check_in_date"
-                        onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')" required>
-                </div>
-                <div class="side2">
-                    Rooms: <br> <select name="nr_rooms" id="nr_rooms" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
-                        required>
-                        <option value=1>1</option>
-                        <option value=2>2</option>
-                        <option value=3>3</option>
-                        <option value=4>4</option>
-                    </select>
-                    <br>
-                    Persons: <br> <select name="nr_adults" , id="nr_adults" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
-                        required>
-                        <option value=1>1</option>
-                        <option value=2>2</option>
-                        <option value=3>3</option>
-                        <option value=4>4</option>
-                    </select>
-                </div>
+        <div class="gul_container">
+            <div class="gul_boks">
+                <h2>Book your hotel now!</h2>
+                <form action="Hotels.html" method="post" accept-charset="UTF-8">
+                    <div class="side1">
+                        Check in date: <br> <input type="date" name="check_in_date" id="check_in_date" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
+                            required>
+                        <br>
+                        Check out date: <br> <input type="date" name="check_out_date" id="check_out_date" min="check_in_date"
+                            onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
+                            required>
+                    </div>
+                    <div class="side2">
+                        Rooms: <br> <select name="nr_rooms" id="nr_rooms" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
+                            required>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                        </select>
+                        <br>
+                        Persons: <br> <select name="nr_adults" , id="nr_adults" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1')"
+                            required>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                        </select>
+                    </div>
 
-                <div class="side3">
-                    Full name: <br> <input type="text" name="full_name" id="full_name" size="4" placeholder="Your name"
-                        required> <br>
-                    Phone: <br> <input type="number" name="full_name" id="full_name" size="4" placeholder="Your phone number"
-                        required><br>
-                    Email: <br> <input type="email" name="full_name" id="full_name" size="1" placeholder="Your Email"
-                        required><br>
-                </div>
-                <div class="price" id="price1">
-                    Please fill in form for price estimation
+                    <div class="side3">
+                        Full name: <br> <input type="text" name="full_name" id="full_name" size="4" placeholder="Your name"
+                            required> <br>
+                        Phone: <br> <input type="number" name="full_name" id="full_name" size="4" placeholder="Your phone number"
+                            required><br>
+                        Email: <br> <input type="email" name="full_name" id="full_name" size="1" placeholder="Your Email"
+                            required><br>
+                    </div>
+                    <div class="price" id="price1">
+                        Please fill in form for price estimation
 
-                </div>
-                <div class="side4">
-                    <button class="booking_btn" type="submit" name="Book_now" onclick="return form_validater('check_in_date', 'check_out_date')">
-                        <span>Book now</span>
-                    </button>
+                    </div>
+                    <div class="side4">
+                        <button class="booking_btn" type="submit" name="Book_now" onclick="return form_validater('check_in_date', 'check_out_date')">
+                            <span>Book now</span>
+                        </button>
 
-                </div>
+                    </div>
 
-            </form>
+                </form>
 
 
+            </div>
         </div>
-
     </div>
 
     <!--####################################           Hotel 2            ########################-->
@@ -162,7 +165,7 @@
             <img class="hotelbilde" src="../img/hotelbilder/hotel2-1.jpg" alt="Hotel Adriana">
         </div>
         <div class="hot_name">
-            <h3>Hotel Barbo
+            <h3>Hotel Barbo, Olbia
                 <div>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -180,7 +183,7 @@
             <p> <i class="fas fa-swimming-pool"></i> 12:00 - 20:30</p>
             <p> <i class="fas fa-umbrella-beach"></i> 500 meters </p>
             <p> <i class="fas fa-phone"></i> +39 373 52 8976</p>
-            <p> <i class="fas fa-map-marker-alt"></i> Viale Indipendenza, 26-18 <br> 09170 Oristano OR, Italy
+            <p> <i class="fas fa-map-marker-alt"></i> Via del Faro, 27 <br> 07026 Olbia OT, Italy
             </p>
 
         </div>
@@ -188,10 +191,12 @@
 
         </div>
         <div class="hotel_tekst">
-            <p> Hotel Barbo is located 5 km outside the city center, but close to beautiful beaches and the mountain side.
-                It offers a relaxing atmosphere, where you can enjoy a cold mojito with stunning scenery over the landscape.
+            <p> Hotel Barbo is located 5 km outside the city center of Olbia, but close to beautiful beaches and the mountain
+                side.
+                It offers a relaxing atmosphere, where you can enjoy a cold mojito with stunning scenery over the
+                landscape.
 
-                </p>
+            </p>
         </div>
 
 
@@ -204,13 +209,17 @@
             <p>
                 <ul>
                     <li>
-                        At Hotel Barbo you will be greeted by friendly and helpful staff employees, that will help you with 
-                        whatever you need to realize your holiday dreams at Sardinia.  
+                        <p>
+                            At Hotel Barbo you will be greeted by friendly and helpful staff employees, that will help
+                            you with
+                            whatever you need to realize your holiday dreams at Sardinia. </p>
 
-                    </li>
+                    </li> <br>
                     <li>
-                        The kitchen serves exclusively dishes inspired from the local area, often with ingredients from the 
-                        surrounding mediterranean ocean. 
+                        <p>
+                            The kitchen serves exclusively dishes inspired from the local area, often with ingredients
+                            from the
+                            surrounding mediterranean ocean. </p>
 
                     </li>
                 </ul>
@@ -219,9 +228,8 @@
 
         </div>
         <div class="google_image_element">
-            <img class="google_image" src="../img/hotelbilder/map_hot1.PNG" alt="expander">
-
-        </div>
+        <div id="mapBarbo"></div>
+    </div>
         <div class="gul_boks">
             <h2>Book your hotel now!</h2>
             <form action="Hotels.html" method="post" accept-charset="UTF-8">
@@ -286,7 +294,7 @@
             <img class="hotelbilde" src="../img/hotelbilder/hotel2.jpg" alt="Hotel Barameda">
         </div>
         <div class="hot_name">
-            <h3>Hotel Marameda
+            <h3>Hotel Mar, Cagliari
                 <div>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -304,7 +312,7 @@
             <p> <i class="fas fa-swimming-pool"></i> 12:00 - 21:00</p>
             <p> <i class="fas fa-child"></i> Family friendly </p>
             <p> <i class="fas fa-phone"></i> +39 355 65 1192</p>
-            <p> <i class="fas fa-map-marker-alt"></i> Viale Indipendenza, 26-18 <br> 09170 Oristano OR, Italy
+            <p> <i class="fas fa-map-marker-alt"></i> Viale Regina Margherita, 81-99 <br> 09124 Cagliari CA, Italy
             </p>
 
         </div>
@@ -312,9 +320,9 @@
 
         </div>
         <div class="hotel_tekst">
-            <p>Hotel Barameda is located close to the city center, and is just a couple of blocks away from 
-                the famous Cagliari Cathedral. The hotel is well suited for accommodating families with children, 
-            as the hotels offers several activites to keep the children entertained.  </p>
+            <p>Hotel Mar is located close to the city center, and is just a couple of blocks away from
+                the famous Cagliari Cathedral. The hotel is well suited for accommodating families with children,
+                as the hotels offers several activites to keep the children entertained. </p>
         </div>
 
 
@@ -327,13 +335,18 @@
             <p>
                 <ul>
                     <li>
-                        If you want unbeatable service where everything is facilitated for you and your familiy, look no further.
-                        The hotel offers movies and clown shows for the youngest, while the bar is available for the parents.
+                        <p>
+                            If you want unbeatable service where everything is facilitated for you and your familiy,
+                            look no further.
+                            The hotel offers movies and clown shows for the youngest, while the bar is available for
+                            the parents.</p>
 
-                    </li>
+                    </li> <br>
                     <li>
-                        The Cagliari Cathedral is a five minute walk away, and is a "must see" if you are staying here. 
-                        The hotel gives you a 20% off on the cathedral tour, if you are staing more than three nights.
+                        <p>
+                            The Cagliari Cathedral is a five minute walk away, and is a "must see" if you are staying
+                            here.
+                            Hotel guests get a 20% discount on the cathedral tour.</p>
 
                     </li>
                 </ul>
@@ -342,9 +355,8 @@
 
         </div>
         <div class="google_image_element">
-            <img class="google_image" src="../img/hotelbilder/map_hot1.PNG" alt="expander">
-
-        </div>
+        <div id="mapMarameda"></div>
+    </div>
         <div class="gul_boks">
             <h2>Book your hotel now!</h2>
             <form action="Hotels.html" method="post" accept-charset="UTF-8">
@@ -353,7 +365,8 @@
                         required>
                     <br>
                     Check out date: <br> <input type="date" name="check_out_date" id="check_out_date3" min="check_in_date"
-                        onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3')" required>
+                        onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3')"
+                        required>
                 </div>
                 <div class="side2">
                     Rooms: <br> <select name="nr_rooms" id="nr_rooms3" onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3')"
@@ -401,7 +414,7 @@
 
 
 
-  <!--####################################           Hotel 4            ########################-->
+    <!--####################################           Hotel 4            ########################-->
 
 
 
@@ -414,7 +427,7 @@
             <img class="hotelbilde" src="../img/hotelbilder/hotel4.jpg" alt="Hostel BackPacker Cagliari">
         </div>
         <div class="hot_name">
-            <h3>Hostel BP Cagliari
+            <h3>Hostel Indi, Cagliari
                 <div>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -432,7 +445,7 @@
             <p> <i class="fas fa-glass-martini"></i> 12:00 - 23:30</p>
             <p> <i class="fas fa-umbrella-beach"></i> 100 meters </p>
             <p> <i class="fas fa-phone"></i> +39 543 44 7733</p>
-            <p> <i class="fas fa-map-marker-alt"></i> Viale Indipendenza, 26-18 <br> 09170 Oristano OR, Italy
+            <p> <i class="fas fa-map-marker-alt"></i> Via S'Oru e Mari, 1 <br> 09045 Quartu Sant'Elena CA, Italy
             </p>
 
         </div>
@@ -440,8 +453,9 @@
 
         </div>
         <div class="hotel_tekst">
-            <p> If you are traveling on a budget, this is the perfect place to stay. Hostel BP Cagliari offers a
-                cheap alternative to the mainstream hotels in the area, where it is easy to meet new open minded backpackers and travelers.     </p>
+            <p> If you are traveling on a budget, this is the perfect place to stay. Hostel Indioffers a
+                cheap alternative to the mainstream hotels in the area, where it is easy to meet new open minded
+                backpackers and travelers. </p>
         </div>
 
 
@@ -454,13 +468,17 @@
             <p>
                 <ul>
                     <li>
-                        The hostel is located on the beautiful Lia'more Beach, which is a 15 minutes wlak from the city center.
-
-                    </li>
+                        <p>
+                            The hostel is located on the beautiful Lia'more Beach, which is a 15 minutes walk from the
+                            city center.
+                        </p>
+                    </li><br>
                     <li>
-                        The bar is open to late at night, with happy hours from 17:00 to 19:00 every day. Is is also 
-                        possible to starte a bonfire on the beach, just remember to contact the staff beforehand.
-
+                        <p>
+                            The bar is open to late at night, with happy hours from 17:00 to 19:00 every day. Is is
+                            also
+                            possible to starte a bonfire on the beach, just remember to contact the staff beforehand.
+                        </p>
                     </li>
                 </ul>
             </p>
@@ -468,9 +486,8 @@
 
         </div>
         <div class="google_image_element">
-            <img class="google_image" src="../img/hotelbilder/map_hot1.PNG" alt="expander">
-
-        </div>
+        <div id="mapBP"></div>
+    </div>
         <div class="gul_boks">
             <h2>Book your hotel now!</h2>
             <form action="Hotels.html" method="post" accept-charset="UTF-8">
@@ -522,7 +539,6 @@
 
 
         </div>
-
     </div>
 
 
@@ -530,8 +546,8 @@
 
     <div class="footer" id="footer">
 
-        </div>
-
+    </div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFLGoMfLcbvXg9_8uS5aUSy9yucPtLg7k&callback=initMap"></script>
     <script src="../scripts/hotel.js"></script>
 </body>
 
