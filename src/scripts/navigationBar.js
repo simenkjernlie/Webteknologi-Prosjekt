@@ -24,7 +24,6 @@
 * Inspirasjon og kode for oprettelse og animasjon av menuIcon hentet fra: https://www.w3schools.com/howto/howto_css_menu_icon.asp
 * */
 
-
 var navigationBar = null;
 var offSet = null;
 var h = null;
@@ -36,6 +35,7 @@ function navigationStartup(isindex) {
   const navBar = document.getElementById("navBarDiv");
 
   navBar.addEventListener("mouseover", function() {
+    //If it is a mobile device do not run the function
     displayNavigationbar("block");
   });
 
