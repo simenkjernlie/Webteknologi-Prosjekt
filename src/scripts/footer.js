@@ -33,18 +33,21 @@ images = {
             src:"img/ikoner/twitter-icon.svg",
             class:"footerImages",
             text:null,
+            href:"https://twitter.com/",
         },
         facebook:{
             alt:"facebookIcon",
             src:"img/ikoner/facebook-icon.svg",
             class:"footerImages",
             text:null,
+            href:"https://www.facebook.com/",
         },
         instagram:{
             alt:"instagramIcon",
             src:"img/ikoner/instagram-icon.svg",
             class:"footerImages",
             text:null,
+            href:"https://www.instagram.com/",
         },
     },
 }
@@ -82,11 +85,16 @@ function createImg(element, isindex){
     img.alt = element.alt;
     let src = "";
     if (isindex != true){
-        src += "../"
+        src += "../";
     }
-    src += element.src
+    src += element.src;
     img.src = src;
     img.classList.add(element.class);
+    if (element.href !== undefined){
+        img.addEventListener("click", function(){
+            window.location = element.href;
+        })
+    }
     return img;
 }
 
@@ -108,7 +116,7 @@ function addFooter(isindex) {
         contactInf.appendChild(createImg(images.contactInf[e],isindex));
         if (images.contactInf[e].text != null){
             //console.log(images.contactInf[e].text);
-            const t = document.createTextNode(images.contactInf[e].text)
+            const t = document.createTextNode(images.contactInf[e].text);
             contactInf.appendChild(t);
             contactInf.appendChild(document.createElement("br"));
         }
@@ -116,7 +124,7 @@ function addFooter(isindex) {
 
     const sosialmedia = document.createElement("div");
     sosialmedia.setAttribute("id","socialMedia");
-    sosialmedia.appendChild(document.createTextNode("Sosial"));
+    sosialmedia.appendChild(document.createTextNode("Social"));
     sosialmedia.appendChild(document.createElement("br"));
     for (let e in images.sosialmedia){
         sosialmedia.appendChild(createImg(images.sosialmedia[e],isindex));

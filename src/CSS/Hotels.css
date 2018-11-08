@@ -2,7 +2,9 @@
     height: 20px;
     width: 100%;
 }
-
+.pspace{
+    visibility: hidden;
+}
 
 .gul_container {
     width: 100%;
@@ -10,10 +12,19 @@
     text-align: center;
 }
 
+.utivdelse{
+    border-radius: 3px;
+    top: -3px;
+}
 td{
     vertical-align: bottom;
 }
-
+#mapAdriana,
+    #mapBarbo,
+    #mapMarameda,
+    #mapBP {
+        border-radius: 3px;
+    }
 
 select{
     padding: 10px 20px;
@@ -91,7 +102,6 @@ p {
         z-index: 1;
         width: 70%;
         display: inline-block;
-
     }
      
         .hotel_tekst {
@@ -108,7 +118,7 @@ p {
             width: 100%;
             height: 875px;
             position: relative;
-            top: -2px;
+            
             color: #F8F8F8;
         }
         .utivdelse .a {
@@ -312,7 +322,7 @@ p {
             width: 100%;
             height: 740px;
             position: relative;
-            top: -2px;
+           
             color: #F8F8F8;
         
         }
@@ -465,9 +475,7 @@ padding-left: 20%;
         padding: 5px 5px 5px 15px;
         font-size: 13pt;
     }
-    .gul_container {
-        text-align: left;
-    }
+  
 
     .linje{
         position: absolute;
@@ -512,7 +520,7 @@ padding-left: 20%;
         left: 10%;
         height: 528px;
         position: relative;
-        top: -2px;
+        
         color: #F8F8F8;
     
     }

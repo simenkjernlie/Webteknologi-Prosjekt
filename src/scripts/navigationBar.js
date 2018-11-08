@@ -79,8 +79,12 @@ function displayNavigationbar(displaytype) {
     if (element[i].style === undefined) {
       break;
     }
-    if (element[i].innerHTML !== "Home") {
-      element[i].style.display = displaytype;
+    try{
+        if (element[i].innerHTML !== "Home") {
+            element[i].style.display = displaytype;
+        }
+    } catch (e) {
+        
     }
   }
 }

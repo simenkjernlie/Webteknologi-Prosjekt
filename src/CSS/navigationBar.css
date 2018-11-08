@@ -95,6 +95,10 @@ body {
 }
 
 /* Menu icon bars */
+/* Kode for menu icon er hentet en del av CSS fra W#School from en del av koden. De fleste verdiene er endret, men mye
+av koden har tatt inspirasjon fra: https://www.w3schools.com/howto/howto_css_menu_icon.asp
+
+*/
 .menuBar1,
 .menuBar2,
 .menuBar3 {
