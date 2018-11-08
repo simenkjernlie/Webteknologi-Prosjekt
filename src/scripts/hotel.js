@@ -90,7 +90,10 @@ function form_validater(check_in_date, check_out_date, hot_name){
         alert("Please select valid check in and check out days! \n Check in date before check out day")
         return false;
     } 
-
+    else {
+        alert("Thank you for your reservation, " + hot_name + " is looking forward for your stay. \n Please check mail for confirmation and receipt")
+        return false;
+    }
 }
 
 

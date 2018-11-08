@@ -1,3 +1,4 @@
+//Under blir klokken og datoen lagret i from av strenger som senere kan fylles inn i skjemaet. 
 let today = new Date();
 let minutes = today.getMinutes();
 let hours = today.getHours();
@@ -19,6 +20,7 @@ if(hours<10) {
 let today_date_string = yyyy + "-" + mm + "-" + dd;
 let time_now_string = hours + ":" + minutes;
 
+//Her lages det et priselement som består av Eurotegnet og selve prisen.
 function make_price_elements(i, pris) {
   let img = document.createElement('img');
   let tall = document.createTextNode(pris);
@@ -32,17 +34,16 @@ function make_price_elements(i, pris) {
   price_class.appendChild(tall);
 }
 
+//Her nuller funksjonene ut alle pristallene
 function null_ut() {
-  //The for loop was defined to run 4 iterations despite the fact that Biking only had 3 elements.
-  //This was solved by reading the number of elements the exists
   for (let i = 0; i < document.getElementsByClassName('price').length; i++) {
     make_price_elements(i, 0);
+    document.getElementsByClassName("input_start")[i].style.boxShadow = "0px 0px 0px 0px";
   }
 }
 
+//Denne funksjonen setter inn dagens dato og klokkeslett inn i alle skjemaene.
 function set_todays_date() {
-  //The for loop was defined to run 4 iterations despite the fact that Biking only had 3 elements.
-  //This was solved by reading the number of elements the exists
   for (let i = 0; i < document.getElementsByClassName("input_start").length; i++) {
     document.getElementsByClassName("input_start")[i].value = today_date_string;
     document.getElementsByClassName("input_end")[i].value = today_date_string;
@@ -54,6 +55,9 @@ function set_todays_date() {
 let wrong_date_alert = 0;
 let wrong_date_flag = 0;
 
+/*Dette er funksjonen som utfører kalkuleringen av prisen og setter opp feilmeldinger dersom feil dato er satt inn før submit knappen er trykket inn.
+Funksjonen har også flere kall til funksjonen som nuller ut og den som skaper visuelle tilbakemeldinger i form av farge rundt skjemaet.
+*/
 function calc_price(number, price_per_day) {
   let calculated_price = 0;
   let start_value = new Date(document.getElementsByClassName("input_start")[number].value);
@@ -61,6 +65,7 @@ function calc_price(number, price_per_day) {
   calculated_price = (parseInt(end_value.getTime() - start_value.getTime())/(1000*60*60*24))*price_per_day;
   let diff_date_today = parseInt(start_value.getTime() - today.getTime());
 
+//Dersom prisen blir mindre enn 0, altså datoen må være fylt ut feil. (Pick up date er satt etter End date)
   if (calculated_price < 0) {
     document.getElementsByClassName("input_start")[number].style.boxShadow = "2px 0px 10px 5px red";
     if ((wrong_date_alert % 10)===0) {
@@ -69,6 +74,8 @@ function calc_price(number, price_per_day) {
     wrong_date_alert += 1;
     wrong_date_flag = 1;
   }
+
+  //Sjekker her om datoen er satt før dagens dato og gir en eventuell feilmelding.
   else if (diff_date_today <= -100000000) {
     document.getElementsByClassName("input_start")[number].style.boxShadow = "2px 0px 10px 5px red";
     if ((wrong_date_alert % 10)===0) {
@@ -77,11 +84,12 @@ function calc_price(number, price_per_day) {
     wrong_date_alert += 1;
     wrong_date_flag = 1;
   }
+
+  //Dersom ingen av feilene over ble oppdaget så vil fargen bli oppdatert til grønn, andre priser nulles ut, og ny pris satt der brukeren skriver.
   else {
     wrong_date_flag = 0;
     null_ut();
     make_price_elements(number, calculated_price);
-    document.getElementsByClassName("input_start")[number].style.boxShadow = "none"
 
     //Effekt på pristallet
     document.getElementsByClassName('price')[number].classList.toggle("price_zoom");
@@ -92,7 +100,8 @@ function calc_price(number, price_per_day) {
   }
 }
 
-
+/* Denne funksjonen har i oppgave å sjekke om datoen fylt ut av brukeren ikke har noen feil. Dersom feil blir oppdaget så vil en feilmelding
+varsle brukeren om feilen. Ellers vil man få en melding om bestilt båt/sykkel*/
 function verify_and_notify() {
   if (wrong_date_flag) {
     alert("Sorry, but you need to refill the form. Your date is not realistic.\nPick-Up date cannot be set after the End-of-trip date" )
