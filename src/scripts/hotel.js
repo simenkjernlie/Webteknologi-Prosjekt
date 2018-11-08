@@ -76,12 +76,17 @@ function form_validater(check_in_date, check_out_date, hot_name){
     var  year = today.getFullYear()
     var current_date = month + "/" + day + "/" + year
     current_date = parseDate(current_date)
-    var past_diff = datediff(current_date, check_in_date)
-
+    console.log(current_date, check_in_date)
     check_in_date = parseDate(check_in_date)
-    check_out_date = parseDate(check_out_date)
+    var past_diff = datediff(current_date, check_in_date)
+     
 
+
+    
+    check_out_date = parseDate(check_out_date)
     var days_diff = datediff(check_in_date, check_out_date)
+
+    console.log(past_diff, days_diff)
     if (past_diff < 0){
         alert("Please select valid check in and check out days! \n Select dates in the future")
         return false        
@@ -92,7 +97,7 @@ function form_validater(check_in_date, check_out_date, hot_name){
     } 
     else {
         alert("Thank you for your reservation, " + hot_name + " is looking forward for your stay. \n Please check mail for confirmation and receipt")
-        return false;
+        return true;
     }
 }
 
