@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="../CSS/Style.css">
     <link rel="stylesheet" href="../CSS/navigationBar.css">
     <link rel="stylesheet" href="../CSS/footer.css">
-    <link rel="stylesheet" href="../CSS/activities.css">
     <link rel="stylesheet" href="../CSS/sailing_biking.css">
     <script src="../scripts/navigationBar.js"></script>
     <script src="../scripts/footer.js"></script>
@@ -16,11 +15,11 @@
 <div id="mainPageBody">
     <div id="headerDiv"></div>
 
-    <!--- Navigation bar --->
+    <!-- Navigation bar -->
 
     <div id="navBarDiv"></div>
 
-    <!--- Main body structure --->
+    <!-- Main body structure -->
     <div class="main_body">
         <h2 id="header">Biking</h2>
         <div id="one" class="backbox">
@@ -32,75 +31,78 @@
                     <div class="rightside1 description">
                         <p class="overskrift">Mountain Bike</p>
                         <p style="font-style: italic; color: #FAC917;">
-                            <img src="../img/location-vector.png" alt="location-vector" width="4%">
+                            <img src="../img/location-vector.png" alt="location-vector" style="width: 4%">
                             Capoterra, Tèmpiu, Cugnana Verde and others (contact for more available places)
                         </p>
                         <br>
-                        <p>At our bike hire in Sardinia you can ride a comfortable bike: Spark 950 Deore/XT. It is difficult to find a more suitable option for comfortable tours offroad; in the forrests, mountains or even on the beach. In this model, everything is done for the comfort of the cyclist,
-                            equiped with multiple suspension that will garantee you a nice ride.
+                        <div>
+                            <p>
+                                At our bike hire in Sardinia you can ride a comfortable bike: Spark 950 Deore/XT. It is difficult to find a more suitable option for comfortable tours offroad; in the forrests, mountains or even on the beach. In this model, everything is done for the comfort of the cyclist,
+                                equiped with multiple suspension that will garantee you a nice ride.
+                            </p>
+                            <br>
                             <ul style="margin-left:15px">
-                                <br>
                                 <li>Braking system: Hydraulic disc brake</li>
                                 <li>User: Unisex</li>
                                 <li>Wheel Size: 29</li>
                                 <li>Frame material: Aluminum</li>
                                 <li>Fork: Muffle fork, lockable Fully muffled</li>
                                 <li>Number of gear: 20</li>
-                            </ul></p>
+                            </ul>
+                        </div>
                             <br>
                         <p class="price" >
                         </p>
                     </div>
                 </div>
                 <div class="side2">
-                    <form onsubmit="verify_and_notify()" accept-charset="UTF-8">
+                    <form onsubmit="verify_and_notify()"  accept-charset="UTF-8">
                         <div class="leftside2">
-                            <label for="date">
-                                Pick-Up Date:
+                            <label for="start_date_0">
+                                <span>Pick-Up Date:</span>
                                 <br>
-                                <input type="date" class="input_start" onchange="calc_price(0, 25)" name="hentedato" placeholder="Pick-Up Date" value="" required>
+                                <input id = "start_date_0" type="date" class="input_start" onchange="calc_price(0, 25)" name="hentedato" value="" required>
                                 <br>
-                                End of Trip Date:
+                            </label>
+                            <label for="end_date_0">
+                                <span>End of Trip Date:</span>
                                 <br>
-                                <input type="date" class="input_end" onchange="calc_price(0, 25)"name="leveringsdato" placeholder="End of Trip Date" value="" required>
+                                <input id = "end_date_0" type="date" class="input_end" onchange="calc_price(0, 25)" name="leveringsdato" value="" required>
                             </label>
                             <br><br><br>
-                            <label for="name">
-                                Full name
+                            <label for="name_0">
+                                <span>Full name</span>
                                 <br>
-                                <input type="text" name="name" id="name" placeholder="Name"  pattern="[a-zA-ZÆÅØøæå \s]+" autocomplete="name" required>
+                                <input id = "name_0" type="text" name="name" class="name" placeholder="Name" pattern="[a-zA-ZÆÅØøæå \s]+" autocomplete="name" required>
                                 <br>
                             </label>
-                            <label for="email">
-                                E-Mail
+                            <label for="email_0">
+                                <span>E-Mail</span>
                                 <br>
-                                <input type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
+                                <input id = "email_0" type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
                             </label>
                         </div>
                         <div class="rightside2">
-                            <label for="time">
-                                Pic-Up Time
+                            <label for="start_time_0">
+                                <span>Pick-Up Time</span>
                                 <br>
-                                <input class="input_start_time" type="time" name="hentetid" value="" required>
+                                <input id="start_time_0" class="input_start_time" type="time" name="hentetid" value="" required>
                                 <br>
-                                End of trip Time
+                            </label>
+                            <label for="end_time_0">
+                                <span>End of trip Time</span>
                                 <br>
-                                <input class="input_end_time" type="time" name="leveringstid" value="" required>
+                                <input id="end_time_0" class="input_end_time" type="time" name="leveringstid" value="" required>
                                 <br><br><br><br><br>
                             </label>
-                            <label for="button">
-                                <button type="submit" name="submit"><span>Book Now</span></button>
+                            <label for="button_0">
+                                <button id="button_0" type="submit" name="submit"><span>Contact me</span></button>
                             </label>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-
-
-
-
-
 
         <div id="two" class="backbox">
             <div class="insidebox">
@@ -111,21 +113,25 @@
                     <div class="rightside1 description">
                         <p class="overskrift">Speed Bike</p>
                         <p style="font-style: italic; color: #FAC917;">
-                            <img src="../img/location-vector.png" alt="location-vector" width="4%">
+                            <img src="../img/location-vector.png" alt="location-vector" style = "width: 4%">
                             All main cities in Sardinia (contact for precise information)
                         </p>
                         <br>
-                        <p>Versatile bike for country road, gravel and cyclocross. Aluminum frame and carbide fork, Shimano Tiagra provides hydraulic disc brakes. Weight 9.8 kg. This is a perfect solution for those that want
-                            a professional and fast bike but at the same time with wheels and design that can be match with the Sardinian countryroads.
+                        <div>
+                            <p>
+                                Versatile bike for country road, gravel and cyclocross. Aluminum frame and carbide fork, Shimano Tiagra provides hydraulic disc brakes. Weight 9.8 kg. This is a perfect solution for those that want
+                                a professional and fast bike but at the same time with wheels and design that can be match with the Sardinian countryroads.
+                            </p>
+                            <br>
                                 <ul style="margin-left:15px">
-                                <br>
                                 <li>Braking system: Hydraulic disc brake</li>
                                 <li>User: Unisex</li>
                                 <li>Wheel Size: 28</li>
                                 <li>Frame material: Aluminum</li>
                                 <li>Fork: Carbone fork</li>
                                 <li>Number of gear: 20</li>
-                            </ul></p>
+                            </ul>
+                        </div>
                         <p class="price">
                         </p>
                     </div>
@@ -133,41 +139,45 @@
                 <div class="side2">
                     <form onsubmit="verify_and_notify()" accept-charset="UTF-8">
                         <div class="leftside2">
-                            <label for="date">
-                                Pick-Up Date:
+                            <label for="start_date_1">
+                                <span>Pick-Up Date:</span>
                                 <br>
-                                <input type="date" class="input_start" onchange="calc_price(1, 17)" name="hentedato" placeholder="Pick-Up Date" value="" required>
+                                <input id="start_date_1" type="date" class="input_start" onchange="calc_price(1, 17)" name="hentedato" value="" required>
                                 <br>
-                                End of Trip Date:
+                            </label>
+                            <label for="end_date_1">
+                                <span>End of Trip Date:</span>
                                 <br>
-                                <input type="date" class="input_end" onchange="calc_price(1, 17)"name="leveringsdato" placeholder="End of Trip Date" value="" required>
+                                <input id="end_date_1" type="date" class="input_end" onchange="calc_price(1, 17)" name="leveringsdato" value="" required>
                             </label>
                             <br><br><br>
-                            <label for="name">
-                                Full name
+                            <label for="name_1">
+                                <span>Full name</span>
                                 <br>
-                                <input type="text" name="name" id="name" placeholder="Name"  pattern="[a-zA-ZÆÅØøæå \s]+" autocomplete="name" required>
+                                <input id="name_1" type="text" name="name" class="name" placeholder="Name" pattern="[a-zA-ZÆÅØøæå \s]+" autocomplete="name" required>
                                 <br>
                             </label>
-                            <label for="email">
-                                E-Mail
+                            <label for="email_1">
+                                <span>E-Mail</span>
                                 <br>
-                                <input type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
+                                <input id="email_1" type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
                             </label>
                         </div>
                         <div class="rightside2">
-                            <label for="time">
-                                Pic-Up Time
+                            <label for="start_time_1">
+                                <span>Pick-Up Time</span>
                                 <br>
-                                <input class="input_start_time" type="time" name="hentetid" value="" required>
+                                <input id="start_time_1" class="input_start_time" type="time" name="hentetid" value="" required>
                                 <br>
-                                End of trip Time
+                            </label>
+                            <label for="end_time_1">
+                                <span>End of trip Time</span>
                                 <br>
-                                <input class="input_end_time" type="time" name="leveringstid" value="" required>
+                                <input id="end_time_1" class="input_end_time" type="time" name="leveringstid" value="" required>
                                 <br><br><br><br><br>
                             </label>
-                            <label for="button">
-                                <button type="submit" name="submit"><span>Book Now</span></button>
+                            <label for="button_1">
+                                <button id="button_1" type="submit" name="submit"><span>Contact me</span></button>
                             </label>
                         </div>
                     </form>
@@ -184,64 +194,72 @@
                     <div class="rightside1 description">
                         <p class="overskrift">City Bike</p>
                         <p style="font-style: italic; color: #FAC917;">
-                            <img src="../img/location-vector.png" alt="location-vector" width="4%">
+                            <img src="../img/location-vector.png" alt="location-vector" style = "width: 4%">
                             All main cities in Sardinia (contact for precise information)
                         </p>
                         <br>
-                        <p> VeloCity by White(not the one on picture) is a cool city / shuttle bike with stylish, elegant design. Solid and easy to use. With luggage racks, screens, support and room for two bottle holders.
-                            Weight 15.1 kg.ARL FF EQ has Shimano hydraulic disc brakes and gear system, and adjustable steering. Screen prevent spills on wet days.
-                            ARL gives you a lot of pleasure and is an excellent bike for walking, commuting and leisure.
+                        <div>
+                            <p>
+                                VeloCity by White(not the one on picture) is a cool city / shuttle bike with stylish, elegant design. Solid and easy to use. With luggage racks, screens, support and room for two bottle holders.
+                                Weight 15.1 kg.ARL FF EQ has Shimano hydraulic disc brakes and gear system, and adjustable steering. Screen prevent spills on wet days.
+                                ARL gives you a lot of pleasure and is an excellent bike for walking, commuting and leisure.
+                            </p>
+                            <br>
                             <ul style="margin-left:15px">
-                                <br>
                                 <li>Braking system: Hydraulic disc brake</li>
                                 <li>User: Men and lady models</li>
                                 <li>Wheel Size: 28</li>
                                 <li>Frame material: Aluminum</li>
                                 <li>Fork: Steel fork</li>
                                 <li>Number of gear: 24</li>
-                            </ul></p>
+                            </ul>
+                        </div>
                         <p><p class="price">
                         </p>
                     </div>
                 </div>
                 <div class="side2">
-                    <form onsubmit="verify_and_notify()"  accept-charset="UTF-8">
+                    <form onsubmit="verify_and_notify()" accept-charset="UTF-8">
                         <div class="leftside2">
-                            <label for="date">
-                                Pick-Up Date:
+                            <label for="start_date_2">
+                                <span>Pick-Up Date:</span>
                                 <br>
-                                <input type="date" class="input_start" onchange="calc_price(2, 10)" name="hentedato" placeholder="Pick-Up Date" value="" required>
+                                <input id="start_date_2" type="date" class="input_start" onchange="calc_price(2, 10)" name="hentedato" value="" required>
                                 <br>
-                                End of Trip Date:
+                            </label>
+                            <label for="end_date_2">
+                                <span>End of Trip Date:</span>
                                 <br>
-                                <input type="date" class="input_end" onchange="calc_price(2, 10)"name="leveringsdato" placeholder="End of Trip Date" value="" required>
+                                <input id="end_date_2" type="date" class="input_end" onchange="calc_price(2, 10)" name="leveringsdato" value="" required>
                             </label>
                             <br><br><br>
-                            <label for="name">
-                                Full name
+                            <label for="name_2">
+                                <span>Full name</span>
                                 <br>
-                                <input type="text" name="name" id="name" placeholder="Name"  pattern="[a-zA-ZÆÅØøæå \s]+" autocomplete="name" required>
+                                <input id="name_2" type="text" name="name" class="name" placeholder="Name" pattern="[a-zA-ZÆÅØøæå \s]" autocomplete="name" required>
                                 <br>
                             </label>
-                            <label for="email">
-                                E-Mail
+                            <label for="email_2">
+                                <span>E-Mail</span>
                                 <br>
-                                <input type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
+                                <input id="email_2" type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
                             </label>
                         </div>
                         <div class="rightside2">
-                            <label for="time">
-                                Pic-Up Time
+                            <label for="start_time_2">
+                                <span>Pick-Up Time</span>
                                 <br>
-                                <input class="input_start_time" type="time" name="hentetid" value="" required>
+                                <input id="start_time_2" class="input_start_time" type="time" name="hentetid" value="" required>
                                 <br>
-                                End of trip Time
+                            </label>
+                            <label for="end_time_2">
+                                <span>End of trip Time</span>
                                 <br>
-                                <input class="input_end_time" type="time" name="leveringstid" value="" required>
+                                <input id="end_time_2" class="input_end_time" type="time" name="leveringstid" value="" required>
                                 <br><br><br><br><br>
                             </label>
-                            <label for="button">
-                                <button type="submit" name="submit"><span>Book Now</span></button>
+                            <label for="button_2">
+                                <button id="button_2" type="submit" name="submit"><span>Contact me</span></button>
                             </label>
                         </div>
                     </form>
@@ -250,7 +268,7 @@
         </div>
     </div>
 </div>
-    <!--- Footer --->
+    <!-- Footer -->
     <div class="footer" id="footer"></div>
 </body>
 </html>
