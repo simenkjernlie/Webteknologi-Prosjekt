@@ -18,6 +18,7 @@ h5 {
   background-color: #13434b;
   width: 100%;
   height: 6vh;
+  min-height: 40px;
   text-align: center;
   vertical-align: middle;
   color: #f8f8f8;
@@ -26,4 +27,5 @@ h5 {
 
 .headerImg {
   height: inherit;
+  min-height: 40px;
 }
