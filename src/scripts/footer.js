@@ -116,7 +116,7 @@ function addFooter(isindex) {
 
     const sosialmedia = document.createElement("div");
     sosialmedia.setAttribute("id","socialMedia");
-    sosialmedia.appendChild(document.createTextNode("Sosial"));
+    sosialmedia.appendChild(document.createTextNode("Social"));
     sosialmedia.appendChild(document.createElement("br"));
     for (let e in images.sosialmedia){
         sosialmedia.appendChild(createImg(images.sosialmedia[e],isindex));
