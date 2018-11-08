@@ -1,0 +1,59 @@
+html,
+body {
+  background-color: rgb(210, 210, 210);
+  color: rgb(45, 45, 45);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.wrapper {
+  max-width: 1000px;
+  justify-content: center;
+  margin: auto;
+}
+
+.content {
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+  border: solid 2px rgb(130, 130, 130);
+  padding: 1em;
+  margin: 1em;
+}
+.header {
+  text-align: center;
+}
+ul > li > ul > li {
+  list-style: none;
+}
+.center {
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.mockups {
+  display: inline-block;
+  width: 40%;
+  margin: 20px auto 20px auto;
+}
+.mockups_smaller {
+  width: 22%;
+}
+.mockup_container {
+  text-align: center;
+}

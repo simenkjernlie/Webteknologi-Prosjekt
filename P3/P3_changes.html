@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>P3 Changes</title>
+</head>
+
+<body>
+    <div class=wrapper>
+
+        <div class="header content">
+            <h1>IT2805 P2 Project Requirements</h1>
+            <h2>Alexey Gusev, Hans Bratland Østerdal, Sander Kilen, Simen Kjernlie og Vilde Bruvik</h2>
+            <h4>09.10.2018</h4>
+
+        </div>
+        <div class="content">
+            <h2>Administative detaljer</h2>
+            <p>Kunde: Visita Sardinia (turistkontor, ikke reell klient).</p>
+        </div>
+        <div class="content">
+            <h2>Forandringer</h2>
+            <p>Vi bestemte oss for å endre et par ting fra den originale ideen av siden.
+                Vi endte med å bruke separate CSS-filer for sider uten overlappende design, og har kun det som er
+                felles for alle sidene i Style.css. Dette ble for oss ryddigere og gjorde det lettere å holde oversikt
+                over. Underoverskriftene på alle sidene, med unntak av undersidene til "Activities", ble fjernet, da vi
+                la inn styling på den aktive fanen i navigasjonsbaren i stedet.
+                "Slideshow"-funksjonaliten på restaurant- og hotellsiden ble ikke inkludert grunnet mangel på tid. </p>
+            <p>I index.html ble noen få ting endret:</p>
+            <ul>
+                <li>
+                    Vi endret mye av skriftstørelsen på index siden. Dette har med at når siden måtte gjøres responsiv
+                    ble en del av
+                    størrelsene til for eksempel bildene veldig anderledes. Teksten i desse blir derfor endret avhengig
+                    av
+                    størrelsen på
+                    bildene. Dette har med at det blir lettere å lese teksten som er beskrevet uten å endre for mye av
+                    størrelsesforholdene
+                    på siden. Teksten i boksene under Offers endrer størrelse slik at det skal være mulig å lese all
+                    teksten og at ikke
+                    noe blir gjemt underveis når teksten blir for stor.
+                    Tekststørrelsen på området "About us" på index siden ble også endret da det set mer naturlig ut med
+                    en
+                    tekst som har
+                    en størrelse skalert etter boksen. Teksten blir da ikke alt for stor i forhold til boksen.
+                    En annen grunn til at dette ble løst på denne måten er at index siden har et helt annet
+                    oppløsningsforhold enn det
+                    mange av de andre sidene har. 15 eller 18 piksler på en side som Hotels eller Restaurants blir
+                    derfor
+                    mye større i
+                    forhold til resten av innholdet enn det blir på index siden. Det samme gjeller for Activities
+                    siden.
+
+                </li>
+
+                <li>
+                    Den delen av siden som tidligere også het "News" ble også endret til Offser slik at de heller kunne
+                    fungere
+                    som ekstra linker til de mer naturlige/vanlige/populære sidene å besøke.</li>
+                <li>
+                    Annet enn dette er siden implementert på samme måte som planlagt</li>
+
+            </ul>
+
+            </p>
+            <p>
+                Det var også andre ting som ble endret noe. Dette har med at designet av siden ikke tok hensyn til
+                responsivitet og
+                possisjonereing av enkelte elementer ble derfor anderledes fra det første designet da dette ikke lot
+                seg gjøre brukervenlig
+                med en responsiv side.
+
+                Med dette følger endringene at Offers boksene stilles under hverandre når siden blir for smal.
+
+            </p>
+
+            <p>
+                Samme type endring ble gjort på navigajsonsbaren og footer elementet da disse måtte optimaliseres for
+                mindre skjermer.
+                Dette ble da en helt nye del av designet som først ble lagt til under implementasjonen av siden da
+                dette ikke ble tatt
+                godt nok høyde for under planleggingen av siden.
+
+            </p>
+            <p>
+                For navigasjonsbaren består endringene av at den blir en stor dropdown meny når skjermen blir for
+                liten. Da er også
+                linkene til Sailing, Biking, Nature og Culture fjernet fra navigasjonsbaren i tilfellet hvor skjermen
+                ble for smal da
+                det å beholde disse ble lite uoversiktlig, rotete og lite brukervenlig.
+
+            </p>
+            <p>
+                Annet enn dette er de eneste endringene på navigasjonsbaren at størelsen ble beskrevet med vh
+                istedenfor px da dette
+                tar bedre hensyn til ulike oppløsninger på de ulike sidene. Det samme er gjort med teksten på footeren.
+                I tillegg til dette er teksten på navigasjonsbaren likt fordelt istedenfor å være plassert i midten da
+                det i praksik ikke
+                var plass til å sentrere alt.
+
+            </p>
+
+            <p>
+                Når det gjeller footeren ble teksten her (som i navigasjonsbaren) endret til vh istedenfor px for å ta
+                hensyn til
+                ulike oppløsinger på sidene.
+                I tillegg til denne ble de to ulike delene (den venstre og høyre siden av footeren) plassert over
+                hverandre når
+                skjermen blir smalere/mindre da dette var mer oversiktlig og brukervennlig.</p>
+
+            </p>
+            <p>Activities har ikke endt med noen store endringer fra det orginale designet. Dette er fremdeles det
+                samme i veldig stor
+                grad. Eneste ordentlige forskjellen er den responsive delen av siden hvor aktivitets boksene endrer
+                possisjon til under
+                hverandre (1x4 -> 2x2) når skjermen blir for smal</p>
+            <p>
+                På hotell-, restaurant-, sykkel-, seiling-, om oss- og om Sardinia-siden er skriftstørrelsen på
+                hovedteksten forandret fra 18pt
+                til 13pt. Dette ble gjort da vi innså at 18pt ble altfor stort.
+            </p>
+
+        </div>
+    </div>
+</body>
+
+</html>
