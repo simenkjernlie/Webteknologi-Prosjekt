@@ -99,7 +99,7 @@
                 <div class="gul_boks">
                     <!-- gul bakgrunn for skjemaet -->
                     <h2>Book your hotel now!</h2>
-                    <form action="Hotels.html" method="post" accept-charset="UTF-8">
+                    <form onsubmit="return form_validater('check_in_date', 'check_out_date', 'Hotel Adriana')"  accept-charset="UTF-8">
                         <!-- Skjemaet er delt i fem div'er (tre av disse er for inputs, en er for submit, og siste er for å vise pris)-->
                         <div class="side1">
                             <label for="check_in_date"> Check in date: </label>
@@ -147,7 +147,7 @@
                             Please fill in form for price estimation
                         </div>
                         <div class="side4">
-                            <button class="booking_btn" type="submit" name="Book_now" onsubmit="return form_validater('check_in_date', 'check_out_date', 'Hotel Adriana')" >
+                            <button class="booking_btn" type="submit" name="Book_now" >
                                 <span>Book now</span>
                             </button>
                         </div>
@@ -217,7 +217,7 @@
             </div>
             <div class="gul_boks">
                 <h2>Book your hotel now!</h2>
-                <form action="Hotels.html" method="post" accept-charset="UTF-8">
+                <form onsubmit="return form_validater('check_in_date2', 'check_out_date2', 'Hotel Barbo')"  accept-charset="UTF-8">
                     <div class="side1">
                         <label for="check_in_date2"> Check in date: </label>
                         <br> 
@@ -269,7 +269,7 @@
                         Please fill in form for price estimation
                     </div>
                     <div class="side4">
-                        <button class="booking_btn" type="submit" name="Book_now" onclick="return form_validater('check_in_date2', 'check_out_date2', 'Hotel Barbo')">
+                        <button class="booking_btn" type="submit" name="Book_now">
                             <span>Book now</span>
                         </button>
                     </div>
@@ -337,7 +337,7 @@
             </div>
             <div class="gul_boks">
                 <h2>Book your hotel now!</h2>
-                <form action="Hotels.html" method="post" accept-charset="UTF-8">
+                <form onsubmit="return form_validater('check_in_date3', 'check_out_date3', 'Hotel Mar')"  accept-charset="UTF-8">
                     <div class="side1">
                        <label for="check_in_date3"> Check in date: </label>
                         <br> 
@@ -389,7 +389,7 @@
                         Please fill in form for price estimation
                     </div>
                     <div class="side4">
-                        <button class="booking_btn" type="submit" name="Book_now" onclick="return form_validater('check_in_date3', 'check_out_date3', 'Hotel Mar')">
+                        <button class="booking_btn" type="submit" name="Book_now" >
                             <span>Book now</span>
                         </button>
                     </div>
@@ -401,7 +401,7 @@
         <div class="spacing"></div>
         <div class="hotel_block" id="hotel_block4">
             <div>
-                <img class="hotelbilde" src="../img/hotelbilder/hotel4.jpg" alt="Hostel BackPacker Cagliari">
+                <img class="hotelbilde" src="../img/hotelbilder/hotel4.jpg" alt="Hostel Indi">
             </div>
             <div class="hot_name">
                 <h3>Hostel Indi, Cagliari <br>
@@ -454,7 +454,7 @@
             </div>
             <div class="gul_boks">
                 <h2>Book your hotel now!</h2>
-                <form action="Hotels.html" method="post" accept-charset="UTF-8">
+                <form onsubmit="return form_validater('check_in_date4', 'check_out_date4', 'Hotel Indi')"  accept-charset="UTF-8">
                     <div class="side1">
                         <label for="check_in_date4"> Check in date: </label>
                         <br> 
@@ -506,7 +506,7 @@
                         Please fill in form for price estimation
                     </div>
                     <div class="side4">
-                        <button class="booking_btn" type="submit" name="Book_now" onclick="return form_validater('check_in_date4', 'check_out_date4', 'Hotel Indi')">
+                        <button class="booking_btn" type="submit" name="Book_now" )">
                             <span>Book now</span>
                         </button>
                     </div>
