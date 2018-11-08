@@ -329,31 +329,31 @@ function createMenuIcon() {
 * (Below the header) and this code will insert the navigation bar auto-magically
 * */
 function addNavBar(isindex) {
-  //Finds the navBarDiv where the navigation bar will be inserted
-  const navBarDiv = document.getElementById("navBarDiv");
-  //Creates a div with class navigationBarWrapper
-  const navigationBarWrapper = document.createElement("div");
-  navigationBarWrapper.classList.add("navigationBarWrapper");
-  navigationBarWrapper.setAttribute("id", "navigationBar");
-  //Creates a div with class navigationBarDiv and appends it to the div created over
-  const navigationBarDiv = document.createElement("div");
-  navigationBarDiv.classList.add("navigationBarDiv");
-  navigationBarDiv.setAttribute("id", "navigationBarDiv");
-  navigationBarWrapper.appendChild(navigationBarDiv);
-  //Creates an unsorted list and appends it to the div created above
-  const navigationBarList = document.createElement("ul");
-  navigationBarList.classList.add("navigationBarList");
-  navigationBarDiv.appendChild(navigationBarList);
-  //A for lop iterating through the elements in the object navbarElements created with Json at the start of this document
-  for (let e in navbarElements) {
-    navigationBarList.appendChild(
-      addNewElementNavbar(navbarElements[e], true, isindex)
-    );
-  }
-  //Creates a new div and gives it an ID
-  const navigationPlaceholder = document.createElement("div");
-  navigationPlaceholder.setAttribute("id", "navigationPlaceholder");
-  //Appends the div two divs navigationBarWrapper and navigatonPlaceholder to the navBarDiv element
-  navBarDiv.appendChild(navigationBarWrapper);
-  navBarDiv.appendChild(navigationPlaceholder);
+    //Finds the navBarDiv where the navigation bar will be inserted
+    const navBarDiv = document.getElementById("navBarDiv");
+    //Creates a div with class navigationBarWrapper
+    const navigationBarWrapper = document.createElement("div");
+    navigationBarWrapper.classList.add("navigationBarWrapper");
+    navigationBarWrapper.setAttribute("id", "navigationBar");
+    //Creates a div with class navigationBarDiv and appends it to the div created over
+    const navigationBarDiv = document.createElement("div");
+    navigationBarDiv.classList.add("navigationBarDiv");
+    navigationBarDiv.setAttribute("id", "navigationBarDiv");
+    navigationBarWrapper.appendChild(navigationBarDiv);
+    //Creates an unsorted list and appends it to the div created above
+    const navigationBarList = document.createElement("ul");
+    navigationBarList.classList.add("navigationBarList");
+    navigationBarDiv.appendChild(navigationBarList);
+    //A for lop iterating through the elements in the object navbarElements created with Json at the start of this document
+    for (let e in navbarElements) {
+        navigationBarList.appendChild(
+            addNewElementNavbar(navbarElements[e], true, isindex)
+        );
+    }
+    //Creates a new div and gives it an ID
+    const navigationPlaceholder = document.createElement("div");
+    navigationPlaceholder.setAttribute("id", "navigationPlaceholder");
+    //Appends the div two divs navigationBarWrapper and navigatonPlaceholder to the navBarDiv element
+    navBarDiv.appendChild(navigationBarWrapper);
+    navBarDiv.appendChild(navigationPlaceholder);
 }
