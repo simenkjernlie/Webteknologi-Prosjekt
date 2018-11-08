@@ -58,6 +58,8 @@ function parseDate(str) {
 }
 
 function datediff(first, second) {
+
+    // måle 
     // Take the difference between the dates and divide by milliseconds per day.
     // Round to nearest whole number to deal with DST.
     return Math.round((second-first)/(1000*60*60*24));
@@ -79,10 +81,6 @@ function form_validater(check_in_date, check_out_date, hot_name){
     console.log(current_date, check_in_date)
     check_in_date = parseDate(check_in_date)
     var past_diff = datediff(current_date, check_in_date)
-     
-
-
-    
     check_out_date = parseDate(check_out_date)
     var days_diff = datediff(check_in_date, check_out_date)
 
