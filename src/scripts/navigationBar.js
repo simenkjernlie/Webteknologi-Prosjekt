@@ -19,16 +19,23 @@
 *       </body>
 * */
 
+/*
+* Inspirasjon for navigasjonsbar hentet fra: https://www.w3schools.com/css/css_navbar.asp
+* Inspirasjon og kode for oprettelse og animasjon av menuIcon hentet fra: https://www.w3schools.com/howto/howto_css_menu_icon.asp
+* */
+
 var navigationBar = null;
 var offSet = null;
 var h = null;
 
+//Function initializing the navigation bar
 function navigationStartup(isindex) {
   addHeader(isindex);
   addNavBar(isindex);
   const navBar = document.getElementById("navBarDiv");
 
   navBar.addEventListener("mouseover", function() {
+    //If it is a mobile device do not run the function
     displayNavigationbar("block");
   });
 
@@ -44,6 +51,7 @@ function navigationStartup(isindex) {
   h = String(document.getElementById("navigationBarDiv").offsetHeight) + "px";
   document.getElementById("navigationPlaceholder").style.height = h;
 
+  //A onscroll function closing the drop down navBar when scrolling
   window.onscroll = function() {
     navigationPosition();
     //Adds the animation when scrolling the window
@@ -54,6 +62,7 @@ function navigationStartup(isindex) {
   };
 }
 
+//Changes the display attribute of the navigation bar if the width if the page is larger than 960px
 function changeWidth() {
   let displaytype = "block";
   if (window.innerWidth <= 960) {
@@ -63,6 +72,7 @@ function changeWidth() {
   clickMenuIcon(document.getElementsByClassName("menuIconDiv")[0], false);
 }
 
+//Changes the display attribute of the navigation bar (All elements other than Home)
 function displayNavigationbar(displaytype) {
   let element = document.getElementsByClassName("navigationBarListLink");
   for (i in element) {
@@ -75,6 +85,7 @@ function displayNavigationbar(displaytype) {
   }
 }
 
+//Changes the possition attribute of the navigationBar
 function navigationPosition() {
   //console.log(window.innerWidth);
   if (window.innerWidth - 40 <= 960) {
@@ -95,7 +106,7 @@ function navigationPosition() {
 }
 
 //Adds the header element to the element witdh ID-headerDiv
-
+//A Json list fot the links of the navigation bar
 navbarElements = {
   home: {
     name: "Home",
@@ -253,13 +264,9 @@ function addHeader(isindex) {
   header.appendChild(titleBar);
 }
 
-//Adds the navigation bar to the page
-/*
-* Add this code and a div with the id "navBarDiv" at the top of the document
-* (Below the header) and this code will insert the navigation bar auto-magically
-* */
 
-//Function of menu bar
+
+//A function for controlling the event of the menuIcon
 function clickMenuIcon(menuIconDiv, click) {
   const navigationBarListLink = document.getElementsByClassName(
     "navigationBarListLink"
@@ -285,7 +292,7 @@ function clickMenuIcon(menuIconDiv, click) {
     }
   }
 }
-
+//A function for toggle the menuIcon div
 function togleMenuIconDiv(menuIconDiv) {
   if (menuIconDiv.classList.contains("changeMenuIcon")) {
     menuIconDiv.classList.remove("changeMenuIcon");
@@ -311,6 +318,12 @@ function createMenuIcon() {
   return div;
 }
 
+//A function adding the nav bar and the elements it contains to the page
+//Adds the navigation bar to the page
+/*
+* Add this code and a div with the id "navBarDiv" at the top of the document
+* (Below the header) and this code will insert the navigation bar auto-magically
+* */
 function addNavBar(isindex) {
   //Finds the navBarDiv where the navigation bar will be inserted
   const navBarDiv = document.getElementById("navBarDiv");

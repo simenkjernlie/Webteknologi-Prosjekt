@@ -10,8 +10,6 @@ body {
     border-left: 1.5px solid #f8f8f8
 }
 
-
-
 #contact_info * {
     margin-top: 20px;
 }
@@ -50,15 +48,15 @@ body {
 
 @media only screen and (max-width: 960px) {
     .icon {
-        width: 50px;
-        height: 50px;
+        width: 43px;
+        height: 43px;
     }
 
     .vertical_line_short {
-        height: 50px;
+        height: 43px;
     }
 
     #contact_info p {
-        font-size: 0.9em;
+        font-size: 0.82em;
     }
 }

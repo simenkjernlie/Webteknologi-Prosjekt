@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="no">
     <head>
-        <title>VisitaSardenga</title>
         <title>Visita Sardinia - Home</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="CSS/Style.css">
@@ -17,53 +16,57 @@
         <div id="headerDiv">
 
         </div>
-        <!--- Navigation bar --->
+        <!-- Navigation bar -->
         <div id="navBarDiv">
         </div>
 
-        <!--- Main body of page --->
-        <!--- Image of beach at top of page --->
+        <!-- Main body of page -->
+        <!-- Image of beach at top of page -->
         <div id="portraitImage">
             <img alt="Portrait" src="img/Index/portraitImg.jpg" class="portraitImage">
         </div>
         
-        <!--- About --->
+        <!-- About -->
         <div class="aboutFile" id="aboutIndex">
             <div class="textWrapper" id="textWrapper">
                 <h2>About us</h2>
                 <br>
-                <p>We are a dynamic niche PR agency that has been helping visionary luxury travel and hotel brands convey their true essence since 2010.  We are a small tight-knit team of PR professionals and industry influencers that collectively has over 35 years </p>
+                <p>We are a group of young adults who have started a travel guide / travel agency for those who want to
+                    vacation in
+                    Sardinia. In the management we are four good friends, but we have many employees distributed over many
+                    offices,
+                    hotels and activity centers throughout Sardinia.</p>
             </div>
         </div> 
         
-        <!--- Recomended section --->
+        <!-- Offers section -->
         <div class="recomendedSection">
-            <h2>Special offers</h2>
-            <div class="activitis">
+            <h2>Offers</h2>
+            <div class="offers">
                 <a href="WebPages/Hotels.html">
-                    <img src="img/Index/hotel1-3.jpeg">
-                    <div class="hoverInf">
-                        <p class="recomendedHeader">Hotels</p>
+                    <img alt="Image of a hotel" src="img/Index/hotel1-3.jpeg">
+                    <div class="hoverInfOffer">
+                        <p class="offerHeader">Hotels</p>
                         <br><br>
                         <p>Have the perfect vacation by booking the perfect hotel</p>
                     </div>
                 </a>
             </div>
-            <div class="activitis">
+            <div class="offers">
                 <a href="WebPages/Restaurants.html">
-                    <img src="img/Index/restaurant.jpeg" class="activitiesLink">
-                    <div class="hoverInf">
-                        <p class="recomendedHeader">Restaurants</p>
+                    <img alt="Restaurant image" src="img/Index/restaurant.jpeg" class="activitiesLink">
+                    <div class="hoverInfOffer">
+                        <p class="offerHeader">Restaurants</p>
                         <br><br>
                         <p>Feast on the grates food Sardinia has to offer</p>
                     </div>
                 </a>
             </div>
-            <div class="activitis">
+            <div class="offers">
                 <a href="WebPages/Activities.html">
-                    <img src="img/Index/vineTest.jpeg">
-                    <div class="hoverInf">
-                        <p class="recomendedHeader">Activities</p>
+                    <img alt="Image of vine" src="img/Index/vineTest.jpeg">
+                    <div class="hoverInfOffer">
+                        <p class="offerHeader">Activities</p>
                         <br><br>
                         <p>Experience everything Sardinia has to offer</p>
                     </div>
@@ -71,9 +74,119 @@
             </div>
         </div>
     </div>
-        <!--- Footer --->
+        <!-- Footer -->
         <div class="footer" id="footer">
 
         </div>
     </body>
 </html>
+
+<!--
+Vi bestemte oss for å endre et par ting fra den originale ideen av siden.
+I index ble bare noen veldig få til endret:
+ - Vi endret mye av skriftstørelsen på index siden. Dette har med at når siden måtte gjøres responsiv ble en del av
+    størrelsene til for eksempel bildene veldig anderledes. Teksten i desse blir derfor endret avhengig av størrelsen på
+    bildene. Dette har med at det blir lettere å lese teksten som er beskrevet uten å endre for mye av størrelsesforholdene
+    på siden. Teksten i boksene under Offers endrer størrelse slik at det skal være mulig å lese all teksten og at ikke
+    noe blir gjemt underveis når teksten blir for stor.
+    Tekststørrelsen på området "About us" på index siden ble også endret da det set mer naturlig ut med en tekst som har
+    en størrelse skalert etter boksen. Teksten blir da ikke alt for stor i forhold til boksen.
+    En annen grunn til at dette ble løst på denne måten er at index siden har et helt annet oppløsningsforhold enn det
+    mange av de andre sidene har. 15 eller 18 piksler på en side som Hotels eller Restaurants blir derfor mye større i
+    forhold til resten av innholdet enn det blir på index siden. Det samme gjeller for Activities siden.
+ - Den delen av siden som tidligere også het "News" ble også endret til Offser slik at de heller kunne fungere
+    som ekstra linker til de mer naturlige/vanlige/populære sidene å besøke.
+ - Annet enn dette er siden implementert på samme måte som planlagt
+
+-----
+
+ Det var også andre ting som ble endret noe. Dette har med at designet av siden ikke tok hensyn til responsivitet og
+ possisjonereing av enkelte elementer ble derfor anderledes fra det første designet da dette ikke lot seg gjøre brukervenlig
+ med en responsiv side.
+
+ Med dette følger endringene at Offers boksene stilles under hverandre når siden blir for smal.
+
+ -----
+ Samme type endring ble gjort på navigajsonsbaren og footer elementet da disse måtte optimaliseres for mindre skjermer.
+ Dette ble da en helt nye del av designet som først ble lagt til under implementasjonen av siden da dette ikke ble tatt
+ godt nok høyde for under planleggingen av siden.
+ ---
+ For navigasjonsbaren består endringene av at den blir en stor dropdown meny når skjermen blir for liten. Da er også
+ linkene til Sailing, Biking, Nature og Culture fjernet fra navigasjonsbaren i tilfellet hvor skjermen ble for smal da
+ det å beholde disse ble lite uoversiktlig, rotete og lite brukervenlig.
+
+ Annet enn dette er de eneste endringene på navigasjonsbaren at størelsen ble beskrevet med vh istedenfor px da dette
+ tar bedre hensyn til ulike oppløsninger på de ulike sidene. Det samme er gjort med teksten på footeren.
+ I tillegg til dette er teksten på navigasjonsbaren likt fordelt istedenfor å være plassert i midten da det i praksik ikke
+ var plass til å sentrere alt.
+ ---
+ Når det gjeller footeren ble teksten her (som i navigasjonsbaren) endret til vh istedenfor px for å ta hensyn til
+ ulike oppløsinger på sidene.
+ I tillegg til denne ble de to ulike delene (den venstre og høyre siden av footeren) plassert over hverandre når
+ skjermen blir smalere/mindre da dette var mer oversiktlig og brukervennlig.
+
+-->
+
+<!--
+    Respons:
+    Person_1 (Mobil):
+        - Kjønn: Mann
+        - Alder: 21
+        - Student (Datateknologi)
+        Steg1 (Bestill):
+
+        Bestille hotell: Fornøyd med sidene. Lett å bestille
+        Bestille båt:
+        Bestille sykkel:
+
+        Steg 2 (Finn info om):
+
+        Restauranter: Bra og oversiktlig. Lett å finne informasjon
+        Natur:
+        Kultur:
+        Om sardnina:
+        Om firmaet:
+
+        Steg3 (Feedback):
+
+        Generelle inntrykk? Lett å orientere seg rundt?
+        - Godt inntrykk. Lett å orientere seg. Ikke noe problem med å finne frem til de ulike sidene
+
+        Hva likte du best?:
+        Store og fine bilder. En boks til hvert hotell.
+
+        Hva likte du dårligst?:
+        Menyen hopper ned når den ikke skal.
+
+
+        Person_2 (PC):
+        - Kjønn: Kvinne
+        - Alder: 20
+        - Student (Industriell kjemi)
+        Steg1 (Bestill):
+
+        Bestille hotell: Fornøyd med sidene. Lett å bestille.
+        Bestille båt:
+        Bestille sykkel:
+
+        Steg 2 (Finn info om):
+
+        Restauranter: Bra og oversiktlig. Lett å finne informasjon
+        Natur:
+        Kultur:
+        Om sardnina:
+        Om firmaet:
+
+        Steg3 (Feedback):
+
+        Generelle inntrykk? Lett å orientere seg rundt?
+        - Godt inntrykk. Litt småproblmer med å finne frem. Ikke like intuetivt at natur og kultur ligger under Activities og ikke under About Sardinia
+
+        Hva likte du best?:
+        Godt intrykk. Ting fungerte som forventet. Mye bra
+
+        Hva likte du dårligst?:
+        Litt vanskelig å vite hvordan man skal navigere til natur og kultur.
+        Kunne ligget under About sardinia
+
+-->
