@@ -1,3 +1,5 @@
+// initiere utvidelsesblokkene som "none" slik at de ikke vises
+
 document.getElementById("utvidelse1").style.display = "none"
 document.getElementById("utvidelse2").style.display = "none"
 document.getElementById("utvidelse3").style.display = "none"
@@ -12,54 +14,42 @@ document.getElementById("linje4").style.display = "none"
 
 
 
-
+// funksjon for utvidelse. Tar inn tilhørende utvidelsesblokk-ID (for å vite hvilken blokk som skal utvides), ID for utvidelsespilen (slik
+// at den pathen kan endres slik at den peker opp når blokken er utvided), og ID for linjeutvidelse som også utvides etter blokken
 function utvidelse(utvidelseID, bilde_pil, linje){
     var utvidelse_block = document.getElementById(utvidelseID)
     let bilde_path = document.getElementById(bilde_pil)
-
         if (utvidelse_block.style.display == "none"){
         utvidelse_block.style.display = "block"
         bilde_path.src = "../img/arrow-up.svg";
         document.getElementById(linje).style.display = "block"
     }
-
     else {
         utvidelse_block.style.display = "none"
         bilde_path.src = "../img/arrow-down.svg"
         document.getElementById(linje).style.display = "none"
     }
-
 }
 
-
-
-
-
-
+// Funksjon for å kalkulere pris for hotellbooking. Tar in ID'er for å finne verdiene som er fylt inn av bruker (check_in_date, check_out_date, nr_rooms, nr_adults),
+// id til element for å vise kalkulert pris (price), og to induviduelle prisfaktorer som avhenger av hotellet (price_pr_room, price_pr_person).
 function price(check_in_date, check_out_date, nr_rooms, nr_adults, price, price_pr_room, price_pr_person) {
-    
     var price = document.getElementById(price)
     var check_in_date = document.getElementById(check_in_date).value
     var check_out_date = document.getElementById(check_out_date).value
     var nr_rooms = document.getElementById(nr_rooms).value
     var nr_adults = document.getElementById(nr_adults).value
-    check_in_date = check_in_date.slice(5,7) + "/" + check_in_date.slice(8,10) + "/" + check_in_date.slice(0,4)
+    check_in_date = check_in_date.slice(5,7) + "/" + check_in_date.slice(8,10) + "/" + check_in_date.slice(0,4)         // transformere dato til riktig format
     check_out_date = check_out_date.slice(5,7) + "/" + check_out_date.slice(8,10) + "/" + check_out_date.slice(0,4)
-
-    //console.log(nr_rooms, typeof(nr_rooms))
     check_in_date = parseDate(check_in_date)
     check_out_date = parseDate(check_out_date)
     days_diff = datediff(check_in_date, check_out_date)
-    console.log(days_diff)
     var amount = (days_diff*nr_rooms*price_pr_room + days_diff*price_pr_person*nr_adults)
     if (days_diff > 0){
-    price.innerHTML = "Book now for only " + amount + "€"
+        price.innerHTML = "Book now for only " + amount + "€"
     } else {
         price.innerHTML = "Please fill in form for price estimation"
     }
-
-
-
 }
 
 function parseDate(str) {
@@ -73,27 +63,35 @@ function datediff(first, second) {
     return Math.round((second-first)/(1000*60*60*24));
 }
 
-function form_validater(check_in_date, check_out_date){
+function form_validater(check_in_date, check_out_date, hot_name){
     var check_in_date = document.getElementById(check_in_date)
     check_in_date = check_in_date.value
     var check_out_date = document.getElementById(check_out_date).value
     check_in_date = check_in_date.slice(5,7) + "/" + check_in_date.slice(8,10) + "/" + check_in_date.slice(0,4)
     check_out_date = check_out_date.slice(5,7) + "/" + check_out_date.slice(8,10) + "/" + check_out_date.slice(0,4)
 
-    console.log("check_in_date, check_out_date")
+    var today = new Date();
+    var day = today.getDate()
+    var month = today.getMonth() + 1
+    var  year = today.getFullYear()
+    var current_date = month + "/" + day + "/" + year
+    current_date = parseDate(current_date)
+    var past_diff = datediff(current_date, check_in_date)
+
     check_in_date = parseDate(check_in_date)
     check_out_date = parseDate(check_out_date)
-    days_diff = datediff(check_in_date, check_out_date)
 
-    if (days_diff<= 0){
-        alert("Please select valid check in and check out days!")
-        console.log("false")
-        return false;
-    } else {
-        return true
+    var days_diff = datediff(check_in_date, check_out_date)
+    if (past_diff < 0){
+        alert("Please select valid check in and check out days! \n Select dates in the future")
+        return false        
     }
-}
+    else if (days_diff<= 0){
+        alert("Please select valid check in and check out days! \n Check in date before check out day")
+        return false;
+    } 
 
+}
 
 
 var adriana, barbo, marameda, bp;
