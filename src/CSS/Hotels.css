@@ -103,7 +103,7 @@ p {
         width: 70%;
         display: inline-block;
     }
-     
+
         .hotel_tekst {
             display: block;
             position: absolute;
@@ -111,20 +111,20 @@ p {
             width: 90%;
             left: 20px;
             text-align: left;
-        }     
+        }
 
         .utivdelse{
             background-color: #13434b;
             width: 100%;
             height: 875px;
             position: relative;
-            
+
             color: #F8F8F8;
         }
         .utivdelse .a {
             height: auto;
         }
-    
+
         .ekstra_hotel_text {
             position: relative;
             top: 0%;
@@ -142,7 +142,7 @@ p {
             color: #000000;
             position: absolute;
             bottom: 0px;
- 
+
         }
         .gul_boks h2 {
             margin-top: 10px;
@@ -166,7 +166,7 @@ p {
     .side2 {
         float: right;
 
-    }   
+    }
     .side2 select{
       margin-right: 20px;
     }
@@ -222,6 +222,7 @@ p {
     margin: 4px 2px;
     cursor: pointer;
     display: inline-block;
+    border-radius: 10px;
  }
     input {
         padding: 10px;
@@ -249,7 +250,7 @@ p {
         text-align: center;
         margin-bottom: 0%;
         color: #F8F8F8;
- 
+
         border-radius: 3px;
     }
 
@@ -315,9 +316,9 @@ p {
             width: 100%;
             height: 740px;
             position: relative;
-           
+
             color: #F8F8F8;
-        
+
         }
     .side {
         position: absolute;
@@ -352,7 +353,6 @@ padding-left: 20%;
     .booking_btn{
         max-width: 50%;
         padding: 20px;
-        border-radius: 0%;
         border-color: #13434b;
         background-color: #13434b;
         color: #F8F8F8;
@@ -390,7 +390,7 @@ padding-left: 20%;
 }
 @media only screen and (min-width: 1000px) {
 
-    
+
     .hotel_block{
         display: block;
         background-color: #13434b;
@@ -447,7 +447,7 @@ padding-left: 20%;
         display: inline-block;
 
     }
-    
+
 
 
     .side {
@@ -467,7 +467,7 @@ padding-left: 20%;
         padding: 5px 5px 5px 15px;
         font-size: 13pt;
     }
-  
+
 
     .linje{
         position: absolute;
@@ -497,7 +497,7 @@ padding-left: 20%;
         margin-left: 0px;
         margin-right: 0px;
     }
-    
+
     .hotel_tekst {
         display: block;
         position: absolute;
@@ -512,9 +512,9 @@ padding-left: 20%;
         left: 10%;
         height: 528px;
         position: relative;
-        
+
         color: #F8F8F8;
-    
+
     }
     .side1{
         width: 33%;
@@ -533,7 +533,7 @@ padding-left: 20%;
         float: right;
         width: 33%;
 
-    }   
+    }
     .side2 input{
         width: 100%;
         padding: 4px 20px;
