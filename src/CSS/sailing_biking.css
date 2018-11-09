@@ -122,6 +122,9 @@ button{
   cursor: pointer;
 }
 
+/* Kodesnutten under er godt inspirert av https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1, grunnen bak bruken er at den passet godt inn og
+det er veldig basic og rett fram knappanimasjon. Det måtte litt ednring til for å få den til å passe inn i vår side.
+*/
 button span {
   cursor: pointer;
   display: inline-block;
