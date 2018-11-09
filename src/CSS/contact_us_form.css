@@ -5,11 +5,11 @@
     padding: 7px;
     padding-top: 20px;
     padding-bottom: 45px;
-    
+
 }
 
 input, textarea {
-    font-size: 1.2em;
+    font-size: 13pt;
     font-family: 'Roboto', sans-serif;
     border-radius: 3px;
     margin-top: 5px;
@@ -40,9 +40,11 @@ input, textarea {
     position: absolute;
     background-color: #0B414A;
     color: #f8f8f8;
-    width: 75px;
+    width: 100px;
+    height: 30px;
     right: 7px;
-    border-radius: 3px;
+    border-radius: 5px;
+    border: 1px;
 }
 
 #vertical_line_hide{
@@ -59,7 +61,7 @@ h3 {
     #name {
         width: calc(100% - 4px);
     }
-    
+
     #email {
         width: calc(100% - 4px);
     }
