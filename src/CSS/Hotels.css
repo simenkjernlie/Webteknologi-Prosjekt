@@ -19,10 +19,7 @@
 td{
     vertical-align: bottom;
 }
-#mapAdriana,
-    #mapBarbo,
-    #mapMarameda,
-    #mapBP {
+#mapAdriana, #mapBarbo, #mapMarameda, #mapBP {
         border-radius: 3px;
     }
 
@@ -45,8 +42,6 @@ span {
 p {
     font-size: 13pt;
 }
-
-
 
 @media only screen and (min-width: 320px) {
     .hotel_block{
@@ -92,10 +87,7 @@ p {
             top: 70px;
             font-size: 12px;
         }
-    #mapAdriana,
-    #mapBarbo,
-    #mapMarameda,
-    #mapBP {
+    #mapAdriana, #mapBarbo, #mapMarameda, #mapBP {
         position: relative;
         top: 15px;
         height: 130px;
@@ -299,18 +291,6 @@ p {
             display: inline-block;
         }
 
-    #mapAdriana,
-    #mapBarbo,
-    #mapMarameda,
-    #mapBP {
-        position: relative;
-        top: 15px;
-        height: 130px;
-        z-index: 1;
-        width: 70%;
-        display: inline-block;
-
-    }
         .utivdelse{
             background-color: #13434b;
             width: 100%;
@@ -353,10 +333,6 @@ padding-left: 20%;
     .booking_btn{
         max-width: 50%;
         padding: 20px;
-        border-color: #13434b;
-        background-color: #13434b;
-        color: #F8F8F8;
-        display: inline-block;
     }
     .side1 {
         width: 50%;
@@ -436,16 +412,11 @@ padding-left: 20%;
         position: absolute;
         text-align: center;
     }
-    #mapAdriana,
-    #mapBarbo,
-    #mapMarameda,
-    #mapBP {
+    #mapAdriana, #mapBarbo, #mapMarameda, #mapBP {
         width: 180px;
         top: -65px;
         height: 180px;
         z-index: 1;
-        display: inline-block;
-
     }
 
 
@@ -464,7 +435,6 @@ padding-left: 20%;
         z-index: 1;
     }
     .side p {
-        padding: 5px 5px 5px 15px;
         font-size: 13pt;
     }
 
@@ -576,17 +546,7 @@ padding-left: 20%;
 }
 
  .booking_btn{
-     margin-top: 20px;
-    background-color: #13434b;
-    color: white;
     padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    display: inline-block;
  }
 
  .side p {
