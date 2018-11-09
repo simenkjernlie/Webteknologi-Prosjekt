@@ -61,3 +61,6 @@ img {
   height: 600px;
   margin-left: 35%;
 }
+ul li {
+  padding: 5px;
+}

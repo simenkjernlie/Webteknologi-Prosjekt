@@ -56,7 +56,7 @@ p {
         margin: 0px;
         position: relative;
         text-align: center;
-        margin-left: none;
+        margin-left: 0px;
         margin-bottom: 0%;
         color: #F8F8F8;
         margin-bottom: 0px;
@@ -142,11 +142,7 @@ p {
             color: #000000;
             position: absolute;
             bottom: 0px;
-            width: 100%
-            display: inline-block;
-            margin-left: 10px;
-            margin-right: 10px;
-
+ 
         }
         .gul_boks h2 {
             margin-top: 10px;
@@ -195,7 +191,6 @@ p {
         width: 100%;
         height: 100px;
         top: 20px;
-        right: 1005;
         text-align: center;
     }
 
@@ -250,10 +245,8 @@ p {
         background-color: #13434b;
         width: 100%;
         height: 300px;
-        margin: none;
         position: relative;
         text-align: center;
-        margin-left: none;
         margin-bottom: 0%;
         color: #F8F8F8;
  
@@ -285,8 +278,9 @@ p {
         text-align: left;
         color: #000000;
         bottom: 0px;
-        margin-left: 10px;
-        margin-right: 10px;
+        left: 1%;
+        right: 1%;
+
         height: 450px;
         position: absolute;
     }
@@ -295,7 +289,6 @@ p {
         width: 100%;
         height: 100px;
         top: 20px;
-        right: 1005;
         text-align: center;
     }
         .google_image {
@@ -403,7 +396,6 @@ padding-left: 20%;
         background-color: #13434b;
         width: 80%;
         height: 300px;
-        margin: none;
         position: relative;
         text-align: center;
         color: #F8F8F8;
