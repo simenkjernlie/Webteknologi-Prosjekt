@@ -62,7 +62,7 @@ links_Footer = {
         href:"Hotels.html",
     },
     resturants:{
-        text:"Resturants",
+        text:"Restaurants",
         href:"Restaurants.html",
     },
     activities:{
@@ -133,7 +133,7 @@ function addFooter(isindex) {
 
     //Right footer
     const p = document.createElement("p");
-    p.appendChild(document.createTextNode("Quick links"));
+    //p.appendChild(document.createTextNode("Quick links"));
     p.classList.add("footerLinkListHeader");
     right_footer.appendChild(p);
 

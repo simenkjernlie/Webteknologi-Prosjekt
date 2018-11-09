@@ -100,8 +100,8 @@
     
 
     .portraitImage{
-        height: 50vh;
-        width: auto;
+        height: auto;
+        width: 100%;
         overflow: hidden;
     }
     #portraitImage{

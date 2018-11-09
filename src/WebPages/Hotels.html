@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../CSS/Style.css">
     <link rel="stylesheet" href="../CSS/Hotels.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
     <script src="../scripts/navigationBar.js"></script>
     <script src="../scripts/footer.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
@@ -61,8 +62,8 @@
             <div class="hotel_tekst">
                 <!-- Hotelinfor, tekst-->
                 <p>Hotel Adriana is one of the best known hotels in the Cagliari area. It is known for its beautiful
-                    location by the beach, along with unbeatable service and chefs working around the clock to always
-                    offer freash mediterranean courses.</p>
+                    location by the beach, along with unbeatable service personell and chefs working day and night to always
+                    offer you freash mediterranean courses and perfect service.</p>
             </div>
             <img class="expander" id="img_ut1" src="../img/arrow-down.svg" alt="expander" onclick="utvidelse('utvidelse1', 'img_ut1', 'linje1')">
         </div>
@@ -70,22 +71,22 @@
         <div class="utivdelse" id="utvidelse1">
             <div class="ekstra_hotel_text">
                 <!-- Ekstra hotelltekst -->
-              
+
                     <ul>
                         <li>
                             <p>
                                 Hotel Adriana has won several prestigious awards the recent years for its service and facilities.
-                                The employees at hotel Adriana will do everything possible to make your stay as comparable as possible.
+                                The employees at hotel Adriana will do everything possible to make your stay as comfortable as possible.
                             </p>
                         </li>
-                       <li  class="pspace"><br></li> 
+                       <li  class="pspace"><br></li>
                         <li>
                             <p>
-                                This is a very popular hotel in the area, so you should order well a head you planned stay. Dont miss this opportunity, book now!
+                                This is a very popular hotel in the area, so you should order well a head before your planned stay. Dont miss this opportunity, book now!
                             </p>
                         </li>
                     </ul>
-               
+
             </div>
             <div class="google_image_element">
                 <!-- For plassering av kartet -->
@@ -100,19 +101,19 @@
                         <!-- Skjemaet er delt i fem div'er (tre av disse er for inputs, en er for submit, og siste er for å vise pris)-->
                         <div class="side1">
                             <label for="check_in_date"> Check in date: </label>
-                            <br> 
+                            <br>
                             <input type="date" name="check_in_date" id="check_in_date" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1', 40, 21)"
                                 required>
                             <br>
-                            <label for="check_out_date">Check out date: </label> 
-                            <br> 
+                            <label for="check_out_date">Check out date: </label>
+                            <br>
                             <input type="date" name="check_out_date" id="check_out_date"
                                 onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1', 40, 21)"
                                 required>
                         </div>
                         <div class="side2">
                            <label for="nr_rooms"> Rooms: </label>
-                            <br> 
+                            <br>
                             <select name="nr_rooms" id="nr_rooms" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1', 40, 21)">
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -121,7 +122,7 @@
                             </select>
                             <br>
                             <label for="nr_adults"> Persons: </label>
-                            <br> 
+                            <br>
                             <select name="nr_adults" id="nr_adults" onchange="price('check_in_date', 'check_out_date', 'nr_rooms', 'nr_adults', 'price1', 40, 21)">
                                 <option value=1>1</option>
                                 <option value=2>2</option>
@@ -130,18 +131,18 @@
                             </select>
                         </div>
                         <div class="side3">
-                            <label for="fname1"> Full name:</label> 
-                            <br> 
+                            <label for="fname1"> Full name:</label>
+                            <br>
                             <input type="text" name="full_name" placeholder="Your name" id="fname1" pattern="[a-zA-ZÆÅØøæå \s]+" required> <br>
                             <label for="phone1"> Phone: </label>
-                            <br> 
+                            <br>
                             <input type="number" name="full_name" id="phone1" placeholder="Your phone number" required><br>
                             <label for="email1"> Email: </label>
-                            <br> 
+                            <br>
                             <input type="email" name="full_name" id="email1" placeholder="Your Email" required><br>
                         </div>
                         <div class="price" id="price1">
-                            Please fill in form for price estimation
+                            Please fill in the the form for price estimation
                         </div>
                         <div class="side4">
                             <button class="booking_btn" type="submit" name="Book_now" >
@@ -165,7 +166,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
-                        <i class="far fa-star"></i> 
+                        <i class="far fa-star"></i>
                 </h3>
             </div>
             <div class="side" id="side2" onresize="side_height(side1)">
@@ -198,7 +199,7 @@
                                 whatever you need to realize your holiday dreams at Sardinia.
                             </p>
                         </li>
-                        <li  class="pspace"><br></li> 
+                        <li  class="pspace"><br></li>
                         <li>
                             <p>
                                 The kitchen serves exclusively dishes inspired from the local area, often with
@@ -217,19 +218,19 @@
                 <form onsubmit="return form_validater('check_in_date2', 'check_out_date2', 'Hotel Barbo')"  accept-charset="UTF-8">
                     <div class="side1">
                         <label for="check_in_date2"> Check in date: </label>
-                        <br> 
+                        <br>
                         <input type="date" name="check_in_date" id="check_in_date2" onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2', 20, 10)"
                             required>
                         <br>
                         <label for="check_out_date2"> Check out date: </label>
-                        <br> 
+                        <br>
                         <input type="date" name="check_out_date" id="check_out_date2"
                             onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2', 20, 10)"
                             required>
                     </div>
                     <div class="side2">
                         <label for="nr_rooms2"> Rooms: </label>
-                        <br> 
+                        <br>
                         <select name="nr_rooms" id="nr_rooms2" onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2', 20, 10)"
                             >
                             <option value=1>1</option>
@@ -239,7 +240,7 @@
                         </select>
                         <br>
                         <label for="nr_adults2"> Persons: </label>
-                        <br> 
+                        <br>
                         <select name="nr_adults" id="nr_adults2" onchange="price('check_in_date2', 'check_out_date2', 'nr_rooms2', 'nr_adults2', 'price2', 20, 10)"
                             >
                             <option value=1>1</option>
@@ -250,20 +251,20 @@
                     </div>
                     <div class="side3">
                         <label for="fname2"> Full name: </label>
-                        <br> 
+                        <br>
                         <input type="text" name="full_name" id="fname2" pattern="[a-zA-ZÆÅØøæå \s]+" placeholder="Your name"
                             required> <br>
                         <label for="phone2"> Phone: </label>
-                        <br> 
+                        <br>
                         <input type="number" name="full_name" id="phone2" placeholder="Your phone number"
                             required><br>
                        <label for="email2"> Email: </label>
-                        <br> 
+                        <br>
                         <input type="email" name="full_name" id="email2" placeholder="Your Email"
                             required><br>
                     </div>
                     <div class="price" id="price2">
-                        Please fill in form for price estimation
+                        Please fill in the form for price estimation
                     </div>
                     <div class="side4">
                         <button class="booking_btn" type="submit" name="Book_now">
@@ -318,7 +319,7 @@
                                 the parents.
                             </p>
                         </li>
-                        <li  class="pspace"><br></li> 
+                        <li  class="pspace"><br></li>
                         <li>
                             <p>
                                 The Cagliari Cathedral is a five minute walk away, and is a "must see" if you are
@@ -337,19 +338,19 @@
                 <form onsubmit="return form_validater('check_in_date3', 'check_out_date3', 'Hotel Mar')"  accept-charset="UTF-8">
                     <div class="side1">
                        <label for="check_in_date3"> Check in date: </label>
-                        <br> 
+                        <br>
                         <input type="date" name="check_in_date" id="check_in_date3" onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3', 20, 12)"
                             required>
                         <br>
                         <label for="check_out_date3"> Check out date: </label>
-                        <br> 
+                        <br>
                         <input type="date" name="check_out_date" id="check_out_date3"
                             onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3', 20, 12)"
                             required>
                     </div>
                     <div class="side2">
                        <label for="nr_rooms3"> Rooms: </label>
-                        <br> 
+                        <br>
                         <select name="nr_rooms" id="nr_rooms3" onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3', 20, 12)"
                             >
                             <option value=1>1</option>
@@ -359,7 +360,7 @@
                         </select>
                         <br>
                        <label for="nr_adults3"> Persons: </label>
-                        <br> 
+                        <br>
                         <select name="nr_adults" id="nr_adults3" onchange="price('check_in_date3', 'check_out_date3', 'nr_rooms3', 'nr_adults3', 'price3', 20, 12)"
                             >
                             <option value=1>1</option>
@@ -370,20 +371,20 @@
                     </div>
                     <div class="side3">
                        <label for="fname3"> Full name: </label>
-                        <br> 
+                        <br>
                         <input type="text" name="full_name" id="fname3" pattern="[a-zA-ZÆÅØøæå \s]+" placeholder="Your name"
                             required> <br>
                        <label for="phone3"> Phone:</label>
-                         <br> 
+                         <br>
                          <input type="number" name="full_name" id="phone3" placeholder="Your phone number"
                             required><br>
                         <label for="email3"> Email: </label>
-                        <br> 
+                        <br>
                         <input type="email" name="full_name" id="email3" placeholder="Your Email"
                             required><br>
                     </div>
                     <div class="price" id="price3">
-                        Please fill in form for price estimation
+                        Please fill in the form for price estimation
                     </div>
                     <div class="side4">
                         <button class="booking_btn" type="submit" name="Book_now" >
@@ -419,7 +420,7 @@
             <div class="linje" id="linje4">
             </div>
             <div class="hotel_tekst">
-                <p> If you are traveling on a budget, this is the perfect place to stay. Hostel Indioffers a
+                <p> If you are traveling on a budget, this is the perfect place to stay. Hostel Indi offers a
                     cheap alternative to the mainstream hotels in the area, where it is easy to meet new open minded
                     backpackers and travelers. </p>
             </div>
@@ -435,10 +436,10 @@
                                 city center.
                             </p>
                         </li>
-                        <li  class="pspace"><br></li> 
+                        <li  class="pspace"><br></li>
                         <li>
                             <p>
-                                The bar is open to late at night, with happy hours from 17:00 to 19:00 every day. Is is
+                                The bar is open to late at night, with happy hours from 17:00 to 19:00 every day. It is
                                 also
                                 possible to starte a bonfire on the beach, just remember to contact the staff
                                 beforehand.
@@ -454,19 +455,19 @@
                 <form onsubmit="return form_validater('check_in_date4', 'check_out_date4', 'Hotel Indi')"  accept-charset="UTF-8">
                     <div class="side1">
                         <label for="check_in_date4"> Check in date: </label>
-                        <br> 
+                        <br>
                         <input type="date" name="check_in_date" id="check_in_date4" onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4', 10, 5)"
                             required>
                         <br>
                        <label for="check_out_date4"> Check out date: </label>
-                        <br> 
+                        <br>
                         <input type="date" name="check_out_date" id="check_out_date4"
                             onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4', 10, 5)"
                             required>
                     </div>
                     <div class="side2">
                       <label for="nr_rooms4">  Rooms: </label>
-                        <br> 
+                        <br>
                         <select name="nr_rooms" id="nr_rooms4" onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4', 10, 5)"
                             >
                             <option value=1>1</option>
@@ -476,7 +477,7 @@
                         </select>
                         <br>
                       <label for="nr_adults4">  Persons: </label>
-                        <br> 
+                        <br>
                         <select name="nr_adults" id="nr_adults4" onchange="price('check_in_date4', 'check_out_date4', 'nr_rooms4', 'nr_adults4', 'price4', 10, 5)"
                             >
                             <option value=1>1</option>
@@ -487,20 +488,20 @@
                     </div>
                     <div class="side3">
                         <label for="fname4"> Full name: </label>
-                        <br> 
+                        <br>
                         <input type="text" name="full_name" id="fname4" pattern="[a-zA-ZÆÅØøæå \s]+" placeholder="Your name"
                             required> <br>
                         <label for="phone4"> Phone: </label>
-                        <br> 
+                        <br>
                         <input type="number" name="full_name" id="phone4" placeholder="Your phone number"
                             required><br>
-                       <label for="email4"> Email:</label> 
-                       <br> 
+                       <label for="email4"> Email:</label>
+                       <br>
                        <input type="email" name="full_name" id="email4" placeholder="Your Email"
                             required><br>
                     </div>
                     <div class="price" id="price4">
-                        Please fill in form for price estimation
+                        Please fill in the form for price estimation
                     </div>
                     <div class="side4">
                         <button class="booking_btn" type="submit" name="Book_now" )">
@@ -519,10 +520,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-

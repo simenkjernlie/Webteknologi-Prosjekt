@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Visita Sardinia - Sailing</title>
@@ -7,84 +8,349 @@
     <link rel="stylesheet" href="../CSS/navigationBar.css">
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/sailing_biking.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
     <script src="../scripts/navigationBar.js"></script>
     <script src="../scripts/footer.js"></script>
     <script src="../scripts/price.js"></script>
 </head>
+
 <body onload="set_todays_date(), null_ut(),navigationStartup(false),addFooter(false)" onresize="changeWidth()">
-<div id="mainPageBody">
-    <div id="headerDiv"></div>
+    <div id="mainPageBody">
+        <div id="headerDiv"></div>
 
-    <!-- Navigation bar -->
+        <!-- Navigation bar -->
 
-    <div id="navBarDiv"></div>
+        <div id="navBarDiv"></div>
 
-    <!-- Main body structure -->
-    <div class="main_body">
-        <h2 id="header">Sailing</h2>
-        <div id="one" class="backbox">
+        <!-- Main body structure -->
+        <div class="main_body">
+            <h2 id="header">Sailing</h2>
+            <div id="one" class="backbox">
+                <div class="insidebox">
+                    <div class="side1">
+                        <div class="leftside1">
+                            <img class="boat" src="../img/Sailing/Motorboat1.jpg" alt="Megayacht">
+                        </div>
+                        <div class="rightside1 description">
+                            <h2 class="overskrift">Motorboat</h2>
+                            <p style="font-style: italic; color: #FAC917;">
+                                <img src="../img/location-vector.png" alt="location-vector" style="width: 4%">
+                                Baja Sardinia, Italy (Can be delivered to almost all ports in Sardinia)
+                            </p>
+                            <br>
+                            <p>Sardinia, the island many claims has the world's finest archipelago and Europe's finest
+                                beaches, is almost designed for a beautiful boat trip.
+                                We offer a wide range of motor cruisers, from 20 feet and upwards, both with and
+                                without crew.
+                                Boats are offered from well-known boat manufacturers including Bavaria, Azimut,
+                                Fairline and Princess. Fill out the form on the side and we will be in touch with you
+                                as soon as possible.
+                                <br><br>
+                                <span style="font-style: italic;">The price on the rigth is calculated for
+                                    a 30 feet motorboat without crew. </span>
+                            </p>
+                            <p class="price"></p>
+                        </div>
+                    </div>
+                    <div class="side2">
+                        <form onsubmit="verify_and_notify()" accept-charset="UTF-8">
+                            <div class="leftside2">
+                                <label for="start_date_0">
+                                    <span>Pick-up date:</span>
+                                    <br>
+                                    <input id="start_date_0" type="date" class="input_start" onchange="calc_price(0, 350)"
+                                        name="hentedato" value="" required>
+                                    <br>
+                                </label>
+                                <label for="end_date_0">
+                                    <span>End of trip date:</span>
+                                    <br>
+                                    <input id="end_date_0" type="date" class="input_end" onchange="calc_price(0, 350)"
+                                        name="leveringsdato" value="" required>
+                                </label>
+                                <br><br><br>
+                                <label for="name_0">
+                                    <span>Full name</span>
+                                    <br>
+                                    <input id="name_0" type="text" name="name" class="name" placeholder="Name" pattern="[a-zA-ZÆÅØøæå \s]+"
+                                        autocomplete="name" required>
+                                    <br>
+                                </label>
+                                <label for="email_0">
+                                    <span>E-mail</span>
+                                    <br>
+                                    <input id="email_0" type="email" name="email" value="" placeholder="your.mail@domain.com"
+                                        autocomplete="email" required>
+                                </label>
+                            </div>
+                            <div class="rightside2">
+                                <label for="start_time_0">
+                                    <span>Pick-up time</span>
+                                    <br>
+                                    <input id="start_time_0" class="input_start_time" type="time" name="hentetid" value=""
+                                        required>
+                                    <br>
+                                </label>
+                                <label for="end_time_0">
+                                    <span>End of trip time</span>
+                                    <br>
+                                    <input id="end_time_0" class="input_end_time" type="time" name="leveringstid" value=""
+                                        required>
+                                    <br><br><br><br><br>
+                                </label>
+                                <label for="button_0">
+                                    <button id="button_0" type="submit" name="submit"><span>Contact me</span></button>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="two" class="backbox">
             <div class="insidebox">
                 <div class="side1">
                     <div class="leftside1">
-                        <img class="boat" src="../img/Sailing/Motorboat1.jpg" alt="Megayacht">
+                        <img class="boat" src="../img/Sailing/Sailboats.jpg" alt="Sailboats">
                     </div>
                     <div class="rightside1 description">
-                        <h2 class="overskrift">Motorboat</h2>
+                        <h2 class="overskrift">Sailboat</h2>
                         <p style="font-style: italic; color: #FAC917;">
-                            <img src="../img/location-vector.png" alt="location-vector" style = "width: 4%">
+                            <img src="../img/location-vector.png" alt="location-vector" style="width: 4%">
                             Baja Sardinia, Italy (Can be delivered to almost all ports in Sardinia)
                         </p>
                         <br>
-                        <p>Sardinia, the island as many claims has the world's finest archipelago and Europe's finest beaches is just designed for a successful boat trip, whether you choose sailboat or motor cruiser or our other solutions. We can now offer a wide range of motor cruisers, from 20 feet upwards, both with and without crew.
-                        The boats offered are among the well-known boat manufacturers Bavaria, Azimut, Fairline and Princess. Fill out the form on the side and we will be in touch with you as fast as possible.
-                        <br><br>
-                        <span style="font-style: italic;">The price on the rigth is calculated for an avarge, new 30 feet motorboat without crew. </span>
+                        <p>Renting a sailiboat is the most popular choice by our customers. VisitaSardegna
+                            offers a wide selection of sailboats. Our boats are of the brands Bavaria, Benetau
+                            and Jeanneau
+                            Bavaria, which are all synonymous with high quality and robustness.
+                            Each year, more than 1500 motorboats and sailboats leave the yard which is ranked among the
+                            world's largest and most successful yacht manufacturers. Do not hesitate to contact us and
+                            we will give you
+                            a complete map over our models and help you choose the right for you.
+                            <br><br>
+                            <span style="font-style: italic;">The price on the right is calculated for a
+                                39-43 feet sailboat without crew.</span>
                         </p>
                         <p class="price"></p>
                     </div>
                 </div>
                 <div class="side2">
-                    <form onsubmit="verify_and_notify()"  accept-charset="UTF-8">
+                    <form onsubmit="verify_and_notify()" accept-charset="UTF-8">
                         <div class="leftside2">
-                            <label for="start_date_0">
-                                <span>Pick-Up Date:</span>
+                            <label for="start_date_1">
+                                <span>Pick-up date:</span>
                                 <br>
-                                <input id = "start_date_0" type="date" class="input_start" onchange="calc_price(0, 350)" name="hentedato" value="" required>
+                                <input id="start_date_1" type="date" class="input_start" onchange="calc_price(1, 540)"
+                                    name="hentedato" value="" required>
                                 <br>
                             </label>
-                            <label for="end_date_0">
-                                <span>End of Trip Date:</span>
+                            <label for="end_date_1">
+                                <span>End of trip date:</span>
                                 <br>
-                                <input id = "end_date_0" type="date" class="input_end" onchange="calc_price(0, 350)" name="leveringsdato" value="" required>
+                                <input id="end_date_1" type="date" class="input_end" onchange="calc_price(1, 540)" name="leveringsdato"
+                                    value="" required>
                             </label>
                             <br><br><br>
-                            <label for="name_0">
+                            <label for="name_1">
                                 <span>Full name</span>
                                 <br>
-                                <input id = "name_0" type="text" name="name" class="name" placeholder="Name" pattern="[a-zA-ZÆÅØøæå \s]+" autocomplete="name" required>
+                                <input id="name_1" type="text" name="name" class="name" placeholder="Name" pattern="[a-zA-ZÆÅØøæå \s]+"
+                                    autocomplete="name" required>
                                 <br>
                             </label>
-                            <label for="email_0">
-                                <span>E-Mail</span>
+                            <label for="email_1">
+                                <span>E-mail</span>
                                 <br>
-                                <input id = "email_0" type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
+                                <input id="email_1" type="email" name="email" value="" placeholder="your.mail@domain.com"
+                                    autocomplete="email" required>
                             </label>
                         </div>
                         <div class="rightside2">
-                            <label for="start_time_0">
-                                <span>Pick-Up Time</span>
+                            <label for="start_time_1">
+                                <span>Pick-up time</span>
                                 <br>
-                                <input id="start_time_0" class="input_start_time" type="time" name="hentetid" value="" required>
+                                <input id="start_time_1" class="input_start_time" type="time" name="hentetid" value=""
+                                    required>
                                 <br>
                             </label>
-                            <label for="end_time_0">
-                                <span>End of trip Time</span>
+                            <label for="end_time_1">
+                                <span>End of trip time</span>
                                 <br>
-                                <input id="end_time_0" class="input_end_time" type="time" name="leveringstid" value="" required>
+                                <input id="end_time_1" class="input_end_time" type="time" name="leveringstid" value=""
+                                    required>
                                 <br><br><br><br><br>
                             </label>
-                            <label for="button_0">
-                                <button id="button_0" type="submit" name="submit"><span>Contact me</span></button>
+                            <label for="button_1">
+                                <button id="button_1" type="submit" name="submit"><span>Contact me</span></button>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="three" class="backbox">
+            <div class="insidebox">
+                <div class="side1">
+                    <div class="leftside1">
+                        <img class="boat" src="../img/Sailing/Jetski.jpg" alt="Jetski">
+                    </div>
+                    <div class="rightside1 description">
+                        <h2 class="overskrift">Jetski</h2>
+                        <p style="font-style: italic; color: #FAC917;">
+                            <img src="../img/location-vector.png" alt="location-vector" style="width: 4%">
+                            Baja Sardinia, Italy (Can be delivered to almost all ports in Sardinia)
+                        </p>
+                        <br>
+                        <div>
+                            <p>Hire a jetski in Sardinia. We have 3 different versions of watercraft for rent:</p>
+                            <ul style="margin: 10px">
+                                <li>Yamaha V1 with 110 HP</li>
+                                <li>Yamaha FX HO Cruiser with 180 HP</li>
+                                <li>Yamaha Waverunner SUPERJET (standup)</li>
+                            </ul>
+                            <span style="font-style: italic;">The price on the rigth is calculated for the Yamaha V1
+                                with 110 HP.</span>
+                        </div>
+                        <br>
+                        <p class="price"></p>
+                    </div>
+                </div>
+                <div class="side2">
+                    <form onsubmit="verify_and_notify()" accept-charset="UTF-8">
+                        <div class="leftside2">
+                            <label for="start_date_2">
+                                <span>Pick-up date:</span>
+                                <br>
+                                <input id="start_date_2" type="date" class="input_start" onchange="calc_price(2, 100)"
+                                    name="hentedato" value="" required>
+                                <br>
+                            </label>
+                            <label for="end_date_2">
+                                <span>End of trip date:</span>
+                                <br>
+                                <input id="end_date_2" type="date" class="input_end" onchange="calc_price(2, 100)" name="leveringsdato"
+                                    value="" required>
+                            </label>
+                            <br><br><br>
+                            <label for="name_2">
+                                <span>Full name</span>
+                                <br>
+                                <input id="name_2" type="text" name="name" class="name" placeholder="Name" pattern="[a-zA-ZÆÅØøæå \s]"
+                                    autocomplete="name" required>
+                                <br>
+                            </label>
+                            <label for="email_2">
+                                <span>E-mail</span>
+                                <br>
+                                <input id="email_2" type="email" name="email" value="" placeholder="your.mail@domain.com"
+                                    autocomplete="email" required>
+                            </label>
+                        </div>
+                        <div class="rightside2">
+                            <label for="start_time_2">
+                                <span>Pick-up time</span>
+                                <br>
+                                <input id="start_time_2" class="input_start_time" type="time" name="hentetid" value=""
+                                    required>
+                                <br>
+                            </label>
+                            <label for="end_time_2">
+                                <span>End of trip time</span>
+                                <br>
+                                <input id="end_time_2" class="input_end_time" type="time" name="leveringstid" value=""
+                                    required>
+                                <br><br><br><br><br>
+                            </label>
+                            <label for="button_2">
+                                <button id="button_2" type="submit" name="submit"><span>Contact me</span></button>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="four" class="backbox">
+            <div class="insidebox">
+                <div class="side1">
+                    <div class="leftside1">
+                        <img class="boat" src="../img/Sailing/Megayacht2.jpg" alt="Megayacht">
+                    </div>
+                    <div class="rightside1 description">
+                        <h2 class="overskrift">Luxury yacht</h2>
+                        <p style="font-style: italic; color: #FAC917;">
+                            <img src="../img/location-vector.png" alt="location-vector" style="width: 4%">
+                            Baja Sardinia, Italy (Can be delivered to almost all ports in Sardinia)
+                        </p>
+                        <br>
+                        <p>A Luxury yacht is a high-end,
+                            professionally crewed sailing or motor yacht. As one of the best rent and tourist
+                            companies on Sardinia, we can offer you some of the best luxury yacht available on the
+                            island. Our boats comes complete with captians and full crew, to make your stay in Sardinia
+                            comfortable and
+                            without any extra or hidden costs. Since this is a premium segment of boats we will
+                            make a personlized offer to you. Contacts us
+                            for more information about our models and prices.
+                            <br><br>
+                            <span style="font-style: italic;"> The price on the rigth is calculated for an
+                                luxary yacht with crew.</span>
+                        </p>
+                        <br>
+                        <p class="price">
+                        </p>
+                    </div>
+                </div>
+                <div class="side2">
+                    <form onsubmit="verify_and_notify()" accept-charset="UTF-8">
+                        <div class="leftside2">
+                            <label for="start_date_3">
+                                <span>Pick-up date:</span>
+                                <br>
+                                <input id="start_date_3" type="date" class="input_start" onchange="calc_price(3, 12000)"
+                                    name="hentedato" value="" required>
+                                <br>
+                            </label>
+                            <label for="end_date_3">
+                                <span>End of trip date:</span>
+                                <br>
+                                <input id="end_date_3" type="date" class="input_end" onchange="calc_price(3, 12000)"
+                                    name="leveringsdato" value="" required>
+                            </label>
+                            <br><br><br>
+                            <label for="name_3">
+                                <span>Full name</span>
+                                <br>
+                                <input id="name_3" type="text" name="name" class="name" placeholder="Name" pattern="[a-zA-ZÆÅØøæå \s]"
+                                    autocomplete="name" required>
+                                <br>
+                            </label>
+                            <label for="email_3">
+                                <span>E-mail</span>
+                                <br>
+                                <input id="email_3" type="email" name="email" value="" placeholder="your.mail@domain.com"
+                                    autocomplete="email" required>
+                            </label>
+                        </div>
+                        <div class="rightside2">
+                            <label for="start_time_3">
+                                <span>Pick-up time</span>
+                                <br>
+                                <input id="start_time_3" class="input_start_time" type="time" name="hentetid" value=""
+                                    required>
+                                <br>
+                            </label>
+                            <label for="end_time_3">
+                                <span>End of trip time</span>
+                                <br>
+                                <input id="end_time_3" class="input_end_time" type="time" name="leveringstid" value=""
+                                    required>
+                                <br><br><br><br><br>
+                            </label>
+                            <label for="button_3">
+                                <button id="button_3" type="submit" name="submit"><span>Contact me</span></button>
                             </label>
                         </div>
                     </form>
@@ -92,228 +358,9 @@
             </div>
         </div>
     </div>
-
-    <div id="two" class="backbox">
-        <div class="insidebox">
-            <div class="side1">
-                <div class="leftside1">
-                    <img class="boat" src="../img/Sailing/Sailboats.jpg" alt="Sailboats">
-                </div>
-                <div class="rightside1 description">
-                    <h2 class="overskrift">Sailboat</h2>
-                    <p style="font-style: italic; color: #FAC917;">
-                        <img src="../img/location-vector.png" alt="location-vector" style="width: 4%">
-                        Baja Sardinia, Italy (Can be delivered to almost all ports in Sardinia)
-                    </p>
-                    <br>
-                    <p>Renting a sailiboat is the most popular choice by our customers. VisitaSardegna can therfore offer you a wide selection of sailboats. Our boats comes from the brands Bavaria, Benetau and Jeanneau
-                        Bavaria, Benetau and Jeanneau has always been synonymous with high quality, robustness and lasting value as well as good price development.
-                        Each year, more than 1500 motorboats and sailboats leave the yard which is ranked among the world's largest and most successful yacht manufacturers. Do not hesitate to contact us and we will give you
-                        a complete map over our models and help you choose the right for you.
-                        <br><br>
-                        <span style="font-style: italic;">The price on the rigth is calculated for an avarge, new 39-43 feet sailboat without crew.</span>
-                    </p>
-                    <p class="price"></p>
-                </div>
-            </div>
-            <div class="side2">
-                <form onsubmit="verify_and_notify()" accept-charset="UTF-8">
-                    <div class="leftside2">
-                        <label for="start_date_1">
-                            <span>Pick-Up Date:</span>
-                            <br>
-                            <input id="start_date_1" type="date" class="input_start" onchange="calc_price(1, 540)" name="hentedato" value="" required>
-                            <br>
-                        </label>
-                        <label for="end_date_1">
-                            <span>End of Trip Date:</span>
-                            <br>
-                            <input id="end_date_1" type="date" class="input_end" onchange="calc_price(1, 540)" name="leveringsdato" value="" required>
-                        </label>
-                        <br><br><br>
-                        <label for="name_1">
-                            <span>Full name</span>
-                            <br>
-                            <input id="name_1" type="text" name="name" class="name" placeholder="Name" pattern="[a-zA-ZÆÅØøæå \s]+" autocomplete="name" required>
-                            <br>
-                        </label>
-                        <label for="email_1">
-                            <span>E-Mail</span>
-                            <br>
-                            <input id="email_1" type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
-                        </label>
-                    </div>
-                    <div class="rightside2">
-                        <label for="start_time_1">
-                            <span>Pick-Up Time</span>
-                            <br>
-                            <input id="start_time_1" class="input_start_time" type="time" name="hentetid" value="" required>
-                            <br>
-                        </label>
-                        <label for="end_time_1">
-                            <span>End of trip Time</span>
-                            <br>
-                            <input id="end_time_1" class="input_end_time" type="time" name="leveringstid" value="" required>
-                            <br><br><br><br><br>
-                        </label>
-                        <label for="button_1">
-                            <button id="button_1" type="submit" name="submit"><span>Contact me</span></button>
-                        </label>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div id="three" class="backbox">
-        <div class="insidebox">
-            <div class="side1">
-                <div class="leftside1">
-                    <img class="boat" src="../img/Sailing/Jetski.jpg" alt="Jetski">
-                </div>
-                <div class="rightside1 description">
-                    <h2 class="overskrift">Jetski</h2>
-                    <p style="font-style: italic; color: #FAC917;">
-                        <img src="../img/location-vector.png" alt="location-vector" style="width: 4%">
-                        Baja Sardinia, Italy (Can be delivered to almost all ports in Sardinia)
-                    </p>
-                    <div> <p>Hire of Jetski in Sardinia. We have 3 different versions of watercraft for rent:</p>
-                        <ul style="margin: 10px">
-                            <li>Yamaha V1 with 110 hp</li>
-                            <li>Yamaha FX HO Cruiser with 180 hp</li>
-                            <li>Yamaha Waverunner SUPERJET(standup)</li>
-                        </ul>
-                        <span style="font-style: italic;">The price on the rigth is calculated for the Yamaha V1 with 110hp.</span>
-                    </div>
-                    <br>
-                    <p class="price"></p>
-                </div>
-            </div>
-            <div class="side2">
-                <form onsubmit="verify_and_notify()" accept-charset="UTF-8">
-                    <div class="leftside2">
-                        <label for="start_date_2">
-                            <span>Pick-Up Date:</span>
-                            <br>
-                            <input id="start_date_2" type="date" class="input_start" onchange="calc_price(2, 100)" name="hentedato" value="" required>
-                            <br>
-                        </label>
-                        <label for="end_date_2">
-                            <span>End of Trip Date:</span>
-                            <br>
-                            <input id="end_date_2" type="date" class="input_end" onchange="calc_price(2, 100)" name="leveringsdato" value="" required>
-                        </label>
-                        <br><br><br>
-                        <label for="name_2">
-                            <span>Full name</span>
-                            <br>
-                            <input id="name_2" type="text" name="name" class="name" placeholder="Name" pattern="[a-zA-ZÆÅØøæå \s]" autocomplete="name" required>
-                            <br>
-                        </label>
-                        <label for="email_2">
-                            <span>E-Mail</span>
-                            <br>
-                            <input id="email_2" type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
-                        </label>
-                    </div>
-                    <div class="rightside2">
-                        <label for="start_time_2">
-                            <span>Pick-Up Time</span>
-                            <br>
-                            <input id="start_time_2" class="input_start_time" type="time" name="hentetid" value="" required>
-                            <br>
-                        </label>
-                        <label for="end_time_2">
-                            <span>End of trip Time</span>
-                            <br>
-                            <input id="end_time_2" class="input_end_time" type="time" name="leveringstid" value="" required>
-                            <br><br><br><br><br>
-                        </label>
-                        <label for="button_2">
-                            <button id="button_2" type="submit" name="submit"><span>Contact me</span></button>
-                        </label>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div id="four" class="backbox">
-        <div class="insidebox">
-            <div class="side1">
-                <div class="leftside1">
-                    <img class="boat" src="../img/Sailing/Megayacht2.jpg" alt="Megayacht">
-                </div>
-                <div class="rightside1 description">
-                    <h2 class="overskrift">Luxury Yacht</h2>
-                    <p style="font-style: italic; color: #FAC917;">
-                        <img src="../img/location-vector.png" alt="location-vector" style = "width: 4%">
-                        Baja Sardinia, Italy (Can be delivered to almost all ports in Sardinia)
-                    </p>
-                    <br>
-                    <p>A Luxury yacht (also super-yacht, large yacht and mega-yacht) is a very expensive, professionally crewed sailing or motor yacht. As one of the best rent and tourist
-                        company on Sardinia, we can offer you some of the best luxury yacht available on the island. Our boats comes complete with captians and full crew, to make your stay in Sardinia comfortable and
-                        without any extra or hidden costs. Since this is a very premium segment of boats we need to make a personlized offer to you. Contacts us
-                        for more information about our models and a calculated price for you.
-                        <br><br>
-                        <span style="font-style: italic;"> The price on the rigth is calculated for an avarge, new luxary yacht with crew.</span>
-                    </p>
-                        <br>
-                    <p class="price" >
-                    </p>
-                </div>
-            </div>
-            <div class="side2">
-                <form onsubmit="verify_and_notify()" accept-charset="UTF-8">
-                    <div class="leftside2">
-                        <label for="start_date_3">
-                            <span>Pick-Up Date:</span>
-                            <br>
-                            <input id="start_date_3" type="date" class="input_start" onchange="calc_price(3, 12000)" name="hentedato" value="" required>
-                            <br>
-                        </label>
-                        <label for="end_date_3">
-                            <span>End of Trip Date:</span>
-                            <br>
-                            <input id="end_date_3" type="date" class="input_end" onchange="calc_price(3, 12000)" name="leveringsdato" value="" required>
-                        </label>
-                        <br><br><br>
-                        <label for="name_3">
-                            <span>Full name</span>
-                            <br>
-                            <input id="name_3" type="text" name="name" class="name" placeholder="Name" pattern="[a-zA-ZÆÅØøæå \s]" autocomplete="name" required>
-                            <br>
-                        </label>
-                        <label for="email_3">
-                            <span>E-Mail</span>
-                            <br>
-                            <input id="email_3" type="email" name="email" value="" placeholder="your.mail@domain.com" autocomplete="email" required>
-                        </label>
-                    </div>
-                    <div class="rightside2">
-                        <label for="start_time_3">
-                            <span>Pick-Up Time</span>
-                            <br>
-                            <input id="start_time_3" class="input_start_time" type="time" name="hentetid" value="" required>
-                            <br>
-                        </label>
-                        <label for="end_time_3">
-                            <span>End of trip Time</span>
-                            <br>
-                            <input id="end_time_3" class="input_end_time" type="time" name="leveringstid" value="" required>
-                            <br><br><br><br><br>
-                        </label>
-                        <label for="button_3">
-                            <button id="button_3" type="submit" name="submit"><span>Contact me</span></button>
-                        </label>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
     <!-- Footer -->
     <div class="footer" id="footer">
     </div>
 </body>
+
 </html>
