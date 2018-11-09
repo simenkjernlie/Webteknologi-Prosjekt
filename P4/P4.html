@@ -13,7 +13,7 @@
         <div class="header content">
             <h1>IT2805 P4 Project Requirements</h1>
             <h2>Alexey Gusev, Hans Bratland Østerdal, Sander Kilen, Simen Kjernlie og Vilde Bruvik</h2>
-            <h4>09.10.2018</h4>
+            <h4>09.11.2018</h4>
 
         </div>
         <div class="content">
@@ -23,22 +23,28 @@
         </div>
         <div class="content">
             <h2>Brukertesten</h2>
+            Testene ble i hovedsak utført ansikt-til-ansikt med brukerne. Brukerne ble gitt korte instrukser om hva de
+            skulle gjøre, beskrevet under, før vi observerte hvordan de navigerte siden og noterte ned tilbakemeldinger
+            underveis. På denne måten fikk vi observert både umiddelbare reaksjoner om elementer de ikke likte eller
+            skjønte, i tillegg til en oppsummerende tilbakemelding til slutt.
             <p>Brukertester:</p>
             <ol>
                 <li>Gå inn på siden og bestill:
-                <ul>
-                    <li>Hotell</li>
-                    <li>Båt</li>
-                    <li>Sykkel</li>
-                    </ul></li>
+                    <ul>
+                        <li>Hotell</li>
+                        <li>Båt</li>
+                        <li>Sykkel</li>
+                    </ul>
+                </li>
                 <li>Sjekke info om:
-                <ul>
-                    <li>Restauranter</li>
-                    <li>Natur</li>
-                    <li>Kultur</li>
-                    <li>Om Sardinia</li>
-                    <li>Om firmaet</li>
-                </ul></li>
+                    <ul>
+                        <li>Restauranter</li>
+                        <li>Natur</li>
+                        <li>Kultur</li>
+                        <li>Om Sardinia</li>
+                        <li>Om firmaet</li>
+                    </ul>
+                </li>
             </ol>
             <p>Generelle intrykk: Var det lett å orientere seg rundt?</p>
             <p>Hva likte du best?</p>
@@ -46,61 +52,70 @@
         </div>
         <div class="content">
             <h2>Målgruppe</h2>
-            <p>Fant ca riktig folk</p>
+            <p>Målgruppen for siden er turister i alle aldersgrupper som vil ha informasjon om hva Sardinia
+                kan tilby.
+                Se <a href="http://folk.ntnu.no/simenkj/Webteknologi/P2/" target="_blank">P2</a> for en mer detaljert
+                beskrivelse. Brukertestene ble i hovedsak utført på studenter i 20-årene i tekniske utdanninger, som i
+                prinsippet er en del av målgruppen.
+                Ideelt sett burde vi ha testet mer varierte samfunns- og aldersgrupper for å få et mer komplett bilde
+                av hvordan brukere oppfatter siden, men disse testene bør uansett gi oss en pekepinn på hva som kan
+                forbedres med siden. Det ble totalt utført brukertester på 12 personer.</p>
         </div>
         <div class="content">
             <h2>Testplattformer</h2>
-            <p>Laptop (3k), laptop (mac), mobil (Samsung Galaxy S7 og S8), iPad Pro, iPad, iMac (5k), iPad Mini.</p>
+            <p>Laptop (FHD, 3k, 4k), laptop (mac), mobil (Samsung Galaxy S7 og S8), iPad Pro, iPad, iMac (5k), iPad Mini.</p>
         </div>
         <div class="content">
             <h2>Tilbakemelding</h2>
             <ul>
-                <li>Header/Navbar: Kan ikke trykke på visitSardinia for å komme til home. Noen syntes headerbildet
-                    kunne
-                    vært "større"
-                    Footer: Drar bunnen opp => footeren fucker seg.
+                <li><p>Header/Navbar/Footer:</p>
+                    <p>Fra testene ble det gitt tilbakemelding om at header elementet (VisitaSardinia) gjerne skulle vært mulig å bruke som en link tilbake til forsiden. Det ble også nevnt at headeren gjerne kunne vært litt større.</p>
+                    <p>Det også ble gitt tilbakemelding om bra styling av navigasjonsbaren og at denne var interaktiv. En annen tilbakemelding var at det ikke var veldig intuitivt at linkingen til sidene Natur og Kultur lå under aktiviteter siden og ikke under "Om Sardinia" </p>
+                    <p>Det ble også funnet en feil med footeren hvor den ikke fungerte helt som den skulle når siden ble kjørt på en IpadPro i Safari nettleseren. Footeren kan få litt feil høyde når skjermhøyden blir for lav. Flere trodde også at "Quick links" i footeren var en link. En del ble da overrasket når denne ikke gjorde noe.</p>
                 </li>
+                <br>
 
-                <li>Home:
-                    Ikke intuitivt at du kan scrolle ned.
-                    Ellers bra, fint bilde.
-                    Kule animasjoner på bildene nederst, og bra styling i navbar (interaktiv).
-                    Trenger ikke "Quick links", folk tror de kan trykke på den, kan egentlig bare fjerne den.
+                <li><p>Home:</p>
+                    <p>At det var mulig å scrolle nedover på hovedsiden var ikke helt intuitivt ettersom at hovedbildet dekker hele siden og en kan tenke at det ikke er noe mer innhold nedover. For andre fungerte bildet bra.</p>
+                    <p>Det ble også meldt om "kule" animasjoner på bildene nederst på siden.</p>
+                </li>
+                <br>
+                
+                <li><p>Hotell:</p>
+                    <p>Det var kunn mulig å bestille rom til 4 personer. Det ble gitt tilbakemelding om at en gjerne skulle kunne bestilt til flere.</p>
+                    <p>Noen mente også at pil på telefonnummeret ikke var nødvendig.</p>
+                    <p>Det ble også kommentert at det gjerne skulle vært link til hotellene for mer informasjon.</p>
+                    <p>Det var ikke intuitivt å bruke pilen til høyre for dato elementet fot å kunne velge dato fra kalender-pop up.</p>
+                    <p>Det kunne også vært bedre tilbakemelding hvis ulovlige tegn, slik som Æ,Ø og Å, kunne brukes.</p>
+                    <p>Det ble også gitt tilbakemelding på at det for noen var vanskelig å forså hva pilene på siden gjorde. Det var da ikke like intuitivt for alle at disse ble brukt for å få opp mer informajson om hotellene, samt å vise frem booking inputen. Andre hadde ikke dette problemet</p>
+                    <p>Ellers ble sidene opplevd som bra og intuitiv.</p>
+                </li>
+                <br>
+                
+                <li><p>Restauranter:</p>
+                    <p>Det ble klagd på at google maps API-en gir en feilmelding. Dette er kun et problem fordi denne API-en har en betalt lisens og denne var ikke ordnet av kunden per i dag.</p>
+                    <p>Ekstra informasjon på om restaurantene ble også opplevd som litt litt for samlet eller "tight" og det ble nevnt som en tilbakemelding at denne teksten gjerne kunne hatt mer luft for å skille teksten. På samme måte ble det også komentert at det var litt for lite luft mellom boksene som innehoder de ulike restaurantene.</p>
+                    <p>Pilene på restaurantboksene er heller ikke riktig possisjonert for noen spesielle oppløsninger.</p>
+                    <p>Ellers ble siden opplevd som bra og intuitiv.</p>
+                </li>
+                <br>
+                
+                <li><p>Sailing og biking:</p>
+                   <p> Mye gode kommentarer også her. Mange kule animasjoner, f.eks. med tallene når du endrer pris.</p> 
+                    <p>En tilbakemelding på at det var forvirrende med de lysende effektene i rødt og grønt når du la inn ugyldige datoer, og at prisen ikke endrer seg når du endrer timer.</p> 
+                    <p>En annen tilbakemeldig var at man får feilmelding hvis pickupdate velges etter "end of trip date".</p>
 
                 </li>
-                <li>Hotell:
-                    Kan kun bestille til 4 personer, vil bestille til flere.
-                    Pil på tlfnummer ikke nødvendig.
-                    Bug ved autocomplete noen ganger, bør være fikset.
-                    Vil ha link til hotellet for mer info.
-                    Ikke intuitivt å bruke pila til høyre for å velge dato fra kalender-pop up.
-                    Kunne vært bedre tilbakemelding hvis ulovlige tegn brukes.
-                    Litt vanskelig å skjønne hva pilene hva gjorde.
-                    Bra og intuitivt.
-
+                <li><p>Culture og Nature og Om Sardinia og Om oss:</p>
+                    <p>Her var det få som hadde noe å utesette, og folk syntes stort sett sidene var veldig fine, på de på pc og mobil.</p>
+                    <p>Vi fikk en kommentar på at formen "send us a mail" har litt annerledes stil enn resten av siden og kunne kanskje se litt uferdig ut. </p>
                 </li>
-                <li>Restauranter:
-                    Maps feilmelding.
-                    Ekstra-informasjonen var litt tight, kunne brukt linebreak mellom bullet points.
-                    Litt lite luft mellom boksene.
-                    Pilene på restaurantboksen er ikke riktig linet opp i noen spesielle oppløsninger.
-                    Bra og intutivt.
-
+                <li><p>Generelt: </p>
+                    <p>Vi fikk generelt gode tilbakemeldinger på at det var lett og intuitivt å navigere seg rundt på siden.</p> 
+                    <p>Alle klarte å finne fram til ønsket informasjon, uten å støte på noen problemer. Vi fikk noen tilbakemeldinger på
+                    at sider som er relativt like har små forskjeller som kan virke forvirrende og litt useriøst.</p> 
+                    <p>Kort oppsummert er siden lett å navigere seg rundt på, men kan bære preg av å være litt uferdig.</p> 
                 </li>
-                <li>Sailing og biking:
-                    En synes lysende feedback var forvirrende.
-                    Timesbestilling går ikke (prisen endret seg ikke.)
-                    Får feilmelding hvis pickupdate velges etter end of trip date.
-                    Kule animasjoner med tallene.
-
-                </li>
-                <li>Culture og Nature og Om Sardinia og Om oss:
-                    Veldig fine, generelt lite å utsette på det.
-                    Form på about us, annerledes stil enn resten av siden.
-                </li>
-                <li>Generelt: God og intuitiv side, lett å navigere rundt. Kan bære preg av å være uferdig. Litt
-                    forvirrende
-                    at elementer som det virker som skal være like har små forskjeller.</li>
 
             </ul>
 
